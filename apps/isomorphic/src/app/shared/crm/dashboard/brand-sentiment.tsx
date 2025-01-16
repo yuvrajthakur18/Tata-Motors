@@ -1,0 +1,80 @@
+'use client';
+
+import WidgetCard from '@core/components/cards/widget-card';
+import { CustomTooltip } from '@core/components/charts/custom-tooltip';
+import { useTheme } from 'next-themes';
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
+import { Box } from 'rizzui';
+
+const data = [
+  {
+    item: 'Product',
+    customers: 10,
+  },
+  {
+    item: 'Workshop',
+    customers: 40,
+  },
+  {
+    item: 'People',
+    customers: 48,
+  },
+  {
+    item: 'Process',
+    customers: 33,
+  },
+];
+
+export default function BrandSentiment({ className }: { className?: string }) {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
+  return (
+    <WidgetCard rounded="lg" className={className} title="Brand Sentiment">
+      <div className="custom-scrollbar w-full overflow-x-auto scroll-smooth">
+        <Box className="mt-6 h-72 w-full @sm:mt-3 @lg:mt-8">
+          <ResponsiveContainer width="100%" height="100%" minWidth={400}>
+            <BarChart
+              data={data}
+              margin={{
+                left: -5,
+                right: 5,
+                bottom: 10,
+              }}
+              className="[&_.recharts-cartesian-axis-tick-value]:fill-gray-500 rtl:[&_.recharts-cartesian-axis.yAxis]:-translate-x-12 [&_.recharts-cartesian-grid-vertical]:opacity-0"
+            >
+              <CartesianGrid strokeDasharray="8 10" strokeOpacity={0.435} />
+              <XAxis
+                dataKey="item"
+                axisLine={false}
+                tickLine={false}
+                tickMargin={20}
+              />
+              <YAxis axisLine={false} tickLine={false} tickMargin={20} />
+              <Tooltip content={<CustomTooltip />} />
+              <Bar
+                dataKey="customers"
+                className="fill-[#29CCB1] dark:[fill-opacity:0.9]"
+                name="Average Time"
+                barSize={16}
+                radius={20}
+                background={{
+                  fill: isDark ? '#333333' : '#F1F1F2',
+                  radius: 20,
+                }}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </Box>
+      </div>
+    </WidgetCard>
+  );
+}
