@@ -10,14 +10,31 @@ import { PiCaretDownBold } from 'react-icons/pi';
 import { menuItems } from '@/layouts/hydrogen/menu-items';
 import StatusBadge from '@core/components/get-status-badge';
 
+// Define types for menu items
+type DropdownItem = {
+  name: string;
+  href: string;
+  badge?: string; // Optional badge
+};
+
+type MenuItem = {
+  name: string;
+  href?: string; // `href` is optional since some items may have only dropdowns
+  icon?: React.ReactNode; // Icon is optional and can be any React element
+  dropdownItems?: DropdownItem[]; // Optional array of dropdown items
+};
+
+// Explicitly cast menuItems to the defined type
+const typedMenuItems: MenuItem[] = menuItems;
+
 export function SidebarMenu() {
   const pathname = usePathname();
 
   return (
     <div className="mt-4 pb-3 3xl:mt-6">
-      {menuItems.map((item, index) => {
+      {typedMenuItems.map((item, index) => {
         const isActive = pathname === (item?.href as string);
-        const pathnameExistInDropdowns: any = item?.dropdownItems?.filter(
+        const pathnameExistInDropdowns = item?.dropdownItems?.filter(
           (dropdownItem) => dropdownItem.href === pathname
         );
         const isDropdownOpen = Boolean(pathnameExistInDropdowns?.length);
@@ -125,9 +142,6 @@ export function SidebarMenu() {
                       )}
                       <span className="truncate">{item.name}</span>
                     </div>
-                    {item?.badge?.length ? (
-                      <StatusBadge status={item?.badge} />
-                    ) : null}
                   </Link>
                 )}
               </>
