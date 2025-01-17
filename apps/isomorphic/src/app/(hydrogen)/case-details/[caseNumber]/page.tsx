@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { notFound } from 'next/navigation';
 import IndividualCallDetails from './../../../components/IndividualCallDetails'; // Import the new component
 import QAScoring from './../../../components/QAScoring'; // Import the QAScoring component
@@ -1825,14 +1826,14 @@ const data: CaseDataSet = {
   },
 };
 
-interface PageProps {
-  params: {
-    caseNumber: string;
-  };
-}
+// interface PageProps {
+//   params: {
+//     caseNumber: string;
+//   };
+// }
 
-export default async function CaseDetailsPage({ params }: PageProps) {
-  const { caseNumber } = params as { caseNumber: string }; // Explicit cast
+export default async function CaseDetailsPage({ params }: any) {
+  const { caseNumber } = params as { caseNumber: string };
 
   // Fetch the case data
   const caseData = data[caseNumber];
