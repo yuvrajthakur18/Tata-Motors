@@ -1,9 +1,12 @@
+import { routes } from '@/config/routes';
+
 export type CrmStatType = {
   title: string;
   customer: number;
   increased: boolean;
   percentage: number;
   lastMonth: number;
+  href: string;
 };
 
 export const crmStatData: CrmStatType[] = [
@@ -13,6 +16,7 @@ export const crmStatData: CrmStatType[] = [
     increased: true,
     percentage: 25.2,
     lastMonth: 10258,
+    href: routes.casesPage,
   },
   {
     title: 'Calls',
@@ -20,6 +24,7 @@ export const crmStatData: CrmStatType[] = [
     increased: false,
     percentage: 18.2,
     lastMonth: 10587,
+    href: routes.callsPage,
   },
   {
     title: 'Agents',
@@ -27,6 +32,7 @@ export const crmStatData: CrmStatType[] = [
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
+    href: routes.agentsPage,
   },
   {
     title: 'Customers',
@@ -34,6 +40,7 @@ export const crmStatData: CrmStatType[] = [
     increased: false,
     percentage: 25.2,
     lastMonth: 2846,
+    href: routes.customersPage,
   },
   {
     title: 'Technicians',
@@ -41,6 +48,7 @@ export const crmStatData: CrmStatType[] = [
     increased: false,
     percentage: 25.2,
     lastMonth: 2846,
+    href: '#',
   },
   {
     title: 'Supervisors',
@@ -48,6 +56,7 @@ export const crmStatData: CrmStatType[] = [
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
+    href: '#',
   },
   {
     title: 'Unsolved Cases',
@@ -55,6 +64,7 @@ export const crmStatData: CrmStatType[] = [
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
+    href: '#',
   },
   {
     title: 'Agents overall performance / 5',
@@ -62,6 +72,7 @@ export const crmStatData: CrmStatType[] = [
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
+    href: '#',
   },
   {
     title: 'NPS score / 100',
@@ -69,6 +80,7 @@ export const crmStatData: CrmStatType[] = [
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
+    href: '#',
   },
   {
     title: 'Total Duration (in minutes)',
@@ -76,6 +88,7 @@ export const crmStatData: CrmStatType[] = [
     increased: false,
     percentage: 25.2,
     lastMonth: 2846,
+    href: '#',
   },
 ];
 

@@ -46,10 +46,7 @@ const viewOptions = [
   },
 ];
 
-const patientLegend = [
-  { name: 'New Patients' },
-  { name: 'Returning Patients' },
-];
+const patientLegend = [{ name: 'Customers' }, { name: 'Returning Customers' }];
 interface ColorMap {
   dark: string;
   light: string;
@@ -126,7 +123,7 @@ export default function SentimentTrend({ className }: { className?: string }) {
                 dot={<CustomizedDot color={theme && COLORS[0][theme]} />}
                 activeDot={<CustomizedDot color={theme && COLORS[0][theme]} />}
               />
-              <Area
+              {/* <Area
                 dataKey="returningCustomers"
                 {...(theme && {
                   stroke: COLORS[1][theme],
@@ -136,7 +133,7 @@ export default function SentimentTrend({ className }: { className?: string }) {
                 fill="url(#amountCustomer)"
                 dot={<CustomizedDot color={theme && COLORS[1][theme]} />}
                 activeDot={<CustomizedDot color={theme && COLORS[1][theme]} />}
-              />
+              /> */}
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -179,7 +176,7 @@ function CustomLegend({ className }: { className?: string }) {
         className
       )}
     >
-      {patientLegend.map((item, index) => (
+      {/* {patientLegend.map((item, index) => (
         <div
           key={item.name}
           className="flex items-center gap-1.5 text-gray-500"
@@ -194,7 +191,7 @@ function CustomLegend({ className }: { className?: string }) {
           />
           <span>{item.name}</span>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }

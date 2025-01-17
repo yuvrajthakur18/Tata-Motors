@@ -6,6 +6,7 @@ import AvatarCard from '@core/ui/avatar-card';
 import { createColumnHelper } from '@tanstack/react-table';
 import { Checkbox, Text } from 'rizzui';
 import { CaseDataType } from '.';
+import Link from 'next/link';
 
 const statusOptions = [
   { label: 'Open', value: 'Open' },
@@ -19,7 +20,14 @@ export const caseColumns = [
   columnHelper.accessor('caseNumber', {
     size: 100,
     header: 'Case Number',
-    cell: (info) => <Text className="font-medium">{info.getValue()}</Text>,
+    cell: (info) => (
+      <Link
+        href={`/case-details/${info.getValue()}`}
+        className="text-blue-600 hover:underline"
+      >
+        {info.getValue()}
+      </Link>
+    ),
   }),
   columnHelper.accessor('caseStatus', {
     size: 120,

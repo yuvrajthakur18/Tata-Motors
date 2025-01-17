@@ -10,6 +10,7 @@ import {
 } from 'react-icons/pi';
 import { formatNumberWithCommas } from '@core/utils/format-number';
 import { crmStatData, CrmStatType } from '@/data/crm-dashboard-data';
+import Link from 'next/link';
 
 export type StatCardProps = {
   className?: string;
@@ -29,42 +30,47 @@ export default function CRMStats({ className }: { className?: string }) {
 }
 
 function StatCard({ className, statItem }: StatCardProps) {
-  const { title, customer, increased, percentage, lastMonth } = statItem;
+  const { title, customer, increased, percentage, lastMonth, href } = statItem;
 
   return (
-    <Box
-      className={cn(
-        'space-y-3 rounded-lg border border-muted p-6 dark:bg-[#181818]',
-        className
-      )}
+    <Link
+      href={href} // Use this to make the card clickable
+      className="block no-underline"
     >
-      <Flex justify="between" align="center">
-        <Text className="font-semibold text-gray-900">{title}</Text>
-        <Badge
-          style={{
-            backgroundColor: increased ? '#C0F2CC' : '#FCECD6',
-            color: increased ? '#22973F' : '#EE6D3D',
-          }}
-        >
-          <span className="pe-1">{percentage}%</span>
-          {increased ? (
-            <PiTrendUpBold className="size-3" />
-          ) : (
-            <PiTrendDownBold className="size-3" />
-          )}
-        </Badge>
-      </Flex>
+      <Box
+        className={cn(
+          'space-y-3 rounded-lg border border-muted p-6 dark:bg-[#181818]',
+          className
+        )}
+      >
+        <Flex justify="between" align="center">
+          <Text className="font-semibold text-gray-900">{title}</Text>
+          <Badge
+            style={{
+              backgroundColor: increased ? '#C0F2CC' : '#FCECD6',
+              color: increased ? '#22973F' : '#EE6D3D',
+            }}
+          >
+            <span className="pe-1">{percentage}%</span>
+            {increased ? (
+              <PiTrendUpBold className="size-3" />
+            ) : (
+              <PiTrendDownBold className="size-3" />
+            )}
+          </Badge>
+        </Flex>
 
-      <Title className="text-3xl font-normal leading-none">
-        {formatNumberWithCommas(customer)}
-      </Title>
+        <Title className="text-3xl font-normal leading-none">
+          {formatNumberWithCommas(customer)}
+        </Title>
 
-      {/* <Box className="text-gray-400">
+        {/* <Box className="text-gray-400">
         vs last month:{' '}
         <strong className="text-gray-900">
           {formatNumberWithCommas(lastMonth)}
         </strong>
       </Box> */}
-    </Box>
+      </Box>
+    </Link>
   );
 }
