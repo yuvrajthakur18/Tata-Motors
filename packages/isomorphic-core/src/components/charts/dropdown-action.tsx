@@ -51,7 +51,7 @@ export default function DropdownAction({
       onChange={handleOnChange}
       displayValue={(selected) => options.find((option) => option.value === selected)?.label}
       selectClassName={cn("py-1 px-2 leading-[32px] h-8 me-2", selectClassName)}
-      optionClassName="py-1 px-2 leading-[32px] h-8"
+      optionClassName="py-1 px-2 leading-[32px] h-8 z-10"
       dropdownClassName={cn(
         "p-2 gap-1 grid !z-0",
         !inPortal && "w-full !z-10 h-auto",

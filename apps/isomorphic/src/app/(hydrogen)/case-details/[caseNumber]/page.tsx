@@ -1,6 +1,5 @@
 // @ts-nocheck
 import { notFound } from 'next/navigation';
-import IndividualCallDetails from './../../../components/IndividualCallDetails'; // Import the new component
 import QAScoring from './../../../components/QAScoring'; // Import the QAScoring component
 import ProbingQuestions from './../../../components/ProbingQuestions'; // Import the ProbingQuestions component
 import BrandSentiments from './../../../components/BrandSentiments'; // Import BrandSentiments component
@@ -9,7 +8,14 @@ import AgentPerformanceScore from './../../../components/AgentPerformanceScore';
 import AgentThresholdMapping from './../../../components/AgentThresholdMapping'; // Import the Agent Threshold Mapping component
 import SuggestedCoaching from './../../../components/SuggestedCoaching'; // Import SuggestedCoaching
 import ActionPlanDetails from './../../../components/ActionPlanDetails'; // Import the ActionPlanDetails component
-
+{/* use individual call table */}
+import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table'; // Import the IndividualCallTable component
+import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
+import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold';
+import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table';
+import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
+import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis';
+import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-2';
 // Define the types for case data
 type CaseData = {
   caseNumber: string;
@@ -1867,35 +1873,43 @@ export default async function CaseDetailsPage({ params }: any) {
           ))}
         </tbody>
       </table>
+      {/* show individual call table imported table */}
+
 
       {/* Individual Call Details */}
-      <IndividualCallDetails callData={caseData.individualCallDetails} />
+      <IndividualCallTable className='p-3 m-5' />
 
-      {/* Q&A Scoring */}
-      <QAScoring scoringData={caseData.qaScoring} />
+      {/* Q&A Scoring  */}
+      {/* <QAScoring scoringData={caseData.qaScoring} /> */}
+      <QAScoringTable className='p-3 m-5' />
 
-      {/* Probing Questions */}
+      {/* Probing Questions ***todo */}
       <ProbingQuestions probingData={caseData.probingQuestions} />
 
-      {/* Brand Sentiments Table */}
+      {/* Brand Sentiments Table ***todo */}
       <BrandSentiments brandSentimentData={caseData.brandSentiments} />
 
       {/* Empathy Analysis Table */}
-      <EmpathyAnalysis empathyData={caseData.empathyAnalysis} />
+      {/* <EmpathyAnalysis empathyData={caseData.empathyAnalysis} /> */}
+      <EmpathyAnalysisTable className='p-3 m-5' />
 
-      {/* Agent Performance Score */}
-      <AgentPerformanceScore
+      {/* Agent Performance Score ***todo */}
+      {/* <AgentPerformanceScore
         performanceData={caseData.agentPerformanceScoreData}
-      />
+      /> */}
+      <AgentPerformanceAnalysisTable className='p-3 m-5' />
+      
 
       {/* Agent Threshold Mapping for Coaching */}
-      <AgentThresholdMapping coachingData={caseData.agentThresholdMapping} />
+      {/* <AgentThresholdMapping coachingData={caseData.agentThresholdMapping} /> */}
+      <AgentThreshold className='p-3 m-5'/>
 
       {/* Suggested Coaching Table */}
-      <SuggestedCoaching coachingData={caseData.suggestedCoaching} />
-
+      {/* <SuggestedCoaching coachingData={caseData.suggestedCoaching} /> */}
+       <SuggestedCoachingTable className='p-3 m-5' />   
       {/* Action Plan for TL/CX Manager Table */}
-      <ActionPlanDetails actionData={caseData.actionPlanDetails} />
+      {/* <ActionPlanDetails actionData={caseData.actionPlanDetails} /> */}
+      <PlanOfAction className='p-3 m-5'/>
     </div>
   );
 }
