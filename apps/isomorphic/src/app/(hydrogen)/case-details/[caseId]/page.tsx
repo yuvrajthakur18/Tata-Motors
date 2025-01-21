@@ -3,7 +3,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import IndividualCallDetails from '../../../components/IndividualCallDetails'; // Import the new component
 import QAScoring from '../../../components/QAScoring'; // Import the QAScoring component
-import ProbingQuestions from '../../../components/ProbingQuestions'; // Import the ProbingQuestions component
+// import ProbingQuestions from '../../../components/ProbingQuestions'; // Import the ProbingQuestions component
 import BrandSentiments from '../../../components/BrandSentiments'; // Import BrandSentiments component
 import EmpathyAnalysis from '../../../components/EmpathyAnalysis'; // Import the new component
 import AgentPerformanceScore from '../../../components/AgentPerformanceScore'; // Import AgentPerformanceScore
@@ -11,6 +11,18 @@ import AgentThresholdMapping from '../../../components/AgentThresholdMapping'; /
 import SuggestedCoaching from '../../../components/SuggestedCoaching'; // Import SuggestedCoaching
 import ActionPlanDetails from '../../../components/ActionPlanDetails'; // Import the ActionPlanDetails component
 import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
+
+import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table';
+import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
+import ProbingQuestions from '@/app/shared/crm/dashboard/tables/probing-questions';
+import BrandSentiment from '@/app/shared/crm/dashboard/brand-sentiment';
+import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis';
+import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-2';
+import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold';
+import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table';
+import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
+import { overAllCaseData } from '@/data/over-all-case-data';
+import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
 
 // Define the types for case data
 type CaseData = {
