@@ -38,6 +38,17 @@ export default function Filters<TData extends Record<string, any>>({
       className="mt-6 @3xl:flex-row @[62rem]:mt-0"
     >
       <Flex align="center" className="order-2 @3xl:order-1 @3xl:max-w-[360px]">
+      <Input
+        type="search"
+        clearable={true}
+        inputClassName="h-[36px]"
+        placeholder="Search by Agent name..."
+        onClear={() => table.setGlobalFilter('')}
+        value={table.getState().globalFilter ?? ''}
+        prefix={<PiMagnifyingGlassBold className="size-4" />}
+        onChange={(e) => table.setGlobalFilter(e.target.value)}
+        className="w-full @3xl:order-3 @3xl:ms-auto @3xl:max-w-72"
+      />
         <StatusField
           className="w-full"
           placeholder="Select type"
@@ -74,17 +85,7 @@ export default function Filters<TData extends Record<string, any>>({
         </Button>
       ) : null}
 
-      <Input
-        type="search"
-        clearable={true}
-        inputClassName="h-[36px]"
-        placeholder="Search by Agent name..."
-        onClear={() => table.setGlobalFilter('')}
-        value={table.getState().globalFilter ?? ''}
-        prefix={<PiMagnifyingGlassBold className="size-4" />}
-        onChange={(e) => table.setGlobalFilter(e.target.value)}
-        className="w-full @3xl:order-3 @3xl:ms-auto @3xl:max-w-72"
-      />
+      
     </Flex>
   );
 }
