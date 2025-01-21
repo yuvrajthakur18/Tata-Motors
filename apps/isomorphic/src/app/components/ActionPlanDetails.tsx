@@ -9,6 +9,7 @@ interface ActionPlanDetailsProps {
 }
 
 const ActionPlanDetails = ({ actionData }: ActionPlanDetailsProps) => {
+  const safeActionData = Array.isArray(actionData) ? actionData : [];
   return (
     <div>
       <h2 className="mb-4 mt-6 text-xl font-bold">
@@ -25,7 +26,7 @@ const ActionPlanDetails = ({ actionData }: ActionPlanDetailsProps) => {
           </tr>
         </thead>
         <tbody>
-          {actionData.map((action, index) => (
+          {safeActionData.map((action, index) => (
             <tr key={index}>
               <td className="border border-gray-300 px-4 py-2">
                 {action.actionPoint}

@@ -1,20 +1,27 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Table from '@core/components/table';
 import { callColumns } from './columns';
-import { callData } from '@/data/call-data';
 import WidgetCard from '@core/components/cards/widget-card';
 import TablePagination from '@core/components/table/pagination';
 import { useTanStackTable } from '@core/components/table/custom/use-TanStack-Table';
 import cn from '@core/utils/class-names';
 import Filters from './filters';
-import { CallDataType } from '@/data/call-data';
+import dummyData from './../data/dummy-data.json';
 
-export type AppointmentDataType = (typeof callData)[number];
+// Define the type for CallDataType based on calls in the dummy data
+export type CallDataType =
+  (typeof dummyData)[number]['calls_overview']['calls'][number];
 
 export default function CallWiseTable({ className }: { className?: string }) {
-  const { table, setData } = useTanStackTable<CallDataType>({
-    tableData: callData,
+  // Extract the calls data from dummyData
+  const [data, setData] = useState<CallDataType[]>(() => {
+    return dummyData.flatMap((item) => item.calls_overview.calls);
+  });
+
+  const { table } = useTanStackTable<CallDataType>({
+    tableData: data,
     columnConfig: callColumns,
     options: {
       initialState: {
@@ -25,7 +32,9 @@ export default function CallWiseTable({ className }: { className?: string }) {
       },
       meta: {
         handleDeleteRow: (row) => {
-          setData((prev) => prev.filter((r) => r.id !== row.id));
+          setData((prev) =>
+            prev.filter((call) => call.call_id !== row.call_id)
+          );
         },
       },
       enableColumnResizing: false,

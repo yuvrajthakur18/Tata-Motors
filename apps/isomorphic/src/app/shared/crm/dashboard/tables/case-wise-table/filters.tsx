@@ -45,7 +45,7 @@ export default function Filters<TData extends Record<string, any>>({
           dropdownClassName="!z-10 h-auto"
           options={appointmentTypesOptions}
           value={table.getColumn('type')?.getFilterValue() ?? []}
-          onChange={(e) => table.getColumn('type')?.setFilterValue(e)}
+          onChange={(e) => table.getColumn('value')?.setFilterValue(e)}
           getOptionValue={(option: { value: any }) => option.value}
           displayValue={(selected: string) =>
             appointmentTypesOptions.find((option) => option.label === selected)

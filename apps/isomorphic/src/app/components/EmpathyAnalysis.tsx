@@ -8,6 +8,7 @@ interface EmpathyAnalysisProps {
 }
 
 const EmpathyAnalysis = ({ empathyData }: EmpathyAnalysisProps) => {
+  const safeEmpathyData = Array.isArray(empathyData) ? empathyData : [];
   return (
     <div>
       <h2 className="mb-4 mt-6 text-xl font-bold">Empathy Analysis</h2>
@@ -23,7 +24,7 @@ const EmpathyAnalysis = ({ empathyData }: EmpathyAnalysisProps) => {
           </tr>
         </thead>
         <tbody>
-          {empathyData.map((row, index) => (
+          {safeEmpathyData.map((row, index) => (
             <tr key={index}>
               <td className="border border-gray-300 px-4 py-2">
                 {row.customerStatement}

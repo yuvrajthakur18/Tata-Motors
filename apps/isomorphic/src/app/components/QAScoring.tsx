@@ -11,6 +11,9 @@ interface QAScoringProps {
 }
 
 const QAScoring = ({ scoringData }: QAScoringProps) => {
+  // Safely handle scoringData to ensure it's always an array
+  const safeScoringData = Array.isArray(scoringData) ? scoringData : [];
+
   return (
     <div>
       <h2 className="mb-4 mt-6 text-xl font-bold">Q&A Scoring</h2>
@@ -29,7 +32,7 @@ const QAScoring = ({ scoringData }: QAScoringProps) => {
           </tr>
         </thead>
         <tbody>
-          {scoringData.map((row, index) => (
+          {safeScoringData.map((row, index) => (
             <tr key={index}>
               <td className="border border-gray-300 px-4 py-2">
                 {row.agentsQuestion}
