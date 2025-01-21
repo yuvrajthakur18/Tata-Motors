@@ -1,140 +1,89 @@
 'use client';
 
-import { StatusSelect } from '@core/components/table-utils/status-select';
-import TableRowActionGroup from '@core/components/table-utils/table-row-action-group';
 import { createColumnHelper } from '@tanstack/react-table';
-import { Checkbox, Text } from 'rizzui';
-import { CallDataType } from '@/data/call-data';
+import { Text } from 'rizzui';
+import { CallDataType } from '.';
 
 const columnHelper = createColumnHelper<CallDataType>();
 
 export const callColumns = [
-  columnHelper.accessor('id', {
-    size: 30,
-    enableSorting: false,
-    header: ({ table }) => (
-      <Checkbox
-        className="ps-3"
-        aria-label="Select all rows"
-        checked={table.getIsAllPageRowsSelected()}
-        onChange={() => table.toggleAllPageRowsSelected()}
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        className="ps-3"
-        aria-label="Select row"
-        checked={row.getIsSelected()}
-        onChange={() => row.toggleSelected()}
-      />
-    ),
+  // Call ID
+  columnHelper.accessor((row) => row.call_id, {
+    id: 'call_id',
+    header: 'Call ID',
+    size: 150,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
   }),
-  columnHelper.accessor('callRecording', {
-    size: 200,
-    header: 'Call Recording',
-    cell: ({ row: { original } }) => (
-      <a
-        href={original.callRecording}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-500 hover:underline"
-      >
-        Play Recording
-      </a>
-    ),
+
+  // Call Direction
+  columnHelper.accessor((row) => row.call_direction, {
+    id: 'call_direction',
+    header: 'Direction',
+    size: 120,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
   }),
-  columnHelper.accessor('typeOfCall', {
-    size: 180,
+
+  // Call Type
+  columnHelper.accessor((row) => row.call_type, {
+    id: 'call_type',
     header: 'Type of Call',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
+    size: 180,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
   }),
-  columnHelper.accessor('callDuration', {
-    size: 150,
+
+  // Complaint Number
+  columnHelper.accessor((row) => row.complaint_number, {
+    id: 'complaint_number',
+    header: 'Complaint Number',
+    size: 180,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+  }),
+
+  // Call Duration
+  columnHelper.accessor((row) => row.call_meta.call_duration, {
+    id: 'call_duration',
     header: 'Call Duration',
-    cell: ({ row: { original } }) => {
-      const minutes = Math.floor(original.callDuration / 60);
-      const seconds = original.callDuration % 60;
-      return (
-        <span className="whitespace-nowrap font-semibold">
-          {minutes}m {seconds}s
-        </span>
-      );
-    },
-  }),
-  columnHelper.accessor('holdTime', {
     size: 150,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+  }),
+
+  // Hold Time
+  columnHelper.accessor((row) => row.call_meta.call_hold_time, {
+    id: 'call_hold_time',
     header: 'Hold Time',
-    cell: ({ row: { original } }) => {
-      const minutes = Math.floor(original.holdTime / 60);
-      const seconds = original.holdTime % 60;
-      return (
-        <span className="whitespace-nowrap font-semibold">
-          {minutes}m {seconds}s
-        </span>
-      );
-    },
-  }),
-  columnHelper.accessor('talkToListenRatio', {
-    size: 160,
-    header: 'Talk to Listen Ratio',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
-  }),
-  columnHelper.accessor('interruptionsCount', {
     size: 150,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+  }),
+
+  // Interruptions Count
+  columnHelper.accessor((row) => row.call_meta.interruptions_count, {
+    id: 'interruptions_count',
     header: 'Interruptions Count',
-    cell: (info) => (
-      <span className="whitespace-nowrap font-semibold">{info.getValue()}</span>
-    ),
+    size: 150,
+    cell: (info) => <Text>{info.getValue() || '0'}</Text>,
   }),
-  columnHelper.accessor('emotionalToneOfCustomer', {
+
+  // Nature of Call
+  columnHelper.accessor((row) => row.call_meta.nature_of_call, {
+    id: 'nature_of_call',
+    header: 'Nature of Call',
+    size: 150,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+  }),
+
+  // Customer Name
+  columnHelper.accessor((row) => row.customer_details.customer_name, {
+    id: 'customer_name',
+    header: 'Customer Name',
+    size: 150,
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+  }),
+
+  // Emotional Tone
+  columnHelper.accessor((row) => row.customer_details.sentiment_trend.start, {
+    id: 'emotional_tone_start',
+    header: 'Customer Emotional Tone (Start)',
     size: 200,
-    header: 'Emotional Tone of Customer',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
-  }),
-  columnHelper.accessor('emotionalTone', {
-    size: 150,
-    header: 'Emotional Tone',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
-  }),
-  columnHelper.accessor('instancesCount', {
-    size: 150,
-    header: 'Instances Count',
-    cell: (info) => (
-      <span className="whitespace-nowrap font-semibold">{info.getValue()}</span>
-    ),
-  }),
-  columnHelper.accessor('sentimentTrend', {
-    size: 200,
-    header: 'Sentiment Trend',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
-  }),
-  columnHelper.accessor('brandSentiment', {
-    size: 150,
-    header: 'Brand Sentiment',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
+    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
   }),
 ];

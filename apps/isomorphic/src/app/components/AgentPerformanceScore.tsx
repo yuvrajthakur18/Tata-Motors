@@ -12,6 +12,9 @@ interface AgentPerformanceScoreProps {
 const AgentPerformanceScore = ({
   performanceData,
 }: AgentPerformanceScoreProps) => {
+  const safePerformanceData = Array.isArray(performanceData)
+    ? performanceData
+    : [];
   return (
     <div>
       <h2 className="mb-4 mt-6 text-xl font-bold">Agent Performance Score</h2>
@@ -25,7 +28,7 @@ const AgentPerformanceScore = ({
           </tr>
         </thead>
         <tbody>
-          {performanceData.map((item, index) => (
+          {safePerformanceData.map((item, index) => (
             <tr key={index}>
               <td className="border border-gray-300 px-4 py-2 font-medium">
                 {item.parameter}

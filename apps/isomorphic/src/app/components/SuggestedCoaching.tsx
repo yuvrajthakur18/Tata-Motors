@@ -20,6 +20,7 @@ interface SuggestedCoachingProps {
 const SuggestedCoaching: React.FC<SuggestedCoachingProps> = ({
   coachingData,
 }) => {
+  const safeCoachingData = Array.isArray(coachingData) ? coachingData : [];
   return (
     <div>
       <h2 className="mb-4 mt-6 text-xl font-bold">Suggested Coaching</h2>
@@ -31,7 +32,7 @@ const SuggestedCoaching: React.FC<SuggestedCoachingProps> = ({
           </tr>
         </thead>
         <tbody>
-          {Object.entries(coachingData).map(([key, value]) => (
+          {Object.entries(safeCoachingData).map(([key, value]) => (
             <tr key={key}>
               <td className="border border-gray-300 px-4 py-2 font-medium capitalize">
                 {key.replace(/([A-Z])/g, ' $1')}

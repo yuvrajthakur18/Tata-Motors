@@ -9,6 +9,7 @@ interface ProbingQuestionsProps {
 }
 
 const ProbingQuestions = ({ probingData }: ProbingQuestionsProps) => {
+  const safeProbingData = Array.isArray(probingData) ? probingData : [];
   return (
     <div>
       <h2 className="mb-4 mt-6 text-xl font-bold">Probing Questions</h2>
@@ -23,7 +24,7 @@ const ProbingQuestions = ({ probingData }: ProbingQuestionsProps) => {
           </tr>
         </thead>
         <tbody>
-          {probingData.map((item, index) => (
+          {safeProbingData.map((item, index) => (
             <tr key={index}>
               <td className="border border-gray-300 px-4 py-2">
                 {item.question}

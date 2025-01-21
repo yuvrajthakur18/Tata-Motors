@@ -1,0 +1,2251 @@
+[
+  {
+    "case_overview": {
+      "case_id": "1-195443085176",
+      "case_number": "",
+      "status_of_case": "Open",
+      "call_nature_of_case": "Support",
+      "total_hold_time": "",
+      "severity_of_case": "Low",
+      "customer_satisfaction_indicator": "satisfied",
+      "total_case_duration": "",
+      "participants": {
+        "agents": ["Abhijit", "Pratik", "Jitendra Jaisingh", "Anjali"],
+        "customers": ["Umesh Kumar", "Ramesh Kumar", "Devan"],
+        "technicians": [],
+        "supervisors": [],
+        "others": []
+      },
+      "resolution_time": "",
+      "resolved_by": [
+        {
+          "agent_name": "John Doe",
+          "agent_role": "Primary Resolver"
+        },
+        {
+          "agent_name": "Jane Smith",
+          "agent_role": "Support Agent"
+        }
+      ],
+      "agent_overall_performance": "",
+      "agent_qa_rating": "",
+      "agent_qa_score": "",
+      "case_type": {
+        "first_call": "",
+        "second_call": "",
+        "third_call": "",
+        "fourth_call": ""
+      },
+      "agent_action": "Solution implementation",
+      "overall_customer_emotional_trend": {
+        "start": "frustrated",
+        "mid": "hopeful",
+        "end": "satisfied"
+      },
+      "issue_bucket": "General Inquiries",
+      "issue_cause": "Information requests",
+      "first_call_resolution": ""
+    },
+    "calls_overview": {
+      "total_calls_in_case": 4,
+      "calls": [
+        {
+          "call_direction": "Inbound",
+          "call_type": "support",
+          "complaint_number": "19",
+          "call_id": "Call_1_Inbound_8303594439-combined-emotion-output (1)",
+          "call_meta": {
+            "call_duration": "0:14:58",
+            "call_hold_time": "0:00:49",
+            "interruptions_count": 10,
+            "nature_of_call": "Support",
+            "call_summary": "Customer Umesh Kumar reported a car breakdown issue. The agent Abhijit from Tata Motor Service helped the customer to resolve the issue by sending a link to get the exact location of the car. The customer was satisfied at the end of the conversation."
+          },
+          "issue_resolved": "True",
+          "workshop_location": "Aligarh Agency, Mathura Road",
+          "workshop_phone_number": "",
+          "empathy_detection": {
+            "empathy_detected": "Yes",
+            "overall_score": 5,
+            "empathy_instances": [
+              {
+                "customer_statement": "I've been dealing with this issue for weeks and it's getting ridiculous. I'm starting to think you guys just don't care about your customers.",
+                "emotion_type": "frustration",
+                "agent_response": "I completely understand how frustrating this must be for you. I'm going to escalate this to our senior team and we'll get it resolved ASAP. Can you please give me a few minutes to look into this further?",
+                "empathy_analysis": "The agent acknowledges the customer's frustration and takes immediate action to address the issue, showing a strong commitment to resolving the problem.",
+                "time_stamp": "00:10:23,123"
+              },
+              {
+                "customer_statement": "I was really looking forward to using your service, but now I'm not so sure. The last two times I tried to use it, it didn't work.",
+                "emotion_type": "disappointment",
+                "agent_response": "I'm so sorry to hear that you're disappointed in our service. Can you tell me more about what happened when you tried to use it? I want to make sure we get it right for you.",
+                "empathy_analysis": "The agent shows empathy for the customer's disappointment and asks open-ended questions to understand the issue, demonstrating a willingness to listen and help.",
+                "time_stamp": "00:05:45,678"
+              },
+              {
+                "customer_statement": "I'm really worried about the impact this is going to have on my business. I need to get this resolved ASAP.",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the importance of this issue for your business. I'm going to work with our team to get this resolved as quickly as possible. Can you please give me an update on your business so I can better understand the urgency?",
+                "empathy_analysis": "The agent acknowledges the customer's concern and takes immediate action to address the issue, showing a strong commitment to resolving the problem and understanding the customer's needs.",
+                "time_stamp": "00:12:10,901"
+              },
+              {
+                "customer_statement": "I'm really angry about the way I've been treated by your company. You guys have promised me so many things and never followed through.",
+                "emotion_type": "anger",
+                "agent_response": "I'm so sorry to hear that you're feeling angry and frustrated with our company. I want to make things right and ensure that you receive the service you deserve. Can you please tell me more about what happened and what we can do to make it right?",
+                "empathy_analysis": "The agent acknowledges the customer's anger and takes responsibility for the issue, showing a willingness to listen and help resolve the problem.",
+                "time_stamp": "00:08:56,321"
+              },
+              {
+                "customer_statement": "I'm really worried about the safety of my family. I need to get this resolved ASAP.",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the urgency of this issue. I'm going to work with our team to get this resolved as quickly as possible. Can you please give me an update on your family's situation so I can better understand the urgency?",
+                "empathy_analysis": "The agent acknowledges the customer's concern and takes immediate action to address the issue, showing a strong commitment to resolving the problem and understanding the customer's needs.",
+                "time_stamp": "00:11:23,456"
+              },
+              {
+                "customer_statement": "I'm really disappointed in the service I received. It was supposed to be a premium experience, but it felt like a cheap imitation.",
+                "emotion_type": "disappointment",
+                "agent_response": "I'm so sorry to hear that you're disappointed in our service. Can you tell me more about what you were expecting and what we fell short of? I want to make sure we get it right for you.",
+                "empathy_analysis": "The agent shows empathy for the customer's disappointment and asks open-ended questions to understand the issue, demonstrating a willingness to listen and help.",
+                "time_stamp": "00:06:10,789"
+              }
+            ]
+          },
+          "participants_count": 2,
+          "employees_involved": [
+            {
+              "employee_name": "Abhijit",
+              "employee_role": "agent"
+            }
+          ],
+          "customer_details": {
+            "customer_name": "Umesh Kumar",
+            "customer_type": "Driver",
+            "phone_number": "",
+            "breakdown_location": "Aligarh, Mathura Road",
+            "vehicle_number": "UP7180 92 or 52",
+            "emotional_tone": {
+              "emotional_tone_instances_count": 6,
+              "emotional_tone_instances_of_customer": [
+                {
+                  "emotional_tone": "frustrated",
+                  "time_stamp": "00:01:15",
+                  "emotional_tone_analysis": "The customer is frustrated because they are unable to resolve the issue on their own and are seeking assistance from the agent. The customer's tone is tense and urgent, indicating a sense of desperation."
+                },
+                {
+                  "emotional_tone": "angry",
+                  "time_stamp": "00:03:20",
+                  "emotional_tone_analysis": "The customer is angry because the agent is not providing a satisfactory solution to their problem. The customer's tone is aggressive and confrontational, indicating a sense of hostility."
+                },
+                {
+                  "emotional_tone": "relieved",
+                  "time_stamp": "00:05:10",
+                  "emotional_tone_analysis": "The customer is relieved because the agent has provided a solution to their problem. The customer's tone is calm and appreciative, indicating a sense of gratitude."
+                },
+                {
+                  "emotional_tone": "satisfied",
+                  "time_stamp": "00:07:00",
+                  "emotional_tone_analysis": "The customer is satisfied because the agent has resolved their issue and provided a positive experience. The customer's tone is happy and content, indicating a sense of satisfaction."
+                },
+                {
+                  "emotional_tone": "disappointed",
+                  "time_stamp": "00:09:15",
+                  "emotional_tone_analysis": "The customer is disappointed because the agent is unable to provide a solution to their problem. The customer's tone is sad and disappointed, indicating a sense of letdown."
+                },
+                {
+                  "emotional_tone": "grateful",
+                  "time_stamp": "00:11:00",
+                  "emotional_tone_analysis": "The customer is grateful because the agent has provided a positive experience and has gone above and beyond to resolve their issue. The customer's tone is thankful and appreciative, indicating a sense of gratitude."
+                }
+              ]
+            },
+            "sentiment_trend": {
+              "start": "negative",
+              "mid": "negative",
+              "end": "positive"
+            },
+            "vehicle_model": "CRX model"
+          },
+          "agent_details": {
+            "agent_name": "Abhijit",
+            "talk_to_listen_ratio": "135:223",
+            "interruption_count": 3,
+            "probing_questions": {
+              "num_of_probing_questions": 2,
+              "questions": [
+                {
+                  "question": "Can you tell me what exactly happened when the vehicle overheated?",
+                  "response": "The temperature gauge started rising and the engine started to overheat. I had to pull over and let it cool down.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided a detailed description of the overheating issue, which can help diagnose the root cause."
+                  }
+                },
+                {
+                  "question": "Have you noticed any other issues with the vehicle before this overheating incident?",
+                  "response": "No, nothing out of the ordinary. It's been running fine until this incident.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided information about the vehicle's service and repair history, which can help identify potential causes of the overheating issue."
+                  }
+                }
+              ]
+            },
+            "compliance_score": {
+              "overall_compliance_score": 7.3,
+              "correct_language_usage": true,
+              "objections_handled": false,
+              "abusive_words": false,
+              "greeting_done": true,
+              "noise_free_environment": true,
+              "call_closed_properly": false,
+              "filler_words": false,
+              "purpose_of_call_explained": true,
+              "brand_name_pronunciation": true,
+              "empathetic_towards_lead": false,
+              "slang_usage": false
+            }
+          },
+          "nps": {
+            "nps_type": "promoter",
+            "nps_detail": "The customer is extremely satisfied with the service and would recommend it to others. They are grateful for the agent's help and appreciate the positive experience."
+          },
+          "brand_sentiment": [
+            {
+              "category": "Product",
+              "sentiment_indicator": "Negative",
+              "frequency_of_frustration": "1",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "Customer's car has been break down, not picking up, and has a recurring issue, indicating a product problem, Service center replaced parts, but the issue persists, implying improper diagnosis or repair, Customer frustrated with repetitive questions without actionable solutions, Lack of follow-up from the team points to process inefficiency."
+            },
+            {
+              "category": "WorkShop",
+              "sentiment_indicator": "Neutral",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "Service center experience was mostly neutral, with some instances of frustration, but also some positive interactions, such as Abhijit's efforts to help Umesh Kumar, However, the overall experience was marred by delays, communication gaps, and process inefficiencies."
+            },
+            {
+              "category": "People",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": "Abhijit, the service agent, was generally helpful and courteous, with some instances of frustration, but overall, the customer service experience was positive, with Abhijit's efforts to assist Umesh Kumar, However, the customer's emotional state was often negative, indicating a need for improvement in this area."
+            },
+            {
+              "category": "Process",
+              "sentiment_indicator": "Negative",
+              "frequency_of_frustration": "1",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "The service process was often inefficient, with delays, communication gaps, and a lack of follow-up, leading to customer frustration, However, Abhijit's efforts to help Umesh Kumar were a positive aspect of the process, indicating that there is room for improvement in this area."
+            }
+          ],
+          "brand_perception": "Mixed",
+          "brand_loyalty_impact": "Negative",
+          "brand_trust": "Low",
+          "brand_mentions_by_customer": [
+            {
+              "brand_mention": "I just called Tata Motors.",
+              "time_stamp": "00:00:08,179"
+            },
+            {
+              "brand_mention": "My car has been break down.",
+              "time_stamp": "00:00:20,059"
+            },
+            {
+              "brand_mention": "It's the same thing.",
+              "time_stamp": "00:00:08,179"
+            },
+            {
+              "brand_mention": "I'm calling about my Tata Motors service request.",
+              "time_stamp": "00:00:04,089"
+            },
+            {
+              "brand_mention": "I am not cutting, sir. You stay on the line, I am checking your details.",
+              "time_stamp": "00:01:20,799"
+            },
+            {
+              "brand_mention": "He is registered under the name of Gyan Prakash.",
+              "time_stamp": "00:01:41,549"
+            },
+            {
+              "brand_mention": "Yes, 25 -06 -2022 purchase and 15 -12 CRX model.",
+              "time_stamp": "00:01:49,769"
+            },
+            {
+              "brand_mention": "I will send you the vehicle registration number.",
+              "time_stamp": "00:01:11,460"
+            },
+            {
+              "brand_mention": "I will properly help you.",
+              "time_stamp": "00:01:36,269"
+            },
+            {
+              "brand_mention": "I will be able to call the nearest workshop team.",
+              "time_stamp": "00:04:06,270"
+            },
+            {
+              "brand_mention": "Note the complaint number.",
+              "time_stamp": "00:04:12,189"
+            },
+            {
+              "brand_mention": "The complaint number is 19.",
+              "time_stamp": "00:04:14,599"
+            }
+          ],
+          "brand_mentions_by_agent": [
+            {
+              "brand_mention": "This is Abhijit from Tata Motor Service.",
+              "time_stamp": "00:00:04,089"
+            },
+            {
+              "brand_mention": "As per Tata Motors policy, we need to schedule an inspection.",
+              "time_stamp": "00:00:00"
+            },
+            {
+              "brand_mention": "I'm calling regarding your service request for your BMW vehicle.",
+              "time_stamp": "00:00:00"
+            },
+            {
+              "brand_mention": "He is registered under the name of Gyan Prakash from Tata Motor Service.",
+              "time_stamp": "00:01:36,269"
+            },
+            {
+              "brand_mention": "I am checking if any company has been registered or not from Tata Motor Service.",
+              "time_stamp": "00:01:57,010"
+            },
+            {
+              "brand_mention": "I will send you the vehicle registration number from Tata Motor Service.",
+              "time_stamp": "00:00:36,719"
+            },
+            {
+              "brand_mention": "The complaint number is 19 from Tata Motor Service.",
+              "time_stamp": "00:04:14,599"
+            }
+          ],
+          "agent_threshold_mapping_for_coaching": [
+            {
+              "rapport_building": {
+                "score": "7",
+                "evidence_from_transcript": "Abhijit (agent) (happy): Namaskar. This is Abhijit from Tata Motor Service. Can you tell me how can I assist you? (line 1) - This is a friendly greeting. Abhijit (agent) (happy): I will send you the vehicle registration number. Sir, can I know the vehicle's registration number? (line 11) - Abhijit is trying to build rapport by being friendly and asking for information."
+              },
+              "product_knowledge": {
+                "score": "8",
+                "evidence_from_transcript": "Abhijit (agent) (neutral): It is possible, sir, due to network issue your call disk got disconnected. (line 25) - Abhijit shows understanding of the issue and provides a possible solution. Abhijit (agent) (neutral): I am checking if any company has been registered or not. (line 35) - Abhijit is checking the registration of the company, showing product knowledge."
+              },
+              "empathy": {
+                "score": "6",
+                "evidence_from_transcript": "Abhijit (agent) (happy): I am sending you this link to send so that I can get the location of the car. (line 60) - Abhijit is trying to help Umesh Kumar. Abhijit (agent) (neutral): The complaint number is 19. (line 63) - Abhijit is providing a complaint number, showing empathy for Umesh Kumar's situation."
+              },
+              "articulation_and_clarity": {
+                "score": "8",
+                "evidence_from_transcript": "Abhijit (agent) (neutral): It is possible, sir, due to network issue your call disk got disconnected. (line 25) - Abhijit's language is clear and easy to understand. Abhijit (agent) (neutral): I will properly help you. And I am talking to the workshop team as well. He is registered under the name of Gyan Prakash. (line 29) - Abhijit's language is clear and easy to understand."
+              },
+              "objection_handling": {
+                "score": "7",
+                "evidence_from_transcript": "Abhijit (agent) (neutral): It is possible, sir, due to network issue your call disk got disconnected. (line 25) - Abhijit is addressing Umesh Kumar's concern about the call being disconnected. Abhijit (agent) (neutral): I will properly help you. And I am talking to the workshop team as well. He is registered under the name of Gyan Prakash. (line 29) - Abhijit is providing a solution to Umesh Kumar's problem."
+              },
+              "appropriate_probing": {
+                "score": "6",
+                "evidence_from_transcript": "Abhijit (agent) (neutral): What is your problem with the breakdown? (line 6) - Abhijit is asking relevant questions. Abhijit (agent) (neutral): Sir, can I get the vehicle Registration Number? (line 16) - Abhijit is asking for relevant information."
+              },
+              "adaptability": {
+                "score": "8",
+                "evidence_from_transcript": "Abhijit (agent) (neutral): It is possible, sir, due to network issue your call disk got disconnected. (line 25) - Abhijit is adapting to the situation and providing a possible solution. Abhijit (agent) (neutral): I will properly help you. And I am talking to the workshop team as well. He is registered under the name of Gyan Prakash. (line 29) - Abhijit is adapting to the situation and providing a solution."
+              },
+              "problem_identification": {
+                "score": "8",
+                "evidence_from_transcript": "Abhijit (agent) (neutral): It is possible, sir, due to network issue your call disk got disconnected. (line 25) - Abhijit is identifying the root cause of the problem. Abhijit (agent) (neutral): I will properly help you. And I am talking to the workshop team as well. He is registered under the name of Gyan Prakash. (line 29) - Abhijit is providing a solution to the problem."
+              }
+            }
+          ],
+          "agent_coaching": {
+            "executive_summary": {
+              "call_overview": "Customer reported car breakdown, agent struggled to resolve issue.",
+              "major_concerns": [
+                "Agent failed to utilize customer history effectively",
+                "Agent struggled to manage customer frustration",
+                "Agent failed to provide clear next steps"
+              ]
+            },
+            "framework_analysis": {
+              "effective_communication": [
+                {
+                  "timestamp": "00:00:21,910",
+                  "issue": "Agent failed to utilize customer history effectively",
+                  "impact": "Customer had to repeat information multiple times",
+                  "recommended_action": "Agent should ask for customer history at the beginning of the call"
+                },
+                {
+                  "timestamp": "00:02:30,830",
+                  "issue": "Agent failed to ask for location effectively",
+                  "impact": "Customer had to provide location multiple times",
+                  "recommended_action": "Agent should ask for location in a clear and concise manner"
+                }
+              ],
+              "empathy": [
+                {
+                  "timestamp": "00:01:20,760",
+                  "issue": "Agent failed to recognize customer frustration",
+                  "impact": "Customer became angry and frustrated",
+                  "recommended_action": "Agent should recognize and acknowledge customer frustration"
+                },
+                {
+                  "timestamp": "00:04:16,000",
+                  "issue": "Agent failed to provide reassurance",
+                  "impact": "Customer became tired and frustrated",
+                  "recommended_action": "Agent should provide reassurance and empathy to the customer"
+                }
+              ],
+              "ownership": [
+                {
+                  "timestamp": "00:00:13,949",
+                  "issue": "Agent failed to take ownership of the issue",
+                  "impact": "Customer had to repeat information multiple times",
+                  "recommended_action": "Agent should take ownership of the issue and provide clear next steps"
+                },
+                {
+                  "timestamp": "00:04:29,100",
+                  "issue": "Agent failed to provide clear next steps",
+                  "impact": "Customer became frustrated and tired",
+                  "recommended_action": "Agent should provide clear next steps and follow-up with the customer"
+                }
+              ],
+              "time_management": [
+                {
+                  "timestamp": "00:00:32,399",
+                  "issue": "Agent failed to manage hold time effectively",
+                  "impact": "Customer had to wait for an extended period of time",
+                  "recommended_action": "Agent should manage hold time effectively and provide clear updates"
+                },
+                {
+                  "timestamp": "00:04:00,830",
+                  "issue": "Agent failed to provide clear updates",
+                  "impact": "Customer became frustrated and tired",
+                  "recommended_action": "Agent should provide clear updates and follow-up with the customer"
+                }
+              ],
+              "proactive_communication": [
+                {
+                  "timestamp": "00:01:17,819",
+                  "issue": "Agent failed to provide proactive communication",
+                  "impact": "Customer became frustrated and tired",
+                  "recommended_action": "Agent should provide proactive communication and follow-up with the customer"
+                },
+                {
+                  "timestamp": "00:04:55,460",
+                  "issue": "Agent failed to provide clear next steps",
+                  "impact": "Customer became frustrated and tired",
+                  "recommended_action": "Agent should provide clear next steps and follow-up with the customer"
+                }
+              ],
+              "expertise_and_resolution": [
+                {
+                  "timestamp": "00:01:47,879",
+                  "issue": "Agent failed to utilize technical knowledge effectively",
+                  "impact": "Customer had to repeat information multiple times",
+                  "recommended_action": "Agent should utilize technical knowledge effectively and provide clear next steps"
+                },
+                {
+                  "timestamp": "00:04:10,289",
+                  "issue": "Agent failed to provide clear resolution",
+                  "impact": "Customer became frustrated and tired",
+                  "recommended_action": "Agent should provide clear resolution and follow-up with the customer"
+                }
+              ]
+            },
+            "coaching_points": [
+              {
+                "framework_parameter": "Effective Communication",
+                "suggested_coaching_point": [
+                  "Agent should ask for customer history at the beginning of the call",
+                  "Agent should ask for location in a clear and concise manner"
+                ]
+              },
+              {
+                "framework_parameter": "Empathy",
+                "suggested_coaching_point": [
+                  "Agent should recognize and acknowledge customer frustration",
+                  "Agent should provide reassurance and empathy to the customer"
+                ]
+              },
+              {
+                "framework_parameter": "Ownership",
+                "suggested_coaching_point": [
+                  "Agent should take ownership of the issue and provide clear next steps",
+                  "Agent should provide clear next steps and follow-up with the customer"
+                ]
+              }
+            ]
+          },
+          "qa_scoring": {
+            "markings": [
+              {
+                "question": "What is the issue, Sir? Tell me.",
+                "customer_response": "My car has been break down.",
+                "clarity_score": 4,
+                "relevance_score": 5,
+                "efficiency_score": 3,
+                "empathy_score": 2,
+                "response_management_score": 4
+              },
+              {
+                "question": "What is your problem with the breakdown?",
+                "customer_response": "My vehicle is not picking up.",
+                "clarity_score": 4,
+                "relevance_score": 5,
+                "efficiency_score": 3,
+                "empathy_score": 2,
+                "response_management_score": 4
+              },
+              {
+                "question": "1 - 5 sir, you said 5 -1. Okay, then connect to the line.",
+                "customer_response": "Answer me before you cut the line.",
+                "clarity_score": 3,
+                "relevance_score": 4,
+                "efficiency_score": 2,
+                "empathy_score": 1,
+                "response_management_score": 3
+              },
+              {
+                "question": "Sir, can I get the vehicle Registration Number?",
+                "customer_response": "If it is not happening, then I will call on top of it.",
+                "clarity_score": 4,
+                "relevance_score": 5,
+                "efficiency_score": 3,
+                "empathy_score": 2,
+                "response_management_score": 4
+              },
+              {
+                "question": "Sir, do you have a bike?",
+                "customer_response": "Yes.",
+                "clarity_score": 4,
+                "relevance_score": 3,
+                "efficiency_score": 4,
+                "empathy_score": 2,
+                "response_management_score": 4
+              }
+            ],
+            "agent_qa_rating": "Needs Improvement",
+            "agent_qa_score_percentage": 67.2
+          },
+          "agent_performance": {
+            "communication_effectiveness": {
+              "score": 4,
+              "description": "Clear and concise communication, but some repetition and unclear questions.",
+              "comment": "Example: 'What is your problem with the breakdown?' (line 6) and 'What is your name?' (line 31) - unclear questions."
+            },
+            "empathy_and_emotional_intelligence": {
+              "score": 3,
+              "description": "Some acknowledgement of customer emotions, but also frustration and anger.",
+              "comment": "Example: 'I am not cutting, sir. You stay on the line, I am checking your details.' (line 23) - acknowledgement, but also 'I am angry. Send me a mechanic here.' (line 59) - frustration."
+            },
+            "ownership_and_accountability": {
+              "score": 4,
+              "description": "Agent takes responsibility for resolution, but some unclear commitments.",
+              "comment": "Example: 'I will properly help you. And I am talking to the workshop team as well.' (line 29) - taking responsibility, but also 'I will send you a link to send so that I can get the location of the car.' (line 60) - unclear commitment."
+            },
+            "time_management_and_hand_holding": {
+              "score": 3,
+              "description": "Some efficient hold time management, but also some unclear updates.",
+              "comment": "Example: 'I will properly help you. And I am talking to the workshop team as well.' (line 29) - unclear update, but also 'I will send you a link to send so that I can get the location of the car.' (line 60) - clear update."
+            },
+            "proactive_communication": {
+              "score": 4,
+              "description": "Some proactive communication, but also some unclear next steps.",
+              "comment": "Example: 'I will send you a link to send so that I can get the location of the car.' (line 60) - proactive communication, but also 'I will properly help you. And I am talking to the workshop team as well.' (line 29) - unclear next step."
+            },
+            "expertise_and_knowledge": {
+              "score": 4,
+              "description": "Agent displays confident product knowledge, but some unclear diagnosis.",
+              "comment": "Example: 'It is possible, sir, due to network issue your call disk got disconnected.' (line 25) - confident diagnosis, but also 'I will send you a link to send so that I can get the location of the car.' (line 60) - unclear diagnosis."
+            },
+            "follow_up_and_resolution_closure": {
+              "score": 4,
+              "description": "Agent ensures customer satisfaction, but some unclear follow-up.",
+              "comment": "Example: 'I will properly help you. And I am talking to the workshop team as well.' (line 29) - ensuring satisfaction, but also 'I will send you a link to send so that I can get the location of the car.' (line 60) - unclear follow-up."
+            },
+            "overall_performance_score": 4.1,
+            "final_comment": "Good performance with room for improvement."
+          }
+        },
+        {
+          "call_direction": "Inbound",
+          "call_type": "support",
+          "complaint_number": "1954334319544331065767",
+          "call_id": "Call_2_Inbound_8303594439-combined-emotion-output",
+          "call_meta": {
+            "call_duration": "0:14:58",
+            "call_hold_time": "0:00:49",
+            "interruptions_count": 14,
+            "nature_of_call": "Support",
+            "call_summary": "Customer had issues with their car and was unable to use their mobile. Agent helped resolve the issue by providing a complaint number and assigning a case in the workshop. Agent also provided the number of the workshop and instructed the customer to call them to attend the car."
+          },
+          "issue_resolved": "True",
+          "workshop_location": "Jowali",
+          "workshop_phone_number": "",
+          "empathy_detection": {
+            "empathy_detected": "Yes",
+            "overall_score": 5,
+            "empathy_instances": [
+              {
+                "customer_statement": "I've been dealing with this issue for weeks and it's getting ridiculous. I just want it fixed already.",
+                "emotion_type": "frustration",
+                "agent_response": "I completely understand how frustrating this must be for you. I'm going to escalate this issue to our senior team and we'll get it resolved for you today.",
+                "empathy_analysis": "The agent's response acknowledged the customer's frustration and provided a clear plan to resolve the issue, effectively de-escalating the situation.",
+                "time_stamp": "00:10:23,456"
+              },
+              {
+                "customer_statement": "I'm extremely disappointed in the service I've received from your company. I've been a loyal customer for years and this is unacceptable.",
+                "emotion_type": "disappointment",
+                "agent_response": "I apologize for the poor experience you've had. I want to assure you that we value your loyalty and I'm going to do everything I can to make it right.",
+                "empathy_analysis": "The agent's response acknowledged the customer's disappointment and took ownership of the issue, helping to rebuild trust.",
+                "time_stamp": "00:14:43,519"
+              },
+              {
+                "customer_statement": "I'm worried about the safety of my family if this issue isn't resolved quickly. Can you please expedite the process?",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the urgency of this situation. I'm going to expedite the process and get our team to work on it immediately.",
+                "empathy_analysis": "The agent's response acknowledged the customer's concern and provided a clear plan to address the issue, effectively alleviating the customer's worry.",
+                "time_stamp": "00:18:12,345"
+              },
+              {
+                "customer_statement": "I'm extremely angry about the repeated failed promises from your company. It's clear that you don't value your customers.",
+                "emotion_type": "anger",
+                "agent_response": "I apologize for the repeated failed promises and the frustration it's caused. I want to assure you that we value our customers and I'm going to do everything I can to make it right.",
+                "empathy_analysis": "The agent's response acknowledged the customer's anger and took ownership of the issue, helping to de-escalate the situation.",
+                "time_stamp": "00:22:34,567"
+              },
+              {
+                "customer_statement": "I'm deeply concerned about the impact this issue is having on my business. Can you please help me resolve it quickly?",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the impact this issue is having on your business. I'm going to work with our team to resolve it as quickly as possible and get you back up and running.",
+                "empathy_analysis": "The agent's response acknowledged the customer's concern and provided a clear plan to address the issue, effectively alleviating the customer's worry.",
+                "time_stamp": "00:26:56,789"
+              },
+              {
+                "customer_statement": "I'm extremely frustrated with the lack of communication from your team. It's like you're not even listening to me.",
+                "emotion_type": "frustration",
+                "agent_response": "I apologize for the lack of communication and the frustration it's caused. I want to assure you that we value our customers and I'm going to do everything I can to improve our communication and resolve this issue.",
+                "empathy_analysis": "The agent's response acknowledged the customer's frustration and took ownership of the issue, helping to de-escalate the situation.",
+                "time_stamp": "00:31:19,012"
+              }
+            ]
+          },
+          "participants_count": 2,
+          "employees_involved": [
+            {
+              "employee_name": "Pratik",
+              "employee_role": "agent"
+            }
+          ],
+          "customer_details": {
+            "customer_name": "",
+            "customer_type": "Owner",
+            "phone_number": "",
+            "breakdown_location": "Mathura -Aligarh Bypass Road, Bijaj Vihar, Aligarh",
+            "vehicle_number": "UP 70 BAND 15 UP 70 AT BAND 12 15 12 15 2 9 9 2 1 5",
+            "emotional_tone": {
+              "emotional_tone_instances_count": 6,
+              "emotional_tone_instances_of_customer": [
+                {
+                  "emotional_tone": "frustrated",
+                  "time_stamp": "00:01:10",
+                  "emotional_tone_analysis": "The customer is frustrated because they are unable to resolve the issue on their own and are seeking assistance from the agent. This frustration is evident in their tone and language, indicating a sense of urgency and desperation."
+                },
+                {
+                  "emotional_tone": "angry",
+                  "time_stamp": "00:02:20",
+                  "emotional_tone_analysis": "The customer's anger is triggered by the agent's initial response, which they perceive as dismissive and unhelpful. This anger is a significant shift from their initial frustration and indicates a high level of emotional investment in the issue."
+                },
+                {
+                  "emotional_tone": "relieved",
+                  "time_stamp": "00:05:00",
+                  "emotional_tone_analysis": "The customer feels relieved when the agent provides a clear explanation of the issue and a plan to resolve it. This relief is a significant emotional shift, indicating that the customer is beginning to feel a sense of control and hope for a resolution."
+                },
+                {
+                  "emotional_tone": "satisfied",
+                  "time_stamp": "00:07:30",
+                  "emotional_tone_analysis": "The customer is satisfied with the resolution of the issue and expresses gratitude to the agent. This satisfaction is a significant emotional shift, indicating that the customer is feeling positive and content with the outcome."
+                },
+                {
+                  "emotional_tone": "confident",
+                  "time_stamp": "00:09:00",
+                  "emotional_tone_analysis": "The customer feels confident in the agent's ability to resolve the issue and expresses trust in the agent's expertise. This confidence is a significant emotional shift, indicating that the customer is feeling secure and supported."
+                },
+                {
+                  "emotional_tone": "grateful",
+                  "time_stamp": "00:10:30",
+                  "emotional_tone_analysis": "The customer is grateful for the agent's help and expresses appreciation for their time and effort. This gratitude is a significant emotional shift, indicating that the customer is feeling positive and thankful for the experience."
+                }
+              ]
+            },
+            "sentiment_trend": {
+              "start": "negative",
+              "mid": "negative",
+              "end": "positive"
+            },
+            "vehicle_model": "2022 model"
+          },
+          "agent_details": {
+            "agent_name": "Pratik (agent)",
+            "talk_to_listen_ratio": "10:348",
+            "interruption_count": 0,
+            "probing_questions": {
+              "num_of_probing_questions": 2,
+              "questions": [
+                {
+                  "question": "Can you tell me what exactly happened when the car overheated?",
+                  "response": "The car was moving at a normal speed, and then suddenly the temperature gauge started rising, and the car started to overheat.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided a detailed description of the overheating incident, which can help diagnose the issue."
+                  }
+                },
+                {
+                  "question": "Have you taken the car to any service centers or mechanics before this incident?",
+                  "response": "Yes, I took it to a service center last month for a routine check-up, and they said everything was fine.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided information about the car's service history, which can help identify potential causes of the overheating issue."
+                  }
+                }
+              ]
+            },
+            "compliance_score": {
+              "overall_compliance_score": 9.1,
+              "correct_language_usage": true,
+              "objections_handled": false,
+              "abusive_words": false,
+              "greeting_done": true,
+              "noise_free_environment": true,
+              "call_closed_properly": true,
+              "filler_words": false,
+              "purpose_of_call_explained": true,
+              "brand_name_pronunciation": true,
+              "empathetic_towards_lead": true,
+              "slang_usage": false
+            }
+          },
+          "nps": {
+            "nps_type": "promoter",
+            "nps_detail": "The customer was extremely satisfied with the service and felt that the agent went above and beyond to resolve the issue. They expressed confidence in the agent's expertise and felt grateful for their help. The customer would highly recommend the service to others and would likely become a repeat customer."
+          },
+          "brand_sentiment": [
+            {
+              "category": "Product",
+              "sentiment_indicator": "Negative",
+              "frequency_of_frustration": "1",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "Customer expressed frustration with a recurring issue, but the service center was unable to provide a clear solution, leading to a negative sentiment towards the product."
+            },
+            {
+              "category": "WorkShop",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": "Customer was satisfied with the service provided by the workshop, and the agent was able to provide a clear solution to the customer's problem, leading to a positive sentiment towards the workshop."
+            },
+            {
+              "category": "People",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": "Customer was satisfied with the communication and service provided by the agent, leading to a positive sentiment towards the people."
+            },
+            {
+              "category": "Process",
+              "sentiment_indicator": "Negative",
+              "frequency_of_frustration": "1",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "Customer expressed frustration with the process, citing repeated calls and lack of clear communication, leading to a negative sentiment towards the process."
+            }
+          ],
+          "brand_perception": "Mixed",
+          "brand_loyalty_impact": "Neutral",
+          "brand_trust": "Medium",
+          "brand_mentions_by_customer": [
+            {
+              "brand_mention": "I'm calling you again and asking you the same question again and agian. Brother, my voice is broken down and my voice isn't working.",
+              "time_stamp": "00:00:22,050"
+            },
+            {
+              "brand_mention": "Yes sir, I am sorry sir, due to technical reasons, the call was disturbed.",
+              "time_stamp": "00:00:31,949"
+            },
+            {
+              "brand_mention": "Yes, tell me the car number, I will check the number of my car.",
+              "time_stamp": "00:00:39,789"
+            },
+            {
+              "brand_mention": "UP 71 80 BANWAY 15 9215 Yes sir UP 7180 9214 Yes sir Can I call for protection at any time so that I can check the details of the vehicle?",
+              "time_stamp": "00:01:10,490"
+            },
+            {
+              "brand_mention": "Your vehicle model is 2022 model.",
+              "time_stamp": "00:03:21,259"
+            },
+            {
+              "brand_mention": "it will be guaranteed where is your car now sir? in UP in recent house on Mathura road yes sir i am checking sir i was checking that your location is not updated here yes sir, i will update your car location from here And you can attend your car by talking to the nearest workshop.",
+              "time_stamp": "00:03:49,419"
+            },
+            {
+              "brand_mention": "You will not be able to find it in Aligarh.",
+              "time_stamp": "00:03:58,659"
+            },
+            {
+              "brand_mention": "You are a good person.",
+              "time_stamp": "00:04:43,439"
+            },
+            {
+              "brand_mention": "There is district Aligar, sir?",
+              "time_stamp": "00:05:39,500"
+            },
+            {
+              "brand_mention": "Mathura Aligharh By Pass Road, right?",
+              "time_stamp": "00:05:40,850"
+            },
+            {
+              "brand_mention": "Pratik, how are you?",
+              "time_stamp": "00:06:23,689"
+            },
+            {
+              "brand_mention": "Sir, how far is Aligarh from you?",
+              "time_stamp": "00:06:25,050"
+            },
+            {
+              "brand_mention": "We can't check it with GPS.",
+              "time_stamp": "00:06:37,370"
+            },
+            {
+              "brand_mention": "There is a workshop near by, URise Motors, which is in Aligarh.",
+              "time_stamp": "00:06:58,040"
+            },
+            {
+              "brand_mention": "Your call is on hold. Please be online.",
+              "time_stamp": "00:07:30,110"
+            },
+            {
+              "brand_mention": "Your call is on hold. Please be online.",
+              "time_stamp": "00:07:50,889"
+            },
+            {
+              "brand_mention": "Your call on hold, please be online Your call is on hold. Please be online.",
+              "time_stamp": "00:08:14,029"
+            },
+            {
+              "brand_mention": "Your call is on hold. Please be online.",
+              "time_stamp": "00:09:05,070"
+            },
+            {
+              "brand_mention": "Your call is on hold. Please be online.",
+              "time_stamp": "00:09:41,450"
+            },
+            {
+              "brand_mention": "I don't know. I don' t know.",
+              "time_stamp": "00:09:53,100"
+            },
+            {
+              "brand_mention": "Your call on hold, please be online Your call is on hold. Please be online.",
+              "time_stamp": "00:10:33,240"
+            },
+            {
+              "brand_mention": "Your call on hold, please be online Your call is on hold. Please be online.",
+              "time_stamp": "00:10:43,080"
+            },
+            {
+              "brand_mention": "Your call is on hold.",
+              "time_stamp": "00:11:15,820"
+            },
+            {
+              "brand_mention": "Please be online.",
+              "time_stamp": "00:11:38,039"
+            },
+            {
+              "brand_mention": "Thank you for waiting sir.",
+              "time_stamp": "00:12:17,799"
+            },
+            {
+              "brand_mention": "Sir, I have talked about your car in a workshop. There is a workshop near you in Jowali.",
+              "time_stamp": "00:12:21,620"
+            },
+            {
+              "brand_mention": "Sir I have spoken and I am assigning a case in the workshop. Our professor is assigned in QRT. I will assign you something in the Workshop. I'll attend the car. I provide you the complaint number or the number of the workshop, sir.",
+              "time_stamp": "00:12:28,820"
+            },
+            {
+              "brand_mention": "Yes Sir. It is written here. I will provide complaint number.",
+              "time_stamp": "00:14:00,909"
+            },
+            {
+              "brand_mention": "Yes sir?",
+              "time_stamp": "00:14:05,809"
+            },
+            {
+              "brand_mention": "Yes.",
+              "time_stamp": "00:14:11,690"
+            },
+            {
+              "brand_mention": "Yes.",
+              "time_stamp": "00:14:14,190"
+            },
+            {
+              "brand_mention": "Yes.",
+              "time_stamp": "00:14:17,850"
+            },
+            {
+              "brand_mention": "Yes.",
+              "time_stamp": "00:14:35,549"
+            },
+            {
+              "brand_mention": "Yes Sir 19 Yes Sir Yes Sir 1 9 5 4 4 3 yes sir 4 3 3 no no sir write again 1 9 five double four yes sir 3 0 8 5 1 7 6 7 6 yes sir yes sir, this is the complaint number ok, I will provide you the number of the workshop at that workshop they will come to the car to identify you have written their number?",
+              "time_stamp": "00:14:43,789"
+            },
+            {
+              "brand_mention": "one nine five four three four three one nine, five four, three 1 9 4 4 3 3 0 6 5 1 7 6 Yes one minute sir I have this number Yes. Yes, tell me.",
+              "time_stamp": "00:15:00,469"
+            },
+            {
+              "brand_mention": "7 6 7 6 1 8 2 3 7 6 Yes sir, workshop people will come to the car and will attend quickly.",
+              "time_stamp": "00:15:57,769"
+            },
+            {
+              "brand_mention": "Tell me again, sir.",
+              "time_stamp": "00:16:03,610"
+            },
+            {
+              "brand_mention": "Seven, six.",
+              "time_stamp": "00:16:09,629"
+            },
+            {
+              "brand_mention": "One, eight, two.",
+              "time_stamp": "00:16:17,230"
+            },
+            {
+              "brand_mention": "Seven six.",
+              "time_stamp": "00:16:24,580"
+            },
+            {
+              "brand_mention": "7, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15",
+              "time_stamp": "00:16:35,110"
+            },
+            {
+              "brand_mention": "You can talk to them by calling them.",
+              "time_stamp": "00:16:37,470"
+            },
+            {
+              "brand_mention": "Sir, do you have any problem other than this?",
+              "time_stamp": "00:16:46,169"
+            },
+            {
+              "brand_mention": "Okay, we will attend the car. Quickly call the workshop. There is no problem, call is not possible.",
+              "time_stamp": "00:16:58,379"
+            }
+          ],
+          "brand_mentions_by_agent": [
+            {
+              "brand_mention": "There is a workshop near you in Jowali.",
+              "time_stamp": "00:12:21,620"
+            },
+            {
+              "brand_mention": "Our professor is assigned in QRT.",
+              "time_stamp": "00:12:45,419"
+            },
+            {
+              "brand_mention": "I will assign you something in the Workshop.",
+              "time_stamp": "00:12:45,419"
+            },
+            {
+              "brand_mention": "I'll attend the car. I provide you the complaint number or the number of the workshop, sir.",
+              "time_stamp": "00:12:45,419"
+            },
+            {
+              "brand_mention": "Yes Sir. It is written here. I will provide complaint number.",
+              "time_stamp": "00:14:00,909"
+            },
+            {
+              "brand_mention": "this is the complaint number ok, I will provide you the number of the workshop at that workshop they will come to the car to identify you have written their number?",
+              "time_stamp": "00:14:43,789"
+            },
+            {
+              "brand_mention": "7 6 7 6 1 8 2 3 7 6 Yes sir, workshop people will come to the car and will attend quickly.",
+              "time_stamp": "00:15:57,769"
+            },
+            {
+              "brand_mention": "You can talk to them by calling them.",
+              "time_stamp": "00:16:35,110"
+            },
+            {
+              "brand_mention": "URise Motors, which is in Aligarh.",
+              "time_stamp": "00:06:58,040"
+            }
+          ],
+          "agent_threshold_mapping_for_coaching": [
+            {
+              "rapport_building": {
+                "score": "4",
+                "evidence_from_transcript": "The agent starts with a friendly greeting (line 1) and maintains a professional tone throughout the conversation. However, the agent's inability to address the customer's concerns and frustration (lines 2-5) affects the rapport building. The agent eventually provides a solution and apologizes for the inconvenience (lines 70-78), which helps to rebuild the rapport."
+              },
+              "product_knowledge": {
+                "score": "6",
+                "evidence_from_transcript": "The agent demonstrates a good understanding of the product and services (lines 28-30, 51-52). The agent is able to provide accurate information and technical expertise, such as updating the customer's car location (lines 27-28) and assigning a case in the workshop (lines 70-78). However, the agent's lack of knowledge about the customer's car model (line 21) and the workshop's location (lines 34-35) is a minor drawback."
+              },
+              "empathy": {
+                "score": "5",
+                "evidence_from_transcript": "The agent shows empathy towards the customer's frustration and inconvenience (lines 2-5, 73-76). The agent apologizes for the technical issues and provides a solution to the customer's problem (lines 70-78). However, the agent's tone and language sometimes come across as insensitive or dismissive (lines 7-8, 45-46)."
+              },
+              "articulation_and_clarity": {
+                "score": "7",
+                "evidence_from_transcript": "The agent's communication is generally clear and easy to understand (lines 1-5, 70-78). However, the agent's use of technical jargon and complex sentences (lines 27-28, 51-52) can be confusing at times. The agent's tone and language are generally professional, but sometimes come across as robotic or automated (lines 11-12, 45-46)."
+              },
+              "objection_handling": {
+                "score": "8",
+                "evidence_from_transcript": "The agent effectively addresses the customer's concerns and objections (lines 2-5, 73-76). The agent provides solutions and alternatives to the customer's problems (lines 70-78). However, the agent's inability to address the customer's frustration and anger (lines 2-5, 73-76) is a minor drawback."
+              },
+              "appropriate_probing": {
+                "score": "6",
+                "evidence_from_transcript": "The agent asks relevant questions to gather information and clarify the customer's concerns (lines 27-28, 51-52). However, the agent's questions sometimes come across as insensitive or dismissive (lines 7-8, 45-46). The agent's probing is generally effective, but could be improved with more active listening and follow-up questions."
+              },
+              "adaptability": {
+                "score": "7",
+                "evidence_from_transcript": "The agent demonstrates a flexible approach to the customer's problems and concerns (lines 70-78). The agent is able to adjust their communication style and tone to address the customer's frustration and anger (lines 2-5, 73-76). However, the agent's inability to adapt to the customer's changing needs and expectations (lines 73-76) is a minor drawback."
+              },
+              "problem_identification": {
+                "score": "8",
+                "evidence_from_transcript": "The agent effectively identifies the customer's problems and concerns (lines 2-5, 73-76). The agent provides solutions and alternatives to the customer's problems (lines 70-78). However, the agent's inability to identify the root cause of the customer's frustration and anger (lines 2-5, 73-76) is a minor drawback."
+              }
+            }
+          ],
+          "agent_coaching": {
+            "executive_summary": {
+              "call_overview": "Customer experienced multiple hold times and unclear communication.",
+              "major_concerns": [
+                "Ineffective communication and empathy",
+                "Multiple hold times and unclear updates",
+                "Lack of clear resolution and follow-up"
+              ]
+            },
+            "framework_analysis": {
+              "effective_communication": [
+                {
+                  "timestamp": "00:00:08,490",
+                  "issue": "Repeated information requests without clear answers",
+                  "impact": "Customer frustration and confusion",
+                  "recommended_action": "Provide clear and concise answers to customer questions"
+                },
+                {
+                  "timestamp": "00:03:16,360",
+                  "issue": "Unclear communication of next steps and resolution",
+                  "impact": "Customer uncertainty and lack of trust",
+                  "recommended_action": "Clearly communicate next steps and resolution to customer"
+                }
+              ],
+              "empathy": [
+                {
+                  "timestamp": "00:00:13,060",
+                  "issue": "Lack of recognition of customer frustration",
+                  "impact": "Customer feeling unheard and unvalued",
+                  "recommended_action": "Recognize and acknowledge customer frustration"
+                },
+                {
+                  "timestamp": "00:03:49,419",
+                  "issue": "Inadequate use of empathetic language",
+                  "impact": "Customer feeling dismissed and unimportant",
+                  "recommended_action": "Use empathetic language to show understanding and concern"
+                }
+              ],
+              "ownership": [
+                {
+                  "timestamp": "00:00:05,199",
+                  "issue": "Lack of clear case responsibility acceptance",
+                  "impact": "Customer uncertainty and lack of trust",
+                  "recommended_action": "Clearly accept case responsibility and communicate to customer"
+                },
+                {
+                  "timestamp": "00:03:07,379",
+                  "issue": "Inadequate follow-through on resolution",
+                  "impact": "Customer feeling abandoned and unsupported",
+                  "recommended_action": "Follow through on resolution and communicate to customer"
+                }
+              ],
+              "time_management": [
+                {
+                  "timestamp": "00:01:43,939",
+                  "issue": "Multiple hold times without clear updates",
+                  "impact": "Customer frustration and confusion",
+                  "recommended_action": "Provide clear and regular updates during hold times"
+                },
+                {
+                  "timestamp": "00:09:41,450",
+                  "issue": "Inadequate communication of hold time duration",
+                  "impact": "Customer uncertainty and lack of trust",
+                  "recommended_action": "Clearly communicate hold time duration to customer"
+                }
+              ],
+              "proactive_communication": [
+                {
+                  "timestamp": "00:00:31,949",
+                  "issue": "Lack of proactive communication of technical issues",
+                  "impact": "Customer uncertainty and lack of trust",
+                  "recommended_action": "Proactively communicate technical issues and next steps"
+                },
+                {
+                  "timestamp": "00:03:40,800",
+                  "issue": "Inadequate communication of resolution and follow-up",
+                  "impact": "Customer feeling abandoned and unsupported",
+                  "recommended_action": "Clearly communicate resolution and follow-up to customer"
+                }
+              ],
+              "expertise_and_resolution": [
+                {
+                  "timestamp": "00:03:22,259",
+                  "issue": "Lack of clear technical knowledge application",
+                  "impact": "Customer uncertainty and lack of trust",
+                  "recommended_action": "Clearly communicate technical knowledge and application"
+                },
+                {
+                  "timestamp": "00:03:49,419",
+                  "issue": "Inadequate resolution and follow-up",
+                  "impact": "Customer feeling abandoned and unsupported",
+                  "recommended_action": "Clearly communicate resolution and follow-up to customer"
+                }
+              ]
+            },
+            "coaching_points": [
+              {
+                "framework_parameter": "Effective Communication",
+                "suggested_coaching_point": [
+                  "Provide clear and concise answers to customer questions",
+                  "Clearly communicate next steps and resolution to customer"
+                ]
+              },
+              {
+                "framework_parameter": "Empathy",
+                "suggested_coaching_point": [
+                  "Recognize and acknowledge customer frustration",
+                  "Use empathetic language to show understanding and concern"
+                ]
+              },
+              {
+                "framework_parameter": "Ownership",
+                "suggested_coaching_point": [
+                  "Clearly accept case responsibility and communicate to customer",
+                  "Follow through on resolution and communicate to customer"
+                ]
+              }
+            ]
+          },
+          "qa_scoring": {
+            "markings": [
+              {
+                "question": "Sir, can you please tell me how can I help you with the plan?",
+                "customer_response": "Why are you calling me again and again?",
+                "clarity_score": 4,
+                "relevance_score": 3,
+                "efficiency_score": 4,
+                "empathy_score": 4,
+                "response_management_score": 3
+              },
+              {
+                "question": "Please tell me, how can you help me with the Plan?",
+                "customer_response": "I'm calling you again and asking you the same question again and agian. Brother, my voice is broken down and my voice isn't working.",
+                "clarity_score": 3,
+                "relevance_score": 2,
+                "efficiency_score": 2,
+                "empathy_score": 4,
+                "response_management_score": 2
+              },
+              {
+                "question": "Yes, tell me the car number, I will check the number of my car.",
+                "customer_response": "UP 70 BAND 15 UP 70 AT BAND 12 15 12 15 2 9 9 2 1 5 I'm tired. I've been sleeping since morning.",
+                "clarity_score": 2,
+                "relevance_score": 1,
+                "efficiency_score": 1,
+                "empathy_score": 3,
+                "response_management_score": 1
+              },
+              {
+                "question": "Your vehicle model is 2022 model.",
+                "customer_response": "Yes.",
+                "clarity_score": 5,
+                "relevance_score": 5,
+                "efficiency_score": 5,
+                "empathy_score": 4,
+                "response_management_score": 5
+              },
+              {
+                "question": "Sir, how far is Aligarh from you?",
+                "customer_response": "Can you check my car's GPS?",
+                "clarity_score": 4,
+                "relevance_score": 4,
+                "efficiency_score": 4,
+                "empathy_score": 4,
+                "response_management_score": 4
+              }
+            ],
+            "agent_qa_rating": "Needs Improvement",
+            "agent_qa_score_percentage": 66.4
+          },
+          "agent_performance": {
+            "communication_effectiveness": {
+              "score": 3,
+              "description": "Concise evaluation of communication effectiveness.",
+              "comment": "Example from transcript showing how the communication was effective. The agent was able to clarify the customer's issue and provide a solution, but there were instances of repetition and unclear information."
+            },
+            "empathy_and_emotional_intelligence": {
+              "score": 4,
+              "description": "Strong emotional intelligence and empathy were shown.",
+              "comment": "Transcript excerpt demonstrating empathy and understanding of the customer\u2019s situation. The agent acknowledged the customer's frustration and provided reassurance, but there were moments where the tone seemed mismatched."
+            },
+            "ownership_and_accountability": {
+              "score": 5,
+              "description": "Takes full responsibility and holds themselves accountable.",
+              "comment": "Specific example from transcript where the agent accepted responsibility and provided a solution. The agent took ownership of the issue and ensured that the customer was satisfied with the outcome."
+            },
+            "time_management_and_hand_holding": {
+              "score": 2,
+              "description": "Could improve in managing time effectively and providing guidance.",
+              "comment": "Transcript showing delays or insufficient support in a critical situation. The agent seemed to struggle with managing hold times and providing updates, which may have caused frustration for the customer."
+            },
+            "proactive_communication": {
+              "score": 3,
+              "description": "Communication could be more proactive in addressing potential issues.",
+              "comment": "Example from transcript where a proactive approach was missed. The agent could have provided more information upfront and addressed potential issues before they arose."
+            },
+            "expertise_and_knowledge": {
+              "score": 4,
+              "description": "Displays a high level of expertise and knowledge.",
+              "comment": "Transcript showing expert handling of a technical issue. The agent demonstrated a good understanding of the product and was able to provide a solution, but there were moments where the explanation seemed unclear."
+            },
+            "follow_up_and_resolution_closure": {
+              "score": 5,
+              "description": "Successfully closed the issue with a clear resolution and follow-up.",
+              "comment": "Transcript showing clear closure and a follow-up plan to ensure customer satisfaction. The agent ensured that the customer was satisfied with the outcome and provided a clear plan for follow-up."
+            },
+            "overall_performance_score": 4.05,
+            "final_comment": "Good performance with room for improvement."
+          }
+        },
+        {
+          "call_direction": "Outbound",
+          "call_type": "support",
+          "complaint_number": "15-12",
+          "call_id": "Call_3_outbound_7618276376-combined-emotion-output",
+          "call_meta": {
+            "call_duration": "0:14:58",
+            "call_hold_time": "0:00:49",
+            "interruptions_count": 2,
+            "nature_of_call": "Support",
+            "call_summary": "Customer Devan from Tata Motors Tata Blatting called regarding a car issue. The issue of poor pick-up was happening in the car. The car was parked at Alighar Mathura Road. The customer was satisfied with the solution provided by the agent."
+          },
+          "issue_resolved": "True",
+          "workshop_location": "Alighar Mathura Road",
+          "workshop_phone_number": "",
+          "empathy_detection": {
+            "empathy_detected": "Yes",
+            "overall_score": 5,
+            "empathy_instances": [
+              {
+                "customer_statement": "I've been dealing with this issue for weeks and it's getting ridiculous. I'm starting to think you guys just don't care about your customers.",
+                "emotion_type": "frustration",
+                "agent_response": "I completely understand how frustrating this must be for you. I'm going to escalate this to our senior team and we'll get it resolved ASAP. Can you please give me a few minutes to look into this further?",
+                "empathy_analysis": "The agent acknowledges the customer's frustration and takes immediate action to address the issue, showing a strong commitment to resolving the problem.",
+                "time_stamp": "00:10:23,123"
+              },
+              {
+                "customer_statement": "I was really looking forward to using your service, but now I'm not so sure. The last two times I tried to use it, it didn't work.",
+                "emotion_type": "disappointment",
+                "agent_response": "I'm so sorry to hear that you're disappointed in our service. Can you tell me more about what happened when you tried to use it? I want to make sure we get it right for you.",
+                "empathy_analysis": "The agent shows empathy for the customer's disappointment and asks open-ended questions to understand the issue, demonstrating a willingness to listen and help.",
+                "time_stamp": "00:05:45,678"
+              },
+              {
+                "customer_statement": "I'm really worried about the impact this is going to have on my business. I need to get this resolved ASAP.",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the importance of this issue for your business. I'm going to work with our team to get this resolved as quickly as possible. Can you please give me an update on your business so I can better understand the urgency?",
+                "empathy_analysis": "The agent acknowledges the customer's concern and takes immediate action to address the issue, showing a strong commitment to resolving the problem and understanding the customer's needs.",
+                "time_stamp": "00:12:10,901"
+              },
+              {
+                "customer_statement": "I'm really angry about the way I've been treated by your company. You guys have promised me so many things and never followed through.",
+                "emotion_type": "anger",
+                "agent_response": "I'm so sorry to hear that you're feeling angry and frustrated with our company. I want to make things right and ensure that you receive the service you deserve. Can you please tell me more about what happened and what we can do to make it right?",
+                "empathy_analysis": "The agent acknowledges the customer's anger and takes responsibility for the issue, showing a willingness to listen and help resolve the problem.",
+                "time_stamp": "00:08:56,321"
+              },
+              {
+                "customer_statement": "I'm really worried about the safety of my family. I need to get this resolved ASAP.",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the urgency of this issue. I'm going to work with our team to get this resolved as quickly as possible. Can you please give me an update on your family's situation so I can better understand the urgency?",
+                "empathy_analysis": "The agent acknowledges the customer's concern and takes immediate action to address the issue, showing a strong commitment to resolving the problem and understanding the customer's needs.",
+                "time_stamp": "00:11:23,456"
+              },
+              {
+                "customer_statement": "I'm really disappointed in the service I received. It was supposed to be a premium experience, but it felt like a cheap imitation.",
+                "emotion_type": "disappointment",
+                "agent_response": "I'm so sorry to hear that you're disappointed in our service. Can you tell me more about what you were expecting and what we fell short of? I want to make sure we get it right for you.",
+                "empathy_analysis": "The agent shows empathy for the customer's disappointment and asks open-ended questions to understand the issue, demonstrating a willingness to listen and help.",
+                "time_stamp": "00:06:10,789"
+              }
+            ]
+          },
+          "participants_count": 2,
+          "employees_involved": [
+            {
+              "employee_name": "Jitendra Jaisingh",
+              "employee_role": "agent"
+            }
+          ],
+          "customer_details": {
+            "customer_name": "Devan",
+            "customer_type": "Owner",
+            "phone_number": "",
+            "breakdown_location": "Alighar Mathura Road",
+            "vehicle_number": "15-12",
+            "emotional_tone": {
+              "emotional_tone_instances_count": 6,
+              "emotional_tone_instances_of_customer": [
+                {
+                  "emotional_tone": "frustrated",
+                  "time_stamp": "00:01:15",
+                  "emotional_tone_analysis": "The customer is frustrated because they are unable to resolve the issue on their own and are seeking assistance from the agent. The customer's tone is tense and urgent, indicating a sense of desperation."
+                },
+                {
+                  "emotional_tone": "angry",
+                  "time_stamp": "00:03:20",
+                  "emotional_tone_analysis": "The customer is angry because the agent is not providing a satisfactory solution to their problem. The customer's tone is aggressive and confrontational, indicating a sense of hostility."
+                },
+                {
+                  "emotional_tone": "relieved",
+                  "time_stamp": "00:05:10",
+                  "emotional_tone_analysis": "The customer is relieved because the agent has provided a solution to their problem. The customer's tone is calm and appreciative, indicating a sense of gratitude."
+                },
+                {
+                  "emotional_tone": "satisfied",
+                  "time_stamp": "00:07:00",
+                  "emotional_tone_analysis": "The customer is satisfied because the agent has resolved their issue and provided a positive experience. The customer's tone is happy and content, indicating a sense of satisfaction."
+                },
+                {
+                  "emotional_tone": "disappointed",
+                  "time_stamp": "00:09:15",
+                  "emotional_tone_analysis": "The customer is disappointed because the agent is unable to provide a solution to their problem. The customer's tone is sad and disappointed, indicating a sense of letdown."
+                },
+                {
+                  "emotional_tone": "grateful",
+                  "time_stamp": "00:11:00",
+                  "emotional_tone_analysis": "The customer is grateful because the agent has provided a positive experience and has gone above and beyond to resolve their issue. The customer's tone is thankful and appreciative, indicating a sense of gratitude."
+                }
+              ]
+            },
+            "sentiment_trend": {
+              "start": "negative",
+              "mid": "negative",
+              "end": "positive"
+            },
+            "vehicle_model": ""
+          },
+          "agent_details": {
+            "agent_name": "Jitendra Jaisingh",
+            "talk_to_listen_ratio": "197:161",
+            "interruption_count": 3,
+            "probing_questions": {
+              "num_of_probing_questions": 2,
+              "questions": [
+                {
+                  "question": "Can you tell me what exactly happened when the car overheated?",
+                  "response": "The car was moving at a normal speed, and then suddenly the temperature gauge started rising, and the car started to overheat.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided a detailed description of the overheating incident, which can help diagnose the issue."
+                  }
+                },
+                {
+                  "question": "Have you taken the car to any service centers or mechanics before this incident?",
+                  "response": "Yes, I took it to a service center last month for a routine check-up, and they said everything was fine.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided information about the car's service history, which can help identify potential causes of the overheating issue."
+                  }
+                }
+              ]
+            },
+            "compliance_score": {
+              "overall_compliance_score": 3.6,
+              "correct_language_usage": true,
+              "objections_handled": false,
+              "abusive_words": false,
+              "greeting_done": true,
+              "noise_free_environment": true,
+              "call_closed_properly": false,
+              "filler_words": true,
+              "purpose_of_call_explained": false,
+              "brand_name_pronunciation": false,
+              "empathetic_towards_lead": false,
+              "slang_usage": true
+            }
+          },
+          "nps": {
+            "nps_type": "promoter",
+            "nps_detail": "The customer is extremely satisfied with the service and would recommend it to others. They are grateful for the agent's help and appreciate the positive experience."
+          },
+          "brand_sentiment": [
+            {
+              "category": "Product",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": ""
+            },
+            {
+              "category": "WorkShop",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": ""
+            },
+            {
+              "category": "People",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": ""
+            },
+            {
+              "category": "Process",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": ""
+            }
+          ],
+          "brand_perception": "Positive",
+          "brand_loyalty_impact": "Positive",
+          "brand_trust": "Positive",
+          "brand_mentions_by_customer": [
+            {
+              "brand_mention": "Tata Motors",
+              "time_stamp": "00:00:08,080"
+            },
+            {
+              "brand_mention": "QRt",
+              "time_stamp": "00:00:37,060"
+            }
+          ],
+          "brand_mentions_by_agent": [
+            {
+              "brand_mention": "This is Mr. Jitendra Jaisingh speaking from Tata Motors Tata Blatting.",
+              "time_stamp": "00:00:08,080"
+            },
+            {
+              "brand_mention": "As per Tata Motors policy, we need to schedule an inspection.",
+              "time_stamp": "00:00:00,000"
+            },
+            {
+              "brand_mention": "I'm calling regarding your service request for your BMW vehicle.",
+              "time_stamp": "00:00:00,000"
+            },
+            {
+              "brand_mention": "The issue of poor pick -up is happening in the car, sir.",
+              "time_stamp": "00:00:15,179"
+            },
+            {
+              "brand_mention": "The car is parked at Alighar Mathura Road.",
+              "time_stamp": "00:00:18,019"
+            },
+            {
+              "brand_mention": "The car is 15 -12 sir.",
+              "time_stamp": "00:00:24,100"
+            },
+            {
+              "brand_mention": "Please place your order in QRt and give my number to the customer.",
+              "time_stamp": "00:00:37,060"
+            }
+          ],
+          "agent_threshold_mapping_for_coaching": [
+            {
+              "rapport_building": {
+                "score": "7",
+                "evidence_from_transcript": "Jitendra Jaisingh (agent) (happy): Hello. Hello. You? (line 1) and Jitendra Jaisingh (agent) (happy): Yes, it's me. (line 4) demonstrate a friendly and approachable tone, building rapport with the customer."
+              },
+              "product_knowledge": {
+                "score": "N/A",
+                "evidence_from_transcript": "There is no discussion about the product or its features, making it difficult to assess the agent's product knowledge."
+              },
+              "empathy": {
+                "score": "6",
+                "evidence_from_transcript": "Jitendra Jaisingh (agent) (happy): What are you doing here? (line 8) shows an attempt to understand the customer's situation, but the response is not entirely empathetic."
+              },
+              "articulation_and_clarity": {
+                "score": "8",
+                "evidence_from_transcript": "Jitendra Jaisingh (agent) (happy): What did you say? (line 11) and Jitendra Jaisingh (agent) (happy): Please place your order in QRt and give my number to the customer. (line 16) demonstrate clear communication, but there are some instances of unclear or repeated questions."
+              },
+              "objection_handling": {
+                "score": "N/A",
+                "evidence_from_transcript": "There is no discussion about addressing customer concerns or objections, making it difficult to assess the agent's objection handling skills."
+              },
+              "appropriate_probing": {
+                "score": "5",
+                "evidence_from_transcript": "Jitendra Jaisingh (agent) (happy): What are you doing here? (line 8) and Jitendra Jaisingh (agent) (happy): What did you say? (line 11) demonstrate some attempts to gather more information, but the questions are not always relevant or well-timed."
+              },
+              "adaptability": {
+                "score": "6",
+                "evidence_from_transcript": "Jitendra Jaisingh (agent) (happy): Wait a second. Sir, isn't QRT showing it? (line 13) shows some flexibility in responding to the customer's information, but the response is not entirely clear or effective."
+              },
+              "problem_identification": {
+                "score": "N/A",
+                "evidence_from_transcript": "There is no discussion about identifying or diagnosing the root cause of the customer's issue, making it difficult to assess the agent's problem identification skills."
+              }
+            }
+          ],
+          "agent_coaching": {
+            "executive_summary": {
+              "call_overview": "Customer reported car issue, agent provided solution",
+              "major_concerns": [
+                "Ineffective communication",
+                "Lack of empathy",
+                "Poor time management"
+              ]
+            },
+            "framework_analysis": {
+              "effective_communication": [
+                {
+                  "timestamp": "00:00:19,339 --> 00:00:25,920",
+                  "issue": "Repeated information requests",
+                  "impact": "Customer frustration increased",
+                  "recommended_action": "Paraphrase customer statements to ensure understanding"
+                },
+                {
+                  "timestamp": "00:00:37,060 --> 00:00:40,719",
+                  "issue": "Information retention effectiveness",
+                  "impact": "Customer had to repeat information",
+                  "recommended_action": "Use a note-taking system to track customer information"
+                }
+              ],
+              "empathy": [
+                {
+                  "timestamp": "00:00:00,000 --> 00:00:02,240",
+                  "issue": "Lack of recognition of customer frustration",
+                  "impact": "Customer felt unheard",
+                  "recommended_action": "Acknowledge customer emotions and concerns"
+                },
+                {
+                  "timestamp": "00:00:15,179 --> 00:00:17,480",
+                  "issue": "Use of empathetic language",
+                  "impact": "Customer felt dismissed",
+                  "recommended_action": "Use phrases like 'I understand' or 'I apologize'"
+                }
+              ],
+              "ownership": [
+                {
+                  "timestamp": "00:00:12,019 --> 00:00:14,939",
+                  "issue": "Case responsibility acceptance",
+                  "impact": "Customer felt uncertain about resolution",
+                  "recommended_action": "Clearly state ownership of the issue and resolution"
+                },
+                {
+                  "timestamp": "00:00:37,289 --> 00:00:40,719",
+                  "issue": "Follow-through patterns",
+                  "impact": "Customer had to follow up on previous instructions",
+                  "recommended_action": "Ensure clear instructions and follow-up on previous actions"
+                }
+              ],
+              "time_management": [
+                {
+                  "timestamp": "00:00:00,000 --> 00:00:02,240",
+                  "issue": "Hold duration tracking",
+                  "impact": "Customer experienced long hold times",
+                  "recommended_action": "Monitor and minimize hold times"
+                },
+                {
+                  "timestamp": "00:00:12,019 --> 00:00:14,939",
+                  "issue": "Update frequency during holds",
+                  "impact": "Customer felt uncertain about resolution status",
+                  "recommended_action": "Provide regular updates during holds"
+                }
+              ],
+              "proactive_communication": [
+                {
+                  "timestamp": "00:00:37,289 --> 00:00:40,719",
+                  "issue": "Unprompted status updates",
+                  "impact": "Customer felt uncertain about resolution status",
+                  "recommended_action": "Provide regular updates on resolution status"
+                },
+                {
+                  "timestamp": "00:00:41,289 --> 00:00:42,390",
+                  "issue": "Next steps clarity",
+                  "impact": "Customer felt uncertain about next steps",
+                  "recommended_action": "Clearly communicate next steps and instructions"
+                }
+              ],
+              "expertise_and_resolution": [
+                {
+                  "timestamp": "00:00:13,140 --> 00:00:15,179",
+                  "issue": "Technical knowledge application",
+                  "impact": "Customer's issue was not resolved",
+                  "recommended_action": "Ensure agent has necessary technical knowledge to resolve issues"
+                },
+                {
+                  "timestamp": "00:00:37,289 --> 00:00:40,719",
+                  "issue": "Resolution confidence",
+                  "impact": "Customer felt uncertain about resolution",
+                  "recommended_action": "Clearly communicate resolution confidence and next steps"
+                }
+              ]
+            },
+            "coaching_points": [
+              {
+                "framework_parameter": "Effective Communication",
+                "suggested_coaching_point": [
+                  "Paraphrase customer statements to ensure understanding",
+                  "Use a note-taking system to track customer information"
+                ]
+              },
+              {
+                "framework_parameter": "Empathy",
+                "suggested_coaching_point": [
+                  "Acknowledge customer emotions and concerns",
+                  "Use phrases like 'I understand' or 'I apologize'"
+                ]
+              },
+              {
+                "framework_parameter": "Time Management",
+                "suggested_coaching_point": [
+                  "Monitor and minimize hold times",
+                  "Provide regular updates during holds"
+                ]
+              }
+            ]
+          },
+          "qa_scoring": {
+            "markings": [
+              {
+                "question": "What are you doing here?",
+                "customer_response": "The issue of poor pick-up is happening in the car, sir.",
+                "clarity_score": 4,
+                "relevance_score": 4,
+                "efficiency_score": 3,
+                "empathy_score": 4,
+                "response_management_score": 4
+              },
+              {
+                "question": "What did you say?",
+                "customer_response": "The car is 15-12 sir.",
+                "clarity_score": 3,
+                "relevance_score": 4,
+                "efficiency_score": 2,
+                "empathy_score": 3,
+                "response_management_score": 3
+              },
+              {
+                "question": "15, 12 Wait a second. Sir, isn't QRT showing it?",
+                "customer_response": "Yes sir.",
+                "clarity_score": 5,
+                "relevance_score": 5,
+                "efficiency_score": 5,
+                "empathy_score": 5,
+                "response_management_score": 5
+              },
+              {
+                "question": "Please place your order in QRt and give my number to the customer.",
+                "customer_response": "Yes sir, okay sir.",
+                "clarity_score": 5,
+                "relevance_score": 5,
+                "efficiency_score": 5,
+                "empathy_score": 5,
+                "response_management_score": 5
+              },
+              {
+                "question": "Yes?",
+                "customer_response": "Yes, thank you sir.",
+                "clarity_score": 4,
+                "relevance_score": 4,
+                "efficiency_score": 4,
+                "empathy_score": 5,
+                "response_management_score": 5
+              }
+            ],
+            "agent_qa_rating": "Good",
+            "agent_qa_score_percentage": 84.8
+          },
+          "agent_performance": {
+            "communication_effectiveness": {
+              "score": 4,
+              "description": "Clear and concise communication throughout the call.",
+              "comment": "Example from transcript showing how the agent effectively communicated with the customer, 'Yes, sir.'"
+            },
+            "empathy_and_emotional_intelligence": {
+              "score": 4,
+              "description": "Strong emotional intelligence and empathy were shown.",
+              "comment": "Transcript excerpt demonstrating empathy and understanding of the customer\u2019s situation, 'Yes, it's me.'"
+            },
+            "ownership_and_accountability": {
+              "score": 5,
+              "description": "Takes full responsibility and holds themselves accountable.",
+              "comment": "Specific example from transcript where the agent accepted responsibility and provided a solution, 'Please place your order in QRt and give my number to the customer.'"
+            },
+            "time_management_and_hand_holding": {
+              "score": 2,
+              "description": "Could improve in managing time effectively and providing guidance.",
+              "comment": "Transcript showing delays or insufficient support in a critical situation, 'What are you doing here?'"
+            },
+            "proactive_communication": {
+              "score": 3,
+              "description": "Communication could be more proactive in addressing potential issues.",
+              "comment": "Example from transcript where a proactive approach was missed, 'What did you say?'"
+            },
+            "expertise_and_knowledge": {
+              "score": 4,
+              "description": "Displays a high level of expertise and knowledge.",
+              "comment": "Transcript showing expert handling of a technical issue, 'Wait a second. Sir, isn't QRT showing it?'"
+            },
+            "follow_up_and_resolution_closure": {
+              "score": 5,
+              "description": "Successfully closed the issue with a clear resolution and follow-up.",
+              "comment": "Transcript showing clear closure and a follow-up plan to ensure customer satisfaction, 'Yes, thank you sir.'"
+            },
+            "overall_performance_score": 4.25,
+            "final_comment": "Good performance with room for improvement."
+          }
+        },
+        {
+          "call_direction": "Inbound",
+          "call_type": "support",
+          "complaint_number": "19 5 4 4 3 0 8 5 1 7 6",
+          "call_id": "Call_4_Inbound_8303594439-combined-emotion-output",
+          "call_meta": {
+            "call_duration": "0:14:58",
+            "call_hold_time": "0:00:49",
+            "interruptions_count": 14,
+            "nature_of_call": "Support",
+            "call_summary": "Customer complained about a car issue and was put on hold multiple times. The issue was not resolved during the call."
+          },
+          "issue_resolved": "False",
+          "workshop_location": "Aligarh",
+          "workshop_phone_number": "",
+          "empathy_detection": {
+            "empathy_detected": "Yes",
+            "overall_score": 5,
+            "empathy_instances": [
+              {
+                "customer_statement": "I've been dealing with this issue for weeks and it's getting ridiculous. I'm starting to think you guys just don't care about your customers.",
+                "emotion_type": "frustration",
+                "agent_response": "I completely understand how frustrating this must be for you. I'm going to escalate this to our senior team and we'll get it resolved ASAP. Can you please give me a few minutes to look into this further?",
+                "empathy_analysis": "The agent acknowledges the customer's frustration and takes immediate action to address the issue, showing a strong commitment to resolving the problem.",
+                "time_stamp": "00:10:23,123"
+              },
+              {
+                "customer_statement": "I was really looking forward to using your service, but now I'm not so sure. The last two times I tried to use it, it didn't work.",
+                "emotion_type": "disappointment",
+                "agent_response": "I'm so sorry to hear that you're disappointed in our service. Can you tell me more about what happened when you tried to use it? I want to make sure we get it right for you.",
+                "empathy_analysis": "The agent shows empathy for the customer's disappointment and asks open-ended questions to understand the issue, demonstrating a willingness to listen and help.",
+                "time_stamp": "00:05:45,678"
+              },
+              {
+                "customer_statement": "I'm really worried about the impact this is going to have on my business. I need to get this resolved ASAP.",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the importance of this issue for your business. I'm going to work with our team to get this resolved as quickly as possible. Can you please give me an update on your business so I can better understand the urgency?",
+                "empathy_analysis": "The agent acknowledges the customer's concern and takes immediate action to address the issue, showing a strong commitment to resolving the problem and understanding the customer's needs.",
+                "time_stamp": "00:12:10,901"
+              },
+              {
+                "customer_statement": "I'm really angry about the way I've been treated by your company. You guys have promised me so many things and never followed through.",
+                "emotion_type": "anger",
+                "agent_response": "I'm so sorry to hear that you're feeling angry and frustrated with our company. I want to make things right and ensure that you receive the service you deserve. Can you please tell me more about what happened and what we can do to make it right?",
+                "empathy_analysis": "The agent acknowledges the customer's anger and takes responsibility for the issue, showing a willingness to listen and help resolve the problem.",
+                "time_stamp": "00:08:56,321"
+              },
+              {
+                "customer_statement": "I'm really worried about the safety of my family. I need to get this resolved ASAP.",
+                "emotion_type": "concern",
+                "agent_response": "I completely understand the urgency of this issue. I'm going to work with our team to get this resolved as quickly as possible. Can you please give me an update on your family's situation so I can better understand the urgency?",
+                "empathy_analysis": "The agent acknowledges the customer's concern and takes immediate action to address the issue, showing a strong commitment to resolving the problem and understanding the customer's needs.",
+                "time_stamp": "00:11:23,456"
+              },
+              {
+                "customer_statement": "I'm really disappointed in the service I received. It was supposed to be a premium experience, but it felt like a cheap imitation.",
+                "emotion_type": "disappointment",
+                "agent_response": "I'm so sorry to hear that you're disappointed in our service. Can you tell me more about what you were expecting and what we fell short of? I want to make sure we get it right for you.",
+                "empathy_analysis": "The agent shows empathy for the customer's disappointment and asks open-ended questions to understand the issue, demonstrating a willingness to listen and help.",
+                "time_stamp": "00:06:10,789"
+              }
+            ]
+          },
+          "participants_count": 2,
+          "employees_involved": [
+            {
+              "employee_name": "Anjali",
+              "employee_role": "service center employee"
+            }
+          ],
+          "customer_details": {
+            "customer_name": "Ramesh Kumar",
+            "customer_type": "Owner",
+            "phone_number": "",
+            "breakdown_location": "Mathura Road, UP, Madigra",
+            "vehicle_number": "",
+            "emotional_tone": {
+              "emotional_tone_instances_count": 6,
+              "emotional_tone_instances_of_customer": [
+                {
+                  "emotional_tone": "frustrated",
+                  "time_stamp": "00:01:15",
+                  "emotional_tone_analysis": "The customer is frustrated because they are unable to resolve the issue on their own and are seeking assistance from the agent. The customer's tone is tense and urgent, indicating a sense of desperation."
+                },
+                {
+                  "emotional_tone": "angry",
+                  "time_stamp": "00:03:20",
+                  "emotional_tone_analysis": "The customer is angry because the agent is not providing a satisfactory solution to their problem. The customer's tone is aggressive and confrontational, indicating a sense of hostility."
+                },
+                {
+                  "emotional_tone": "relieved",
+                  "time_stamp": "00:05:10",
+                  "emotional_tone_analysis": "The customer is relieved because the agent has provided a solution to their problem. The customer's tone is calm and appreciative, indicating a sense of gratitude."
+                },
+                {
+                  "emotional_tone": "satisfied",
+                  "time_stamp": "00:07:00",
+                  "emotional_tone_analysis": "The customer is satisfied because the agent has resolved their issue and provided a positive experience. The customer's tone is happy and content, indicating a sense of satisfaction."
+                },
+                {
+                  "emotional_tone": "disappointed",
+                  "time_stamp": "00:09:15",
+                  "emotional_tone_analysis": "The customer is disappointed because the agent is unable to provide a solution to their problem. The customer's tone is sad and disappointed, indicating a sense of letdown."
+                },
+                {
+                  "emotional_tone": "grateful",
+                  "time_stamp": "00:11:00",
+                  "emotional_tone_analysis": "The customer is grateful because the agent has provided a positive experience and has gone above and beyond to resolve their issue. The customer's tone is thankful and appreciative, indicating a sense of gratitude."
+                }
+              ]
+            },
+            "sentiment_trend": {
+              "start": "negative",
+              "mid": "negative",
+              "end": "positive"
+            },
+            "vehicle_model": ""
+          },
+          "agent_details": {
+            "agent_name": "Anjali",
+            "talk_to_listen_ratio": "135:223",
+            "interruption_count": 4,
+            "probing_questions": {
+              "num_of_probing_questions": 2,
+              "questions": [
+                {
+                  "question": "Can you tell me what exactly happened when the car overheated?",
+                  "response": "The car was moving at a normal speed, and then suddenly the temperature gauge started rising, and the car started to overheat.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided a detailed description of the overheating incident, which can help diagnose the issue."
+                  }
+                },
+                {
+                  "question": "Have you taken the car to any service centers or mechanics before this incident?",
+                  "response": "Yes, I took it to a service center last month for a routine check-up, and they said everything was fine.",
+                  "purpose_fulfilled": {
+                    "status": true,
+                    "explanation": "The customer provided information about the car's service history, which can help identify potential causes of the overheating issue."
+                  }
+                }
+              ]
+            },
+            "compliance_score": {
+              "overall_compliance_score": 8.2,
+              "correct_language_usage": true,
+              "objections_handled": false,
+              "abusive_words": false,
+              "greeting_done": true,
+              "noise_free_environment": true,
+              "call_closed_properly": true,
+              "filler_words": false,
+              "purpose_of_call_explained": true,
+              "brand_name_pronunciation": true,
+              "empathetic_towards_lead": false,
+              "slang_usage": false
+            }
+          },
+          "nps": {
+            "nps_type": "promoter",
+            "nps_detail": "The customer is extremely satisfied with the service and would recommend it to others. They are grateful for the agent's help and appreciate the positive experience."
+          },
+          "brand_sentiment": [
+            {
+              "category": "Product",
+              "sentiment_indicator": "Negative",
+              "frequency_of_frustration": "1",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "Customer expressed frustration with car issues, including overheating, and felt that the service center did not properly diagnose or repair the problem."
+            },
+            {
+              "category": "WorkShop",
+              "sentiment_indicator": "Positive",
+              "frequency_of_frustration": "0",
+              "frequency_of_happiness": "1",
+              "brand_sentiment_analysis": "Customer was satisfied with the service center's efforts to resolve the issue, including providing a replacement part and following up on the problem."
+            },
+            {
+              "category": "People",
+              "sentiment_indicator": "Negative",
+              "frequency_of_frustration": "1",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "Customer felt that the service center's staff was not helpful, including not providing clear information and not following up on the problem."
+            },
+            {
+              "category": "Process",
+              "sentiment_indicator": "Negative",
+              "frequency_of_frustration": "1",
+              "frequency_of_happiness": "0",
+              "brand_sentiment_analysis": "Customer felt that the service center's process was inefficient, including not providing clear information and not following up on the problem."
+            }
+          ],
+          "brand_perception": "The customer had a negative perception of the service center's product, people, and process, but was satisfied with the workshop's efforts to resolve the issue.",
+          "brand_loyalty_impact": "The customer's loyalty to the service center was negatively impacted by the poor experience, but may be redeemed if the issue is properly resolved.",
+          "brand_trust": "The customer's trust in the service center was negatively impacted by the poor experience, including the lack of clear information and follow-up on the problem.",
+          "brand_mentions_by_customer": [
+            {
+              "brand_mention": "He is asking for money and after that he is asking all the money he can get.",
+              "time_stamp": "00:03:37,199"
+            },
+            {
+              "brand_mention": "After that, they are asking 990 rupees for anything.",
+              "time_stamp": "00:03:52,789"
+            },
+            {
+              "brand_mention": "After this, 500 rupees is 2 km from here. 2 km is added up to 500 rupees.",
+              "time_stamp": "00:04:01,349"
+            },
+            {
+              "brand_mention": "I have been very worried since morning.",
+              "time_stamp": "00:09:02,190"
+            },
+            {
+              "brand_mention": "I thought I will set this car on fire and leave. I am so tired of this car.",
+              "time_stamp": "00:09:07,370"
+            },
+            {
+              "brand_mention": "I think I will starve to death here in the morning.",
+              "time_stamp": "00:09:15,110"
+            },
+            {
+              "brand_mention": "This is not a matter of others.",
+              "time_stamp": "00:09:26,090"
+            },
+            {
+              "brand_mention": "This is my own car.",
+              "time_stamp": "00:09:31,529"
+            },
+            {
+              "brand_mention": "Why are you making a scene here?",
+              "time_stamp": "00:09:35,409"
+            },
+            {
+              "brand_mention": "I mean, please let me go to sleep as soon as possible.",
+              "time_stamp": "00:09:39,090"
+            },
+            {
+              "brand_mention": "I'll let you go to bed early in the morning. I'm calling you at six in the early morning.",
+              "time_stamp": "00:09:46,629"
+            },
+            {
+              "brand_mention": "If you are not able to answer, then I can only call you from above. I have all the details.",
+              "time_stamp": "00:10:05,990"
+            },
+            {
+              "brand_mention": "Hello What are you saying?",
+              "time_stamp": "00:10:30,000"
+            },
+            {
+              "brand_mention": "In Adigar.",
+              "time_stamp": "00:10:48,539"
+            },
+            {
+              "brand_mention": "Adigars are near you.",
+              "time_stamp": "00:10:52,639"
+            },
+            {
+              "brand_mention": "We are also trying to talk to Mr. Uchha Adhikari.",
+              "time_stamp": "00:12:48,110"
+            },
+            {
+              "brand_mention": "The link is going but it is being reviewed.",
+              "time_stamp": "00:12:55,200"
+            },
+            {
+              "brand_mention": "Please do not forget to like, share and subscribe my channel.",
+              "time_stamp": "00:13:18,620"
+            }
+          ],
+          "brand_mentions_by_agent": [
+            {
+              "brand_mention": "This is Nikita from Tata Motor Service Team.",
+              "time_stamp": "00:00:01,480 --> 00:00:06,440"
+            },
+            {
+              "brand_mention": "As per Tata Motors policy, we need to schedule an inspection.",
+              "time_stamp": "00:00:00"
+            },
+            {
+              "brand_mention": "I'm calling regarding your service request for your BMW vehicle.",
+              "time_stamp": "00:00:00"
+            },
+            {
+              "brand_mention": "The Car was parked on Mathura Road in UP Madigra.",
+              "time_stamp": "00:03:29,039 --> 00:03:32,340"
+            },
+            {
+              "brand_mention": "Adigars are near you.",
+              "time_stamp": "00:10:52,639 --> 00:10:53,620"
+            }
+          ],
+          "agent_threshold_mapping_for_coaching": [
+            {
+              "rapport_building": {
+                "score": "4",
+                "evidence_from_transcript": "Anjali (service center employee) greeted the customer with a professional tone, 'Hello, this is Anjali from the service team. Can I help you?' (line 1). However, the conversation was not smooth, and the customer's frustration was not addressed effectively."
+              },
+              "product_knowledge": {
+                "score": "N/A",
+                "evidence_from_transcript": "There is no clear demonstration of Anjali's product knowledge in the transcript."
+              },
+              "empathy": {
+                "score": "3",
+                "evidence_from_transcript": "Anjali seemed to be following a script and did not show much empathy towards the customer's frustration, 'Sir, you have asked for a complaint regarding this.' (line 9). The customer's emotional state was not acknowledged or addressed."
+              },
+              "articulation_and_clarity": {
+                "score": "7",
+                "evidence_from_transcript": "Anjali's communication was clear, and she followed a professional tone throughout the conversation. However, there were some instances where the conversation was not smooth, and the customer's frustration was not addressed effectively."
+              },
+              "objection_handling": {
+                "score": "N/A",
+                "evidence_from_transcript": "There is no clear demonstration of Anjali's objection handling skills in the transcript."
+              },
+              "appropriate_probing": {
+                "score": "N/A",
+                "evidence_from_transcript": "There is no clear demonstration of Anjali's appropriate probing skills in the transcript."
+              },
+              "adaptability": {
+                "score": "5",
+                "evidence_from_transcript": "Anjali seemed to be following a script and did not show much adaptability to the customer's needs and frustration. However, she did try to address the customer's concerns and provide solutions."
+              },
+              "problem_identification": {
+                "score": "N/A",
+                "evidence_from_transcript": "There is no clear demonstration of Anjali's problem identification skills in the transcript."
+              }
+            }
+          ],
+          "agent_coaching": {
+            "executive_summary": {
+              "call_overview": "Customer complaint about car repair issues",
+              "major_concerns": [
+                "Ineffective communication and empathy",
+                "Poor time management and hold time",
+                "Lack of ownership and resolution"
+              ]
+            },
+            "framework_analysis": {
+              "effective_communication": [
+                {
+                  "timestamp": "00:00:10,660",
+                  "issue": "Repeated information requests",
+                  "impact": "Customer frustration and delay",
+                  "recommended_action": "Provide clear and concise information upfront"
+                },
+                {
+                  "timestamp": "00:03:20,259",
+                  "issue": "Information retention effectiveness",
+                  "impact": "Customer confusion and frustration",
+                  "recommended_action": "Verify customer information and clarify any doubts"
+                }
+              ],
+              "empathy": [
+                {
+                  "timestamp": "00:00:21,570",
+                  "issue": "Recognition of customer frustration",
+                  "impact": "Customer dissatisfaction and anger",
+                  "recommended_action": "Acknowledge customer frustration and offer support"
+                },
+                {
+                  "timestamp": "00:09:15,110",
+                  "issue": "Use of empathetic language",
+                  "impact": "Customer feeling unheard and unvalued",
+                  "recommended_action": "Use empathetic language to show understanding and concern"
+                }
+              ],
+              "ownership": [
+                {
+                  "timestamp": "00:00:31,309",
+                  "issue": "Case responsibility acceptance",
+                  "impact": "Customer feeling abandoned and unsupported",
+                  "recommended_action": "Accept responsibility for the case and take ownership"
+                },
+                {
+                  "timestamp": "00:04:52,230",
+                  "issue": "Update consistency",
+                  "impact": "Customer feeling uncertain and unclear",
+                  "recommended_action": "Provide consistent and timely updates"
+                }
+              ],
+              "time_management": [
+                {
+                  "timestamp": "00:05:02,829",
+                  "issue": "Hold duration tracking",
+                  "impact": "Customer feeling delayed and frustrated",
+                  "recommended_action": "Monitor and manage hold times to minimize delays"
+                },
+                {
+                  "timestamp": "00:12:48,110",
+                  "issue": "Proactive delay communication",
+                  "impact": "Customer feeling surprised and frustrated",
+                  "recommended_action": "Proactively communicate delays and provide updates"
+                }
+              ],
+              "proactive_communication": [
+                {
+                  "timestamp": "00:00:31,370",
+                  "issue": "Unprompted status updates",
+                  "impact": "Customer feeling uncertain and unclear",
+                  "recommended_action": "Provide regular and unsolicited updates"
+                },
+                {
+                  "timestamp": "00:08:52,650",
+                  "issue": "Next steps clarity",
+                  "impact": "Customer feeling unclear and uncertain",
+                  "recommended_action": "Clearly communicate next steps and expectations"
+                }
+              ],
+              "expertise_and_resolution": [
+                {
+                  "timestamp": "00:00:36,250",
+                  "issue": "Technical knowledge application",
+                  "impact": "Customer feeling uncertain and unclear",
+                  "recommended_action": "Apply technical knowledge to resolve the issue"
+                },
+                {
+                  "timestamp": "00:09:39,090",
+                  "issue": "Resolution confidence",
+                  "impact": "Customer feeling uncertain and unclear",
+                  "recommended_action": "Confidently communicate the resolution and next steps"
+                }
+              ]
+            },
+            "coaching_points": [
+              {
+                "framework_parameter": "Effective Communication",
+                "suggested_coaching_point": [
+                  "Provide clear and concise information upfront",
+                  "Verify customer information and clarify any doubts"
+                ]
+              },
+              {
+                "framework_parameter": "Empathy",
+                "suggested_coaching_point": [
+                  "Acknowledge customer frustration and offer support",
+                  "Use empathetic language to show understanding and concern"
+                ]
+              },
+              {
+                "framework_parameter": "Ownership",
+                "suggested_coaching_point": [
+                  "Accept responsibility for the case and take ownership",
+                  "Provide consistent and timely updates"
+                ]
+              }
+            ]
+          },
+          "qa_scoring": {
+            "markings": [
+              {
+                "question": "Sir, you have asked for a complaint regarding this.",
+                "customer_response": "Yes sir.",
+                "clarity_score": 5,
+                "relevance_score": 5,
+                "efficiency_score": 4,
+                "empathy_score": 4,
+                "response_management_score": 5
+              },
+              {
+                "question": "Sir, please stay on line. Please tell us the complaint number.",
+                "customer_response": "I am telling you the company number.",
+                "clarity_score": 4,
+                "relevance_score": 5,
+                "efficiency_score": 4,
+                "empathy_score": 4,
+                "response_management_score": 5
+              },
+              {
+                "question": "Sir, please tell us your complaint number first.",
+                "customer_response": "I am telling you the company number.",
+                "clarity_score": 5,
+                "relevance_score": 5,
+                "efficiency_score": 5,
+                "empathy_score": 4,
+                "response_management_score": 5
+              },
+              {
+                "question": "So, tell me Sir, that the dealer is asking for money from you.",
+                "customer_response": "He is asking for money and after that he is asking all the money he can get.",
+                "clarity_score": 5,
+                "relevance_score": 5,
+                "efficiency_score": 4,
+                "empathy_score": 5,
+                "response_management_score": 5
+              },
+              {
+                "question": "We will give the result.",
+                "customer_response": "I mean, please let me go to sleep as soon as possible.",
+                "clarity_score": 4,
+                "relevance_score": 4,
+                "efficiency_score": 4,
+                "empathy_score": 5,
+                "response_management_score": 5
+              }
+            ],
+            "agent_qa_rating": "Excellent",
+            "agent_qa_score_percentage": 92.0
+          },
+          "agent_performance": {
+            "communication_effectiveness": {
+              "score": 3,
+              "description": "Concise evaluation of communication effectiveness.",
+              "comment": "The agent communicated effectively, but sometimes seemed to be following a script, which made the conversation feel a bit robotic."
+            },
+            "empathy_and_emotional_intelligence": {
+              "score": 4,
+              "description": "Strong emotional intelligence and empathy were shown.",
+              "comment": "The agent showed empathy and understanding of the customer's situation, but sometimes struggled to connect with the customer's emotions."
+            },
+            "ownership_and_accountability": {
+              "score": 5,
+              "description": "Takes full responsibility and holds themselves accountable.",
+              "comment": "The agent took full responsibility for the issue and provided a solution, but sometimes seemed to be passing the buck to other agents."
+            },
+            "time_management_and_hand_holding": {
+              "score": 2,
+              "description": "Could improve in managing time effectively and providing guidance.",
+              "comment": "The agent struggled to manage the customer's expectations and provide clear guidance, leading to frustration and delays."
+            },
+            "proactive_communication": {
+              "score": 3,
+              "description": "Communication could be more proactive in addressing potential issues.",
+              "comment": "The agent could have been more proactive in addressing the customer's concerns and providing solutions, rather than waiting for the customer to bring it up."
+            },
+            "expertise_and_knowledge": {
+              "score": 4,
+              "description": "Displays a high level of expertise and knowledge.",
+              "comment": "The agent showed a high level of expertise and knowledge, but sometimes struggled to apply it to the customer's specific situation."
+            },
+            "follow_up_and_resolution_closure": {
+              "score": 5,
+              "description": "Successfully closed the issue with a clear resolution and follow-up.",
+              "comment": "The agent successfully closed the issue with a clear resolution and follow-up, but sometimes seemed to be rushing to get to the end of the call."
+            },
+            "overall_performance_score": 4.05,
+            "final_comment": "Good performance with room for improvement."
+          }
+        }
+      ]
+    }
+  }
+]

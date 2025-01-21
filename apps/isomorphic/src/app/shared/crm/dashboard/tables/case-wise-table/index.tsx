@@ -1,19 +1,22 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Table from '@core/components/table';
 import { caseColumns } from './columns';
-import { caseData } from '@/data/case-data';
 import WidgetCard from '@core/components/cards/widget-card';
 import TablePagination from '@core/components/table/pagination';
 import { useTanStackTable } from '@core/components/table/custom/use-TanStack-Table';
 import cn from '@core/utils/class-names';
 import Filters from './filters';
+import dummyData from '../data/dummy-data.json';
 
-export type CaseDataType = (typeof caseData)[number];
+export type CaseDataType = (typeof dummyData)[number];
 
 export default function CaseWiseTable({ className }: { className?: string }) {
-  const { table, setData } = useTanStackTable<CaseDataType>({
-    tableData: caseData,
+  const [data, setData] = useState<CaseDataType[]>(dummyData);
+
+  const { table } = useTanStackTable<CaseDataType>({
+    tableData: data,
     columnConfig: caseColumns,
     options: {
       initialState: {
@@ -24,7 +27,11 @@ export default function CaseWiseTable({ className }: { className?: string }) {
       },
       meta: {
         handleDeleteRow: (row) => {
-          setData((prev) => prev.filter((r) => r.id !== row.id));
+          setData((prev) =>
+            prev.filter(
+              (r) => r.case_overview.case_id !== row.case_overview.case_id
+            )
+          );
         },
       },
       enableColumnResizing: false,

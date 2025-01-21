@@ -15,7 +15,9 @@ const AgentThresholdMapping = ({
 }: AgentThresholdMappingProps) => {
   const [threshold, setThreshold] = useState(1);
 
-  const filteredData = coachingData.filter((item) => item.score >= threshold);
+  const filteredData = Array.isArray(coachingData)
+    ? coachingData.filter((item) => item.score >= threshold)
+    : [];
 
   return (
     <div>

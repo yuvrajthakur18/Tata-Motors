@@ -18,6 +18,9 @@ interface BrandSentimentsProps {
 }
 
 const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
+  const safeBrandSentimentData = Array.isArray(brandSentimentData)
+    ? brandSentimentData
+    : [];
   return (
     <div>
       <h2 className="mb-4 mt-6 text-xl font-bold">Brand Sentiments</h2>
@@ -35,7 +38,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Category
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.category}
+              {safeBrandSentimentData.category}
             </td>
           </tr>
 
@@ -45,7 +48,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Product
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.product}
+              {safeBrandSentimentData.product}
             </td>
           </tr>
 
@@ -55,7 +58,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Workshop
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.workshop}
+              {safeBrandSentimentData.workshop}
             </td>
           </tr>
 
@@ -65,7 +68,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               People
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.people}
+              {safeBrandSentimentData.people}
             </td>
           </tr>
 
@@ -75,7 +78,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Process
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.process}
+              {safeBrandSentimentData.process}
             </td>
           </tr>
 
@@ -85,7 +88,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Indicator
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.indicator}
+              {safeBrandSentimentData.indicator}
             </td>
           </tr>
 
@@ -95,7 +98,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Contains both Negative and Positive
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.containsBothNegativeAndPositive}
+              {safeBrandSentimentData.containsBothNegativeAndPositive}
             </td>
           </tr>
 
@@ -105,7 +108,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Frequency of Frustration
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.frequencyOfFrustrationRow}
+              {safeBrandSentimentData.frequencyOfFrustrationRow}
             </td>
           </tr>
 
@@ -115,7 +118,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Number on Negative
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.numberOnNegative}
+              {safeBrandSentimentData.numberOnNegative}
             </td>
           </tr>
 
@@ -125,7 +128,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Number on Positive
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.numberOnPositive}
+              {safeBrandSentimentData.numberOnPositive}
             </td>
           </tr>
 
@@ -135,7 +138,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Analysis
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.analysis}
+              {safeBrandSentimentData.analysis}
             </td>
           </tr>
 
@@ -145,7 +148,7 @@ const BrandSentiments = ({ brandSentimentData }: BrandSentimentsProps) => {
               Analysis Given Only on Negative Text
             </td>
             <td className="border border-gray-300 px-4 py-2">
-              {brandSentimentData.analysisGivenOnlyOnNegativeText}
+              {safeBrandSentimentData.analysisGivenOnlyOnNegativeText}
             </td>
           </tr>
         </tbody>
