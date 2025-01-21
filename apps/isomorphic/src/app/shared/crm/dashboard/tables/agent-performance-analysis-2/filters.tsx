@@ -42,7 +42,7 @@ export default function Filters<TData extends Record<string, any>>({
         type="search"
         clearable={true}
         inputClassName="h-[36px]"
-        placeholder="Search by patient name..."
+        placeholder="Search by parameter..."
         onClear={() => table.setGlobalFilter('')}
         value={table.getState().globalFilter ?? ''}
         prefix={<PiMagnifyingGlassBold className="size-4" />}
