@@ -24,27 +24,47 @@ import { Box } from 'rizzui';
 function handleChange(viewType: string) {
   console.log('viewType', viewType);
 }
-
+// Support
+// Service
+// Technician
+// Feedback
+// Assistance
+// Coordination
+// Resolution
+// Followup
 const viewOptions = [
+  
   {
-    value: 'breakdown issue',
-    label: 'Breakdown Issue',
+    value: 'support',
+    label: 'Support',
   },
   {
-    value: 'accelerator issue',
-    label: 'Accelerator Issue',
+    value: 'service',
+    label: 'Service',
   },
   {
-    value: 'workshop related',
-    label: 'Workshop related',
+    value: 'technician',
+    label: 'Technician',
   },
   {
-    value: 'customer complaints / dissatisfaction',
-    label: 'Customer complaints / dissatisfaction',
+    value: 'feedback',
+    label: 'Feedback',
   },
   {
-    value: 'general inquiries',
-    label: 'General Inquiries',
+    value: 'assistance',
+    label: 'Assistance',
+  },
+  {
+    value: 'coordination',
+    label: 'Coordination',
+  },
+  {
+    value: 'resolution',
+    label: 'Resolution',
+  },
+  {
+    value: 'followup',
+    label: 'Followup',
   },
 ];
 
@@ -60,8 +80,8 @@ export default function CustomerGrowthSummary({
   return (
     <WidgetCard
       className={cn('@container', className)}
-      title="Issue type"
-      description="Showing number of customers per issue"
+      title="Case type"
+      description="Showing number of cases per Case type"
       action={
         <DropdownAction
           className="rounded-lg border"
@@ -83,19 +103,19 @@ export default function CustomerGrowthSummary({
               className="[&_.recharts-tooltip-cursor]:fill-opacity-20 dark:[&_.recharts-tooltip-cursor]:fill-opacity-10 [&_.recharts-cartesian-axis-tick-value]:fill-gray-500 [&_.recharts-cartesian-axis.yAxis]:-translate-y-3 rtl:[&_.recharts-cartesian-axis.yAxis]:-translate-x-12 [&_.recharts-cartesian-grid-vertical]:opacity-0"
             >
               <CartesianGrid strokeDasharray="1 0" vertical={false} />
-              <XAxis dataKey="day" tickLine={false} />
+              <XAxis dataKey="name" tickLine={false} />
               <YAxis axisLine={false} tickLine={false} />
               <Tooltip content={<CustomTooltip formattedNumber />} />
               <Bar
                 barSize={24}
                 fill={'#59A7FF'}
-                dataKey={'revenue'}
+                dataKey={'value'}
                 radius={[0, 0, 6, 6]}
                 activeBar={<Rectangle fill="#2CDDC7" stroke="#2CDDC7" />}
                 activeIndex={getActiveIndex()}
                 background={{ fill: isDark ? '#333333' : '#F1F1F2', radius: 6 }}
               >
-                <LabelList dataKey="revenue" content={renderCustomizedLabel} />
+                <LabelList dataKey="value" content={renderCustomizedLabel} />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -132,7 +152,7 @@ function renderCustomizedLabel(props: any) {
 function getActiveIndex() {
   let thisMonthName = new Date().toLocaleString('default', { month: 'short' });
   let activeIndex = revenueSummaryData.findIndex(
-    (data) => data.day === thisMonthName
+    (data) => data.name === thisMonthName
   );
 
   return activeIndex;

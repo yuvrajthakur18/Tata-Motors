@@ -35,6 +35,7 @@ const data = [
   },
 ];
 
+
 const viewOptions = [
   {
     value: 'Daily',
@@ -63,9 +64,38 @@ export default function SentimentTrend({ className }: { className?: string }) {
     console.log('viewType', viewType);
   }
 
+  function CustomLegend({ className }: { className?: string }) {
+    const { theme } = useTheme();
+    return (
+      <div
+        className={cn(
+          'mt-2 flex flex-wrap items-start gap-3 lg:gap-5',
+          className
+        )}
+      >
+        {patientLegend.map((item, index) => (
+          <div
+            key={item.name}
+            className="flex items-center gap-1.5 text-gray-500"
+          >
+            <span
+              className="h-3 w-3 shrink-0 rounded-full"
+              {...(theme && {
+                style: {
+                  backgroundColor: COLORS[index][theme],
+                },
+              })}
+            />
+            <span className="text-sm">{item.name}</span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  
   return (
     <WidgetCard
-      title={<h5 className="font-semibold">Sentiment Trends</h5>}
+      title={<h5 className="font-semibold">Sentiment trends of the customers</h5>}
       titleClassName="text-gray-700 font-normal sm:text-sm font-inter"
       headerClassName="items-center"
       action={
@@ -77,6 +107,7 @@ export default function SentimentTrend({ className }: { className?: string }) {
             onChange={handleChange}
             dropdownClassName="!z-0"
           />
+          
         </div>
       }
       className={cn('min-h-[28rem]', className)}

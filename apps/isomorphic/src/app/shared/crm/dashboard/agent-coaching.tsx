@@ -99,8 +99,11 @@ export default function AgentCoaching({ className }: { className?: string }) {
                 fillOpacity={0.6}
               />
             </RadarChart>
-          </ResponsiveContainer>
+          </ResponsiveContainer>  
         </div>
+      <div className="bg-yellow-100 text-yellow-800 p-3 mt-3 rounded-lg">
+        <p className="text-xs"><p className="text-xs font-semibold">Please note:</p>For now, we have threshold value as 8</p>
+      </div>
       </div>
     </WidgetCard>
   );

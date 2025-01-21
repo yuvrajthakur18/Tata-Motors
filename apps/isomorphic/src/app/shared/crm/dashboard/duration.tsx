@@ -9,17 +9,12 @@ import { Title } from 'rizzui';
 
 const data = [
   { x: 'Mon', y: '9 AM', value: 30 },
-  { x: 'Mon', y: '10 AM', value: 70 },
-  { x: 'Mon', y: '11 AM', value: 50 },
   { x: 'Tue', y: '9 AM', value: 90 },
-  { x: 'Tue', y: '10 AM', value: 60 },
-  { x: 'Tue', y: '11 AM', value: 20 },
-  { x: 'Wed', y: '9 AM', value: 40 },
-  { x: 'Wed', y: '10 AM', value: 80 },
-  { x: 'Wed', y: '11 AM', value: 30 },
-  { x: 'Thu', y: '9 AM', value: 50 },
-  { x: 'Thu', y: '10 AM', value: 40 },
-  { x: 'Thu', y: '11 AM', value: 90 },
+  { x: 'Wed', y: '10 AM', value: 60 },
+  { x: 'Thu', y: '10 AM', value: 50 },
+  { x: 'Fri', y: '11 AM', value: 60 },
+  { x: 'Sat', y: '11 AM', value: 70 },
+  { x: 'Sun', y: '11 AM', value: 80 },
 ];
 
 const viewOptions = [
@@ -42,7 +37,7 @@ export default function Duration({ className }: { className?: string }) {
 
   return (
     <WidgetCard
-      title={<h5 className="font-semibold">Duration Trends</h5>}
+      title={<h5 className="font-semibold">Duration Trends of the calls</h5>}
       titleClassName="text-gray-700 font-normal sm:text-sm font-inter"
       headerClassName="items-center"
       action={

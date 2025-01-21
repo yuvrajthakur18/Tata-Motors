@@ -8,60 +8,42 @@ import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import DropdownAction from '@core/components/charts/dropdown-action';
 
 const data = [
-  { name: 'Support', value: 605 },
-  { name: 'Service', value: 235 },
-  { name: 'Technician', value: 454 },
-  { name: 'Feedback', value: 120 },
-  { name: 'Assistance', value: 256 },
-  { name: 'Coordination', value: 178 },
-  { name: 'Resolution', value: 564 },
-  { name: 'Followup', value: 312 },
+  { name: 'Breakdown Issue', value: 605 },
+  { name: 'Accelerator', value: 235 },
+  { name: 'Workshop related', value: 454 },
+  { name: 'Customer Complaints', value: 120 },
+  { name: 'General Queries', value: 256 },
 ];
 
 const viewOptions = [
   {
-    value: 'Case Type',
-    label: 'Case Type',
+    value: 'Breakdown Issue',
+    label: 'Breakdown Issue',
   },
   {
-    value: 'Support',
-    label: 'Support',
+    value: 'Accelerator',
+    label: 'Accelerator',
   },
   {
-    value: 'Service',
-    label: 'Service',
+    value: 'Workshop related',
+    label: 'Workshop related',
   },
   {
-    value: 'Technician',
-    label: 'Technician',
+    value: 'Customer Complaints',
+    label: 'Customer Complaints',
   },
   {
-    value: 'Feedback',
-    label: 'Feedback',
+    value: 'General Queries',
+    label: 'General Queries',
   },
-  {
-    value: 'Assistance',
-    label: 'Assistance',
-  },
-  {
-    value: 'Coordination',
-    label: 'Coordination',
-  },
-  {
-    value: 'Resolution',
-    label: 'Resolution',
-  },
-  {
-    value: 'Followup',
-    label: 'Followup',
-  },
+  
 ];
 
 const valueSum = data.reduce((total, item) => total + item.value, 0);
 const calculatePercentage = (part: number, total: number) =>
   ((part / total) * 100).toFixed(2);
 
-const COLORS = ['#8DE3F5', '#59A7FF', '#A5F6C6'];
+const COLORS = ['#8DE3F5', '#59A7FF', '#A5F6C6', '#FFC981', '#FFA59E'];
 
 export default function SalesAnalytics({ className }: { className?: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -76,7 +58,7 @@ export default function SalesAnalytics({ className }: { className?: string }) {
 
   return (
     <WidgetCard
-      title="Cases Type"
+      title="Issue Type"
       className={cn('@container', className)}
       headerClassName="mb-6 lg:mb-0"
       action={<DropdownAction options={viewOptions} onChange={handleChange} />}
@@ -85,7 +67,7 @@ export default function SalesAnalytics({ className }: { className?: string }) {
         <ResponsiveContainer
           width="100%"
           height="100%"
-          className="relative z-10"
+          className="relative z-5"
         >
           <PieChart>
             <Pie

@@ -36,98 +36,134 @@ export const appointmentColumns = [
       />
     ),
   }),
-  columnHelper.accessor('patient.email', {
-    size: 100,
-    header: 'Serial.',
-    enableSorting: false,
-    cell: ({ row: { original } }) => <Text>#{original.id}</Text>,
-  }),
-  columnHelper.accessor('date', {
-    size: 180,
-    header: 'Date',
-    enableSorting: false,
-    cell: (info) => <DateCell date={new Date(info.getValue())} />,
-  }),
-  columnHelper.accessor('patient.name', {
+  // columnHelper.accessor('patient.email', {
+  //   size: 100,
+  //   header: 'Serial.',
+  //   enableSorting: false,
+  //   cell: ({ row: { original } }) => <Text>#{original.id}</Text>,
+  // }),
+  // columnHelper.accessor('date', {
+  //   size: 180,
+  //   header: 'Date',
+  //   enableSorting: false,
+  //   cell: (info) => <DateCell date={new Date(info.getValue())} />,
+  // }),
+  // columnHelper.accessor('patient.name', {
+  //   size: 230,
+  //   header: 'Patient Name',
+  //   enableSorting: false,
+  //   cell: ({ row: { original } }) => (
+  //     <>
+  //       <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+  //         {original.patient.name}
+  //       </Text>
+  //       {original.patient.email && (
+  //         <Text className="text-[13px] text-gray-500">
+  //           {original.patient.email}
+  //         </Text>
+  //       )}
+  //     </>
+  //   ),
+  // }),
+  columnHelper.accessor('impact', {
     size: 230,
-    header: 'Patient Name',
+    header: 'Impact',
     enableSorting: false,
     cell: ({ row: { original } }) => (
       <>
         <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
-          {original.patient.name}
+          {original.impact}
         </Text>
-        {original.patient.email && (
-          <Text className="text-[13px] text-gray-500">
-            {original.patient.email}
-          </Text>
-        )}
       </>
     ),
   }),
-  columnHelper.accessor('doctor.name', {
-    size: 300,
-    header: 'Appointed To',
+  columnHelper.accessor('action_point', {
+    size: 230,
+    header: 'Action Point',
     enableSorting: false,
     cell: ({ row: { original } }) => (
-      <AvatarCard
-        src={original.doctor.avatar}
-        name={original.doctor.name}
-        description={original.doctor.email}
-      />
+      <>
+        <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+          {original.action_point}
+        </Text>
+      </>
     ),
   }),
-  columnHelper.accessor('type', {
-    size: 160,
-    header: 'Service Type',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
-  }),
-  columnHelper.accessor('duration', {
-    size: 110,
-    header: 'Duration',
+  columnHelper.accessor('action_description', {
+    size: 230,
+    header: 'Action Description',
     enableSorting: false,
-    cell: ({ row: { original } }) => {
-      const durationHour = Math.trunc(original.duration / 60);
-      return (
-        <span className="whitespace-nowrap font-semibold">
-          {durationHour > 0 && `${Math.trunc(original.duration / 60)}h`}{' '}
-          {original.duration % 60 > 0 ? `${original.duration % 60}m` : null}
-        </span>
-      );
-    },
-  }),
-  columnHelper.accessor('amount', {
-    size: 120,
-    header: 'Payment',
     cell: ({ row: { original } }) => (
-      <span className="whitespace-nowrap font-semibold">
-        ${original.amount}
-      </span>
+      <>
+        <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+          {original.action_description}
+        </Text>
+      </>
     ),
   }),
-  columnHelper.accessor('status', {
-    size: 160,
-    header: 'Status',
-    cell: (info) => (
-      <StatusSelect selectItem={info.getValue()} options={statusOptions} />
-    ),
-  }),
-  columnHelper.accessor('address', {
-    size: 150,
-    header: '',
-    cell: ({
-      row,
-      table: {
-        options: { meta },
-      },
-    }) => (
-      <TableRowActionGroup
-        onDelete={() => meta?.handleDeleteRow?.(row.original)}
-      />
-    ),
-  }),
+  // columnHelper.accessor('doctor.name', {
+  //   size: 300,
+  //   header: 'Appointed To',
+  //   enableSorting: false,
+  //   cell: ({ row: { original } }) => (
+  //     <AvatarCard
+  //       src={original.doctor.avatar}
+  //       name={original.doctor.name}
+  //       description={original.doctor.email}
+  //     />
+  //   ),
+  // }),
+  // columnHelper.accessor('type', {
+  //   size: 160,
+  //   header: 'Service Type',
+  //   cell: (info) => (
+  //     <Text className="whitespace-nowrap font-medium text-gray-900">
+  //       {info.getValue()}
+  //     </Text>
+  //   ),
+  // }),
+  // columnHelper.accessor('duration', {
+  //   size: 110,
+  //   header: 'Duration',
+  //   enableSorting: false,
+  //   cell: ({ row: { original } }) => {
+  //     const durationHour = Math.trunc(original.duration / 60);
+  //     return (
+  //       <span className="whitespace-nowrap font-semibold">
+  //         {durationHour > 0 && `${Math.trunc(original.duration / 60)}h`}{' '}
+  //         {original.duration % 60 > 0 ? `${original.duration % 60}m` : null}
+  //       </span>
+  //     );
+  //   },
+  // }),
+  // columnHelper.accessor('amount', {
+  //   size: 120,
+  //   header: 'Payment',
+  //   cell: ({ row: { original } }) => (
+  //     <span className="whitespace-nowrap font-semibold">
+  //       ${original.amount}
+  //     </span>
+  //   ),
+  // }),
+  // columnHelper.accessor('status', {
+  //   size: 160,
+  //   header: 'Status',
+  //   cell: (info) => (
+  //     <StatusSelect selectItem={info.getValue()} options={statusOptions} />
+  //   ),
+  // }),
+  // columnHelper.accessor('address', {
+  //   size: 150,
+  //   header: '',
+  //   cell: ({
+  //     row,
+  //     table: {
+  //       options: { meta },
+  //     },
+  //   }) => (
+  //     <TableRowActionGroup
+  //       onDelete={() => meta?.handleDeleteRow?.(row.original)}
+  //     />
+  //   ),
+  // }),
 ];
