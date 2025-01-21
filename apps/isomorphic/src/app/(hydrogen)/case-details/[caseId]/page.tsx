@@ -15,7 +15,7 @@ import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
 import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table';
 import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
 import ProbingQuestions from '@/app/shared/crm/dashboard/tables/probing-questions';
-import BrandSentiment from '@/app/shared/crm/dashboard/brand-sentiment';
+import BrandSentiment from '@/app/shared/crm/dashboard/tables/brand-sentiment';
 import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis';
 import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-2';
 import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold';
