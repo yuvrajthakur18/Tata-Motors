@@ -3,7 +3,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import IndividualCallDetails from '../../../components/IndividualCallDetails'; // Import the new component
 import QAScoring from '../../../components/QAScoring'; // Import the QAScoring component
-import ProbingQuestions from '../../../components/ProbingQuestions'; // Import the ProbingQuestions component
+// import ProbingQuestions from '../../../components/ProbingQuestions'; // Import the ProbingQuestions component
 import BrandSentiments from '../../../components/BrandSentiments'; // Import BrandSentiments component
 import EmpathyAnalysis from '../../../components/EmpathyAnalysis'; // Import the new component
 import AgentPerformanceScore from '../../../components/AgentPerformanceScore'; // Import AgentPerformanceScore
@@ -11,6 +11,18 @@ import AgentThresholdMapping from '../../../components/AgentThresholdMapping'; /
 import SuggestedCoaching from '../../../components/SuggestedCoaching'; // Import SuggestedCoaching
 import ActionPlanDetails from '../../../components/ActionPlanDetails'; // Import the ActionPlanDetails component
 import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
+
+import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table';
+import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
+import ProbingQuestions from '@/app/shared/crm/dashboard/tables/probing-questions';
+import BrandSentiment from '@/app/shared/crm/dashboard/brand-sentiment';
+import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis';
+import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-2';
+import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold';
+import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table';
+import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
+import { overAllCaseData } from '@/data/over-all-case-data';
+import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
 
 // Define the types for case data
 type CaseData = {
@@ -206,29 +218,37 @@ export default async function CaseDetailsPage({ params }: any) {
         </tbody>
       </table>
 
+      <OverAllCaseTable className='p-3 m-5' filteredData={overAllCaseData} />
+
       {/* Individual Call Details */}
       <IndividualCallDetails callData={caseData.calls_overview.calls} />
+      <IndividualCallTable className='p-3 m-5'/>
 
       {/* Q&A Scoring */}
       <QAScoring scoringData={caseData.calls_overview.calls[0].qa_scoring} />
+      <QAScoringTable className='p-3 m-5'/>
 
       {/* Probing Questions */}
-      <ProbingQuestions probingData={caseData.calls_overview.call_meta} />
+      {/* <ProbingQuestions probingData={caseData.calls_overview.call_meta} /> */}
+      <ProbingQuestions className='p-3 m-5'/>
 
       {/* Brand Sentiments Table */}
       <BrandSentiments
         brandSentimentData={caseData.calls_overview.brand_sentiment}
       />
+      <BrandSentiment className='p-3 m-5'/>
 
       {/* Empathy Analysis Table */}
       <EmpathyAnalysis
         empathyData={caseData.calls_overview.empathy_detection}
       />
+      <EmpathyAnalysisTable className='p-3 m-5'/>
 
       {/* Agent Performance Score */}
       <AgentPerformanceScore
         performanceData={caseData.calls_overview.agent_performance}
       />
+      <AgentPerformanceAnalysisTable className='p-3 m-5'/>
 
       {/* Agent Threshold Mapping for Coaching */}
       <AgentThresholdMapping
@@ -236,16 +256,19 @@ export default async function CaseDetailsPage({ params }: any) {
           caseData.calls_overview.agent_threshold_mapping_for_coaching
         }
       />
+      <AgentThreshold className='p-3 m-5'/>
 
       {/* Suggested Coaching Table */}
       <SuggestedCoaching
         coachingData={caseData.calls_overview.agent_coaching}
       />
+      <SuggestedCoachingTable className='p-3 m-5'/>
 
       {/* Action Plan for TL/CX Manager Table */}
       <ActionPlanDetails
         actionData={caseData.calls_overview.action_plan_details}
       />
+      <PlanOfAction className='p-3 m-5'/>    
     </div>
   );
 }
