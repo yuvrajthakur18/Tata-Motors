@@ -32,6 +32,25 @@ const Heatmap = ({
     if (value > 20) return "#94d2bd"; // Low intensity
     return "#e9d8a6"; // Very low intensity
   };
+  
+  const renderTooltip = ({ payload }: any) => {
+    if (!payload || payload.length === 0) return null;
+    const { x, y, value } = payload[0].payload;
+    return (
+      <div
+        style={{
+          background: "white",
+          border: "1px solid #ccc",
+          padding: "10px",
+          borderRadius: "5px",
+        }}
+      >
+        <p><strong>Time:</strong> {x}</p>
+        <p><strong>Day:</strong> {y}</p>
+        <p><strong>Calls:</strong> {value}</p>
+      </div>
+    );
+  };
 
   return (
     <div style={{ width: "100%", height }}>
@@ -47,7 +66,7 @@ const Heatmap = ({
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="category" dataKey={xKey} />
           <YAxis type="category" dataKey={yKey} />
-          <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+          <Tooltip content={renderTooltip} cursor={{ strokeDasharray: "3 3" }} />
           <Scatter
             data={data}
             fill="#8884d8"

@@ -94,53 +94,37 @@ export const crmStatData: CrmStatType[] = [
 
 export const revenueSummaryData = [
   {
-    day: 'Jan',
-    revenue: 5000,
+    name: 'Support',
+    value: 605 ,
   },
   {
-    day: 'Feb',
-    revenue: 8500,
+    name: 'Service',
+    value: 235 ,
   },
   {
-    day: 'Mar',
-    revenue: 7000,
+    name: 'Technician',
+    value: 454 ,
   },
   {
-    day: 'Apr',
-    revenue: 3908,
+    name: 'Feedback',
+    value: 120 ,
   },
   {
-    day: 'May',
-    revenue: 4890,
+    name: 'Assistance',
+    value: 256 ,
   },
   {
-    day: 'Jun',
-    revenue: 8000,
+    name: 'Coordination',
+    value: 178 ,
   },
   {
-    day: 'Jul',
-    revenue: 8500,
+    name: 'Resolution',
+    value: 564 ,
   },
   {
-    day: 'Aug',
-    revenue: 7000,
-  },
-  {
-    day: 'Sep',
-    revenue: 3908,
-  },
-  {
-    day: 'Oct',
-    revenue: 4890,
-  },
-  {
-    day: 'Nov',
-    revenue: 8000,
-  },
-  {
-    day: 'Dec',
-    revenue: 8500,
-  },
+    name: 'Followup',
+    value: 312 ,
+  }
 ];
 
 export const customerListData = [
