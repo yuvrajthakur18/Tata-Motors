@@ -25,20 +25,10 @@ import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-
 import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
 import { overAllCaseData } from '@/data/over-all-case-data';
 import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
-import CustomerAreaByPlatform from '@/app/shared/crm/dashboard/customer-area-by-platform';
+// import CustomerGrowthSummary
 import CustomerGrowthSummary from '@/app/shared/crm/dashboard/customer-growth-summary';
-
-import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table';
-import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
-import ProbingQuestions from '@/app/shared/crm/dashboard/tables/probing-questions';
-import BrandSentiment from '@/app/shared/crm/dashboard/tables/brand-sentiment';
-import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis';
-import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-2';
-import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold';
-import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table';
-import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
-import { overAllCaseData } from '@/data/over-all-case-data';
-import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
+// import CustomerAreaByPlatform
+import CustomerAreaByPlatform from '@/app/shared/crm/dashboard/customer-area-by-platform';
 
 // Define the types for case data
 type CaseData = {
@@ -207,6 +197,12 @@ export default async function CaseDetailsPage({ params }: any) {
     <div>
       
       <h1 className="mb-4 text-2xl font-bold">Case Details for {caseId}</h1>
+      <Box className="@container/crm">
+      <Box className="grid grid-cols-1 gap-6 @3xl/crm:grid-cols-12 @7xl/crm:gap-7 3xl:gap-8">
+        <CustomerGrowthSummary className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
+        <CustomerAreaByPlatform className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
+      </Box>
+      </Box>
 
       {/* Quick Tags Table */}
       <h5>Quick Tags</h5>
@@ -1235,21 +1231,21 @@ export default async function CaseDetailsPage({ params }: any) {
       {/* <BrandSentiments
         brandSentimentData={caseData.calls_overview.brand_sentiment}
       /> */}
-      />
+      
       <BrandSentiment className='p-3 m-5'/>
 
       {/* Empathy Analysis Table */}
       {/* <EmpathyAnalysis
         empathyData={caseData.calls_overview.empathy_detection}
       /> */}
-      />
+      
       <EmpathyAnalysisTable className='p-3 m-5'/>
 
       {/* Agent Performance Score */}
       {/* <AgentPerformanceScore
         performanceData={caseData.calls_overview.agent_performance}
       /> */}
-      />
+      
       <AgentPerformanceAnalysisTable className='p-3 m-5'/>
 
       {/* Agent Threshold Mapping for Coaching */}
@@ -1258,21 +1254,21 @@ export default async function CaseDetailsPage({ params }: any) {
           caseData.calls_overview.agent_threshold_mapping_for_coaching
         }
       /> */}
-      />
+      
       <AgentThreshold className='p-3 m-5'/>
 
       {/* Suggested Coaching Table */}
       {/* <SuggestedCoaching
         coachingData={caseData.calls_overview.agent_coaching}
       /> */}
-      />
+      
       <SuggestedCoachingTable className='p-3 m-5'/>
 
       {/* Action Plan for TL/CX Manager Table */}
       {/* <ActionPlanDetails
         actionData={caseData.calls_overview.action_plan_details}
       /> */}
-      />
+      
       <PlanOfAction className='p-3 m-5'/>    
     </div>
   );
