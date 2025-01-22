@@ -98,24 +98,24 @@ export const caseColumns = [
     cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
   }),
 
-  // Accessing nested data: case_overview.resolved_by
-  columnHelper.accessor((row) => row.case_overview.resolved_by, {
-    id: 'resolved_by',
-    size: 180,
-    header: 'Resolved By',
-    cell: (info) => {
-      const resolvedBy = info.getValue();
-      return (
-        <Text>
-          {resolvedBy
-            ?.map(
-              (resolver) => `${resolver.agent_name} (${resolver.agent_role})`
-            )
-            .join(', ') || 'N/A'}
-        </Text>
-      );
-    },
-  }),
+  // // Accessing nested data: case_overview.resolved_by
+  // columnHelper.accessor((row) => row.case_overview.resolved_by, {
+  //   id: 'resolved_by',
+  //   size: 180,
+  //   header: 'Resolved By',
+  //   cell: (info) => {
+  //     const resolvedBy = info.getValue();
+  //     return (
+  //       <Text>
+  //         {resolvedBy
+  //           ?.map(
+  //             (resolver) => `${resolver.agent_name} (${resolver.agent_role})`
+  //           )
+  //           .join(', ') || 'N/A'}
+  //       </Text>
+  //     );
+  //   },
+  // }),
 
   // Accessing nested data: case_overview.customer_satisfaction_indicator
   columnHelper.accessor(
