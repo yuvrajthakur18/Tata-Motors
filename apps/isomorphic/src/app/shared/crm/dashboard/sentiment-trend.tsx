@@ -121,7 +121,7 @@ export default function SentimentTrend({ className }: { className?: string }) {
           <span className="font-semibold leading-none"> +32.40%</span>
         </span>
       </div>
-      <CustomLegend className="mb-4 mt-0 inline-flex @[80rem]:hidden" />
+      {/* <CustomLegend className="mb-4 mt-0 inline-flex @[80rem]:hidden" /> */}
       <div className="custom-scrollbar -mb-3 overflow-x-auto pb-3">
         <div className="h-[20rem] w-full pe-1 pt-6">
           <ResponsiveContainer width="100%" height="100%" minWidth={700}>

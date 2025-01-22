@@ -1,5 +1,7 @@
 'use client';
 
+
+import Link from 'next/link';
 import { createColumnHelper } from '@tanstack/react-table';
 import { Text } from 'rizzui';
 import { CallDataType } from '.';
@@ -7,13 +9,22 @@ import { CallDataType } from '.';
 const columnHelper = createColumnHelper<CallDataType>();
 
 export const callColumns = [
-  // Call ID
-  columnHelper.accessor((row) => row.call_id, {
-    id: 'call_id',
-    header: 'Call ID',
-    size: 150,
-    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
-  }),
+  
+  
+// Call ID
+columnHelper.accessor((row) => row.call_id, {
+  id: 'call_id',
+  header: 'Call ID',
+  size: 150,
+  cell: (info) => (
+    <Link
+      href={`/call-details/${info.getValue()}`}
+      className="text-blue-600 hover:underline"
+    >
+      {info.getValue() || 'N/A'}
+    </Link>
+  ),
+}),
 
   // Call Direction
   columnHelper.accessor((row) => row.call_direction, {
@@ -86,4 +97,5 @@ export const callColumns = [
     size: 200,
     cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
   }),
+
 ];

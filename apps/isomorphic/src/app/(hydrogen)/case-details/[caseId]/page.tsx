@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { notFound } from 'next/navigation';
+import { Box } from 'rizzui/box';
 import IndividualCallDetails from '../../../components/IndividualCallDetails'; // Import the new component
 import QAScoring from '../../../components/QAScoring'; // Import the QAScoring component
 // import ProbingQuestions from '../../../components/ProbingQuestions'; // Import the ProbingQuestions component
@@ -24,6 +25,8 @@ import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-
 import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
 import { overAllCaseData } from '@/data/over-all-case-data';
 import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
+import CustomerAreaByPlatform from '@/app/shared/crm/dashboard/customer-area-by-platform';
+import CustomerGrowthSummary from '@/app/shared/crm/dashboard/customer-growth-summary';
 
 import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table';
 import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
@@ -202,6 +205,7 @@ export default async function CaseDetailsPage({ params }: any) {
 
   return (
     <div>
+      
       <h1 className="mb-4 text-2xl font-bold">Case Details for {caseId}</h1>
 
       {/* Quick Tags Table */}
@@ -1209,17 +1213,7 @@ export default async function CaseDetailsPage({ params }: any) {
           </div>
         ))}
       </div>
-                    {typeof value === 'string'
-                      ? value
-                      : JSON.stringify(value, null, 2)}
-                  </td>
-                </tr>
-              ))}
-            </React.Fragment>
-          ))}
-        </tbody>
-      </table>
-
+                    
       <OverAllCaseTable className='p-3 m-5' filteredData={overAllCaseData} />
 
       {/* Individual Call Details */}
