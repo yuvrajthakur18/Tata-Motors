@@ -1521,6 +1521,4 @@ div[style='z-index: 1000001;'],
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
   @apply rounded-md bg-gray-400/70;
 }
-.{
-background-color: #d9e6ce;
-}
+
