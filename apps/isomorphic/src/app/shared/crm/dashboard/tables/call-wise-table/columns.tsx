@@ -3,6 +3,7 @@
 import { createColumnHelper } from '@tanstack/react-table';
 import { Text } from 'rizzui';
 import { CallDataType } from '.';
+import Link from 'next/link';
 
 const columnHelper = createColumnHelper<CallDataType>();
 
@@ -12,7 +13,14 @@ export const callColumns = [
     id: 'call_id',
     header: 'Call ID',
     size: 150,
-    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+    cell: (info) => (
+      <Link
+        href={`/call-details/${info.getValue()}`}
+        className="text-blue-600 hover:underline"
+      >
+        {info.getValue() || 'N/A'}
+      </Link>
+    ),
   }),
 
   // Call Direction
