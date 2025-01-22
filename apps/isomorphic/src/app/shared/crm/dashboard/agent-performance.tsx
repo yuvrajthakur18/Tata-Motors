@@ -6,10 +6,7 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
   // Filter logic
   const totalAgents = data.length;
   const topAgents = data.slice(0, Math.ceil(totalAgents * 0.25));
-  const bottomAgents = data.slice(
-    Math.floor(totalAgents * 0.75),
-    totalAgents
-  );
+  const bottomAgents = data.slice(Math.floor(totalAgents * 0.75), totalAgents);
   const mediocreAgents = data.slice(
     Math.ceil(totalAgents * 0.25),
     Math.floor(totalAgents * 0.75)
@@ -18,7 +15,7 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
   // Render card function
   const renderCard = (title: string, agents: any[], borderColor: string) => (
     <Box
-      className={`flex-1 rounded-lg shadow-md p-4`}
+      className={`flex-1 rounded-lg p-4 shadow-md`}
       style={{
         minWidth: '350px',
         maxWidth: '33%',
@@ -27,15 +24,15 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
         backgroundColor: '#fff',
       }}
     >
-      <h3 className="text-lg font-semibold mb-4">{title}</h3>
+      <h3 className="mb-4 text-lg font-semibold">{title}</h3>
       <div
-        className="overflow-auto max-h-96"
+        className="max-h-96 overflow-auto"
         style={{
           scrollbarWidth: 'thin',
           scrollbarColor: `${borderColor} #f8f9fa`,
         }}
       >
-        <style jsx>{`
+        <style>{`
           div::-webkit-scrollbar {
             width: 1px;
           }
@@ -50,17 +47,29 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
         <Table className="min-w-[900px]">
           <thead>
             <tr>
-              <th className="px-2 py-2 font-medium text-left">Agent Name</th>
-              <th className="px-2 py-2 font-medium text-left">Total Cases Allotted</th>
-              <th className="px-2 py-2 font-medium text-left">Calls Handled</th>
-              <th className="px-2 py-2 font-medium text-left">Cases Solved</th>
-              <th className="px-2 py-2 font-medium text-left">Duration</th>
-              <th className="px-2 py-2 font-medium text-left">Hold Time</th>
-              <th className="px-2 py-2 font-medium text-left">Talk to Listen Ratio</th>
-              <th className="px-2 py-2 font-medium text-left">Interruptions Count</th>
-              <th className="px-2 py-2 font-medium text-left">Agent Efficiency</th>
-              <th className="px-2 py-2 font-medium text-left">Brand Mentions</th>
-              <th className="px-2 py-2 font-medium text-left">Agent Overall Performance</th>
+              <th className="px-2 py-2 text-left font-medium">Agent Name</th>
+              <th className="px-2 py-2 text-left font-medium">
+                Total Cases Allotted
+              </th>
+              <th className="px-2 py-2 text-left font-medium">Calls Handled</th>
+              <th className="px-2 py-2 text-left font-medium">Cases Solved</th>
+              <th className="px-2 py-2 text-left font-medium">Duration</th>
+              <th className="px-2 py-2 text-left font-medium">Hold Time</th>
+              <th className="px-2 py-2 text-left font-medium">
+                Talk to Listen Ratio
+              </th>
+              <th className="px-2 py-2 text-left font-medium">
+                Interruptions Count
+              </th>
+              <th className="px-2 py-2 text-left font-medium">
+                Agent Efficiency
+              </th>
+              <th className="px-2 py-2 text-left font-medium">
+                Brand Mentions
+              </th>
+              <th className="px-2 py-2 text-left font-medium">
+                Agent Overall Performance
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -93,7 +102,8 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
           'Mediocre Performance Agents',
           mediocreAgents,
           '#fbf1d3'
-        )} {/* Orange */}
+        )}{' '}
+        {/* Orange */}
         {renderCard('Bottom 25% Agents', bottomAgents, '#eed4d4')} {/* Red */}
       </div>
     </Box>

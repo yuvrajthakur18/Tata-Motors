@@ -4,6 +4,7 @@ import { createColumnHelper } from '@tanstack/react-table';
 import { Checkbox, Text } from 'rizzui';
 import TableRowActionGroup from '@core/components/table-utils/table-row-action-group';
 import { AgentDataType } from '@/data/agent-data';
+import Link from 'next/link';
 
 const columnHelper = createColumnHelper<AgentDataType>();
 
@@ -32,9 +33,12 @@ export const agentColumns = [
     size: 230,
     header: 'Agent Name',
     cell: (info) => (
-      <Text className="text-sm font-medium text-gray-900">
+      <Link
+        href={`/agent-details/${info.getValue()}`}
+        className="text-blue-600 hover:underline"
+      >
         {info.getValue()}
-      </Text>
+      </Link>
     ),
   }),
   columnHelper.accessor('callsHandled', {
