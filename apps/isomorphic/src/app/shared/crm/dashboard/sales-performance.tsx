@@ -3,6 +3,7 @@
 import WidgetCard from '@core/components/cards/widget-card';
 import { CustomTooltip } from '@core/components/charts/custom-tooltip';
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 import {
   Bar,
   BarChart,
@@ -12,37 +13,20 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import { Box } from 'rizzui';
+import { Box, Button } from 'rizzui';
 
+// Data for bar chart
 const data = [
-  {
-    day: 'A1',
-    customers: 10,
-  },
-  {
-    day: 'A2',
-    customers: 40,
-  },
-  {
-    day: 'A3',
-    customers: 48,
-  },
-  {
-    day: 'A4',
-    customers: 33,
-  },
-  {
-    day: 'A5',
-    customers: 25,
-  },
-  {
-    day: 'A6',
-    customers: 25,
-  },
-  {
-    day: 'A7',
-    customers: 50,
-  },
+  { agent: 'A1', performance: 10 },
+  { agent: 'A2', performance: 40 },
+  { agent: 'A3', performance: 48 },
+  { agent: 'A4', performance: 33 },
+  { agent: 'A5', performance: 25 },
+  { agent: 'A6', performance: 25 },
+  { agent: 'A7', performance: 50 },
+  { agent: 'A8', performance: 37 },
+  { agent: 'A9', performance: 20 },
+  { agent: 'A10', performance: 44 },
 ];
 
 export default function SalesPerformance({
@@ -51,6 +35,7 @@ export default function SalesPerformance({
   className?: string;
 }) {
   const { theme } = useTheme();
+  const router = useRouter(); // Use Next.js router for navigation
   const isDark = theme === 'dark';
 
   return (
@@ -73,7 +58,7 @@ export default function SalesPerformance({
             >
               <CartesianGrid strokeDasharray="8 10" strokeOpacity={0.435} />
               <XAxis
-                dataKey="day"
+                dataKey="agent"
                 axisLine={false}
                 tickLine={false}
                 tickMargin={20}
@@ -81,9 +66,9 @@ export default function SalesPerformance({
               <YAxis axisLine={false} tickLine={false} tickMargin={20} />
               <Tooltip content={<CustomTooltip />} />
               <Bar
-                dataKey="customers"
+                dataKey="performance"
                 className="fill-[#29CCB1] dark:[fill-opacity:0.9]"
-                name="Satisfied Customers"
+                name="Performance"
                 barSize={16}
                 radius={20}
                 background={{
@@ -95,6 +80,12 @@ export default function SalesPerformance({
           </ResponsiveContainer>
         </Box>
       </div>
+      <Button
+        className="mt-4"
+        onClick={() => router.push('/agents-page')} // Redirect to /agents-page
+      >
+        View All
+      </Button>
     </WidgetCard>
   );
 }

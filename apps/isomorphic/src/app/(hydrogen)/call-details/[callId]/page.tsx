@@ -2,6 +2,17 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
+import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table';
+import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
+import ProbingQuestions from '@/app/shared/crm/dashboard/tables/probing-questions';
+import BrandSentiment from '@/app/shared/crm/dashboard/tables/brand-sentiment';
+import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis';
+import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-2';
+import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold';
+import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table';
+import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
+import { overAllCaseData } from '@/data/over-all-case-data';
+import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
 
 export default async function CallDetailsPage({ params }: any) {
   const { callId: rawCallId } = params as { callId: string };
@@ -40,12 +51,12 @@ export default async function CallDetailsPage({ params }: any) {
   }
 
   return (
-    <div>
+    <div className="m-10 p-3">
       <h1 className="mb-4 text-2xl font-bold">Call Details for {callId}</h1>
 
       {/* Quick Tags Table */}
       <h5>Quick Tags</h5>
-      <table className="mb-6 mt-2 w-full table-auto border-collapse rounded-lg border border-gray-400 text-center shadow-md">
+      <table className="mb-6 mt-2 w-full table-auto border-collapse rounded-lg border border-gray-400 text-left shadow-md">
         <thead>
           <tr className="bg-green-300">
             <th className="border border-gray-300 px-4 py-2">Parameter</th>
@@ -104,39 +115,55 @@ export default async function CallDetailsPage({ params }: any) {
         </tbody>
       </table>
 
-      {/* Cards  */}
-      <div className="mb-8 mt-8 flex justify-evenly">
-        <div className="card border-black-600 flex flex-col items-center justify-center rounded-lg border p-6">
-          <p className="text-center">Call Duration</p>
-          <h4 className="text-center font-semibold">
+      {/* Enhanced Cards */}
+      <div className="mb-8 mt-8 flex justify-evenly gap-6">
+        <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">
+          <p className="text-center text-gray-500">Call Duration</p>
+          <h4 className="text-center text-xl font-bold text-gray-800">
             {callDetails.call_meta.call_duration || 'N/A'}
           </h4>
         </div>
-        <div className="card border-black-600 flex flex-col items-center justify-center rounded-lg border p-6">
-          <p className="text-center">Call Hold Time</p>
-          <h4 className="text-center font-semibold">
+        <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">
+          <p className="text-center text-gray-500">Call Hold Time</p>
+          <h4 className="text-center text-xl font-bold text-gray-800">
             {callDetails.call_meta.call_hold_time || 'N/A'}
           </h4>
         </div>
-        <div className="card border-black-600 flex flex-col items-center justify-center rounded-lg border p-6">
-          <p className="text-center">Interruptions Count</p>
-          <h4 className="text-center font-semibold">
+        <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">
+          <p className="text-center text-gray-500">Interruptions Count</p>
+          <h4 className="text-center text-xl font-bold text-gray-800">
             {callDetails.call_meta.interruptions_count || 'N/A'}
           </h4>
         </div>
-        <div className="card border-black-600 flex flex-col items-center justify-center rounded-lg border p-6">
-          <p className="text-center">Empathy Score</p>
-          <h4 className="text-center font-semibold">
+        <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">
+          <p className="text-center text-gray-500">Empathy Score</p>
+          <h4 className="text-center text-xl font-bold text-gray-800">
             {callDetails.empathy_detection.overall_score || 'N/A'}
           </h4>
         </div>
-        <div className="card border-black-600 flex flex-col items-center justify-center rounded-lg border p-6">
-          <p className="text-center">Participants</p>
-          <h4 className="text-center font-semibold">
+        <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">
+          <p className="text-center text-gray-500">Participants</p>
+          <h4 className="text-center text-xl font-bold text-gray-800">
             {callDetails.participants_count || 'N/A'}
           </h4>
         </div>
       </div>
+
+      <QAScoringTable className="my-5 p-3" />
+
+      <ProbingQuestions className="my-5 p-3" />
+
+      <BrandSentiment className="my-5 p-3" />
+
+      <EmpathyAnalysisTable className="my-5 p-3" />
+
+      <AgentPerformanceAnalysisTable className="my-5 p-3" />
+
+      <AgentThreshold className="my-5 p-3" />
+
+      <SuggestedCoachingTable className="my-5 p-3" />
+
+      <PlanOfAction className="my-5 p-3" />
     </div>
   );
 }

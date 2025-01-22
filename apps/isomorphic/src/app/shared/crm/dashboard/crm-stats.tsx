@@ -17,12 +17,35 @@ export type StatCardProps = {
   statItem: CrmStatType;
 };
 
-export default function CRMStats({ className }: { className?: string }) {
+export default function CRMStats({
+  className,
+  stats,
+}: {
+  className?: string;
+  stats?: string;
+}) {
+  // Filter stats based on the "stats" prop
+  const filteredStats =
+    stats === "case"
+      ? crmStatData.filter(
+          (stat) => stat.title === "Total Cases" || stat.title === "Unsolved Cases"
+        )
+      : stats === "call"
+      ? crmStatData.filter(
+          (stat) =>
+            stat.title === "Calls" ||
+            stat.title === "Agents" ||
+            stat.title === "Customers" ||
+            stat.title === "Technicians" ||
+            stat.title === "Supervisors"
+        )
+      : crmStatData; // Show all stats if no filter is provided
+
   return (
-    <Box className={cn('@container', className)}>
+    <Box className={cn("@container", className)}>
       <Box className="grid grid-cols-1 gap-4 @lg:grid-cols-2 @3xl:gap-6 @4xl:grid-cols-4 3xl:gap-8">
-        {crmStatData.map((stat: CrmStatType, index: number) => {
-          return <StatCard key={'stat-card-' + index} statItem={stat} />;
+        {filteredStats.map((stat: CrmStatType, index: number) => {
+          return <StatCard key={"stat-card-" + index} statItem={stat} />;
         })}
       </Box>
     </Box>
