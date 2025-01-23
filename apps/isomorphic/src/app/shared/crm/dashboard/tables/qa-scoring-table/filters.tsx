@@ -47,43 +47,9 @@ export default function Filters<TData extends Record<string, any>>({
         value={table.getState().globalFilter ?? ''}
         prefix={<PiMagnifyingGlassBold className="size-4" />}
         onChange={(e) => table.setGlobalFilter(e.target.value)}
-        className="w-full @3xl:order-3 @3xl:ms-auto @3xl:max-w-72"
+        className=" @3xl:order-3 @3xl:ms-auto @3xl:max-w-72"
       />
-        <StatusField
-          className="w-full"
-          placeholder="Select type"
-          dropdownClassName="!z-10 h-auto"
-          options={appointmentTypesOptions}
-          value={table.getColumn('type')?.getFilterValue() ?? []}
-          onChange={(e) => table.getColumn('type')?.setFilterValue(e)}
-          getOptionValue={(option: { value: any }) => option.value}
-          displayValue={(selected: string) =>
-            appointmentTypesOptions.find((option) => option.label === selected)
-              ?.label ?? ''
-          }
-        />
-        <StatusField
-          className="w-full"
-          options={statusOptions}
-          dropdownClassName="!z-10 h-auto"
-          getOptionValue={(option) => option.label}
-          value={table.getColumn('status')?.getFilterValue() ?? []}
-          onChange={(e) => table.getColumn('status')?.setFilterValue(e)}
-        />
-      </Flex>
-
-      {isFiltered ? (
-        <Button
-          variant="flat"
-          onClick={() => {
-            table.resetGlobalFilter();
-            table.resetColumnFilters();
-          }}
-          className="order-3 h-9 w-full bg-gray-200/70 @3xl:order-2 @3xl:w-24"
-        >
-          <PiTrashDuotone className="me-1.5 size-4" /> Clear
-        </Button>
-      ) : null}
+        </Flex>
 
       
     </Flex>

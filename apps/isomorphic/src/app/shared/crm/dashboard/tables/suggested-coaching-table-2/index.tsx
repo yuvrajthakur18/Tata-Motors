@@ -8,71 +8,40 @@ import { useTanStackTable } from '@core/components/table/custom/use-TanStack-Tab
 import cn from '@core/utils/class-names';
 import Filters from './filters';
 
-interface Call {
-  call_id: string;
-  qa_scoring: {
-    markings: {
-      question: string;
-      customer_response: string;
-      clarity_score: number;
-      relevance_score: number;
-      efficiency_score: number;
-      empathy_score: number;
-      response_management_score: number;
-    }[];
-  };
-}
-
-interface DummyDataType {
-  calls_overview?: {
-    calls: Call[];
-  };
-}
-
-// Import dummy data and type it
+// Import dummy data
 import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
 
-const dummyDataTyped = dummyData as DummyDataType[];
-
 export type AppointmentDataType = {
-  id: string;
-  question: string;
-  customer_response: string;
-  clarity_score: string;
-  relevance_score: string;
-  efficiency_score: string;
-  empathy_score: string;
-  response_management_score: string;
+  focus_area: string;
+  row_items: string[];
 };
 
-interface QAScoringTableProps {
+interface SuggestedCoachingTableProps {
   callId: string; // Pass only the caseId as a prop
   className?: string;
 }
 
-export default function QAScoringTable({
+export default function SuggestedCoachingTable({
   callId,
   className,
-}: QAScoringTableProps) {
-  // Extract QA scoring data
-  const qaScoringData =
-    dummyDataTyped
-      .flatMap((item) => item.calls_overview?.calls || [])
-      .find((call) => call.call_id === callId)?.qa_scoring || null;
+}: SuggestedCoachingTableProps) {
+  // Find the data for the given callId
+  const SuggestedCoachingTableData = dummyData
+    .flatMap((item) => item.calls_overview?.calls || []) // Flatten all calls into a single array
+    .find((call) => call.call_id === callId)?.agent_coaching.coaching_points;
 
-  // Map data
-  const mappedData = qaScoringData?.markings.map((item, index) => ({
-    id: `qa-${index}`,
-    question: item.question,
-    customer_response: item.customer_response,
-    clarity_score: item.clarity_score.toString(),
-    relevance_score: item.relevance_score.toString(),
-    efficiency_score: item.efficiency_score.toString(),
-    empathy_score: item.empathy_score.toString(),
-    response_management_score: item.response_management_score.toString(),
-  })) || [];
+  if (!SuggestedCoachingTableData) {
+    console.error(`Suggested Coaching Data not found for call ID: ${callId}`);
+  }
 
-  // Use TanStackTable unconditionally
+  // Map data to align with the updated JSON structure
+  const mappedData =
+    SuggestedCoachingTableData?.map((item) => ({
+      focus_area: item.framework_parameter,
+      row_items: item.suggested_coaching_point,
+    })) || [];
+
+  // Use TanStackTable to manage table data
   const { table } = useTanStackTable<AppointmentDataType>({
     tableData: mappedData,
     columnConfig: appointmentColumns,
@@ -87,11 +56,12 @@ export default function QAScoringTable({
     },
   });
 
-  if (!qaScoringData) {
+  // Handle case not found
+  if (!SuggestedCoachingTableData) {
     return (
       <WidgetCard
         className={cn('p-0 lg:p-0', className)}
-        title="QA Scoring"
+        title="Suggested Coaching"
         titleClassName="whitespace-nowrap"
         headerClassName="mb-4 px-5 lg:px-7 pt-5 lg:pt-7"
       >
@@ -103,7 +73,7 @@ export default function QAScoringTable({
   return (
     <WidgetCard
       className={cn('p-0 lg:p-0', className)}
-      title={`QA Scoring`}
+      title="Suggested Coaching"
       titleClassName="whitespace-nowrap"
       headerClassName="mb-4 items-start flex-col @[62rem]:flex-row @[62rem]:items-center px-5 lg:px-7 pt-5 lg:pt-7"
       actionClassName="grow @[62rem]:ps-11 ps-0 items-center w-full @[42rem]:w-full @[62rem]:w-auto"

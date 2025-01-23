@@ -5,14 +5,18 @@ import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
 import IndividualCallTable from '@/app/shared/crm/dashboard/tables/individual-call-table';
 import QAScoringTable from '@/app/shared/crm/dashboard/tables/qa-scoring-table';
 import ProbingQuestions from '@/app/shared/crm/dashboard/tables/probing-questions';
-import BrandSentiment from '@/app/shared/crm/dashboard/tables/brand-sentiment';
-import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis';
-import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-2';
-import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold';
-import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table';
+import BrandSentiment from '@/app/shared/crm/dashboard/tables/brand-sentiment-2';
+import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-analysis-2';
+import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-3';
+import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold-2';
+import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table-2';
 import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
 import { overAllCaseData } from '@/data/over-all-case-data';
-import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
+import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action'; 
+// import quick data table 
+import QuickTag from '@/app/shared/crm/dashboard/tables/quick-tag';
+import BrandSentiments from '@/app/shared/crm/dashboard/brand-sentiment-2';
+
 
 export default async function CallDetailsPage({ params }: any) {
   const { callId: rawCallId } = params as { callId: string };
@@ -49,13 +53,22 @@ export default async function CallDetailsPage({ params }: any) {
     console.error(`Call details for ID ${callId} not found.`);
     notFound();
   }
+  
+  const callDirection = callDetails.call_direction
+  const callType = callDetails.call_type
+  const complaintNumber = callDetails.complaint_number
+  const workshopLocation = callDetails.workshop_location
+  const issueResolved = callDetails.issue_resolved
+  const workshopPhoneNumber = callDetails.workshop_phone_number
+
+
 
   return (
     <div className="m-10 p-3">
       <h1 className="mb-4 text-2xl font-bold">Call Details for {callId}</h1>
 
       {/* Quick Tags Table */}
-      <h5>Quick Tags</h5>
+      {/* <h5>Quick Tags</h5>
       <table className="mb-6 mt-2 w-full table-auto border-collapse rounded-lg border border-gray-400 text-left shadow-md">
         <thead>
           <tr className="bg-green-300">
@@ -113,7 +126,13 @@ export default async function CallDetailsPage({ params }: any) {
             </td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
+      <QuickTag  callId={callDetails.call_id} callDirection = {callDetails.call_direction}
+      callType = {callDetails.call_type}
+      complaintNumber = {callDetails.complaint_number}
+      workshopLocation = {callDetails.workshop_location}
+      issueResolved = {callDetails.issue_resolved}
+      workshopPhoneNumber = {callDetails.workshop_phone_number} className='p-3 my-5'/>
 
       {/* Enhanced Cards */}
       <div className="mb-8 mt-8 flex justify-evenly gap-6">
@@ -149,21 +168,33 @@ export default async function CallDetailsPage({ params }: any) {
         </div>
       </div>
 
-      <QAScoringTable className="my-5 p-3" />
 
-      <ProbingQuestions className="my-5 p-3" />
+      <BrandSentiments callId={callDetails.call_id}  className='p-3 my-5'/>
+     
+      <QAScoringTable callId={callDetails.call_id} className='p-3 my-5'/>
 
-      <BrandSentiment className="my-5 p-3" />
+     
+     
+     <ProbingQuestions callId={callDetails.call_id} className='p-3 my-5'/>
 
-      <EmpathyAnalysisTable className="my-5 p-3" />
+      
+      <BrandSentiment callId={callDetails.call_id} className='p-3 my-5'/>
 
-      <AgentPerformanceAnalysisTable className="my-5 p-3" />
+      
+      <EmpathyAnalysisTable callId={callDetails.call_id} className='p-3 my-5'/>
 
-      <AgentThreshold className="my-5 p-3" />
+      
+      <AgentPerformanceAnalysisTable callId={callDetails.call_id} className='p-3 my-5'/>
 
-      <SuggestedCoachingTable className="my-5 p-3" />
+      
+      <AgentThreshold callId={callDetails.call_id} className='p-3 my-5'/>
 
-      <PlanOfAction className="my-5 p-3" />
+      
+      <SuggestedCoachingTable callId={callDetails.call_id} className='p-3 my-5'/>
+
+      
+      <PlanOfAction className='p-3 my-5'/> 
+
     </div>
   );
 }

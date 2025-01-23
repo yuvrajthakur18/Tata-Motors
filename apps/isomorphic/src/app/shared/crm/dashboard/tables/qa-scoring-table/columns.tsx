@@ -6,94 +6,109 @@ import AvatarCard from '@core/ui/avatar-card';
 import DateCell from '@core/ui/date-cell';
 import { createColumnHelper } from '@tanstack/react-table';
 import { Checkbox, Text } from 'rizzui';
-import { AppointmentDataType } from '.';
 
-const statusOptions = [
-  { label: 'Waiting', value: 'Waiting' },
-  { label: 'Scheduled', value: 'Scheduled' },
-];
+export interface Appointment {
+  id: string;
+  question: string;
+  customer_response: string;
+  clarity_score: string;
+  relevance_score: string;
+  efficiency_score: string;
+  empathy_score: string;
+  response_management_score: string;
+}
 
-const columnHelper = createColumnHelper<AppointmentDataType>();
+const columnHelper = createColumnHelper<Appointment>();
+
 export const appointmentColumns = [
-  columnHelper.accessor('id', {
-    size: 30,
-    enableSorting: false,
-    header: ({ table }) => (
-      <Checkbox
-        className="ps-3"
-        aria-label="Select all rows"
-        checked={table.getIsAllPageRowsSelected()}
-        onChange={() => table.toggleAllPageRowsSelected()}
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        className="ps-3"
-        aria-label="Select row"
-        checked={row.getIsSelected()}
-        onChange={() => row.toggleSelected()}
-      />
-    ),
-  }),
-  columnHelper.accessor('agentsQuestion', {
-    size: 100,
-    header: 'Agent\'s Question',
-    enableSorting: false,
-    cell: ({ row: { original } }) => (
-      <>
-        <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
-          {original.agentsQuestion}
-        </Text>
-      </>
-    ),
-  }),
-  columnHelper.accessor('customerResponse', {
+  // columnHelper.accessor('id', {
+  //   size: 30,
+  //   enableSorting: false,
+  //   header: ({ table }) => (
+  //     <Checkbox
+  //       className="ps-3"
+  //       aria-label="Select all rows"
+  //       checked={table.getIsAllPageRowsSelected()}
+  //       onChange={() => table.toggleAllPageRowsSelected()}
+  //     />
+  //   ),
+  //   cell: ({ row }) => (
+  //     <Checkbox
+  //       className="ps-3"
+  //       aria-label="Select row"
+  //       checked={row.getIsSelected()}
+  //       onChange={() => row.toggleSelected()}
+  //     />
+  //   ),
+  // }),
+  columnHelper.accessor('question', {
     size: 200,
-    header: 'Customer\'s Response',
+    header: "Agent's Question",
     enableSorting: false,
     cell: ({ row: { original } }) => (
-      <>
-        <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
-          {original.customerResponse}
-        </Text>
-      </>
+      <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+        {original.question}
+      </Text>
     ),
   }),
-  columnHelper.accessor('scoreCriteria', {
+  columnHelper.accessor('customer_response', {
+    size: 200,
+    header: "Customer's Response",
+    enableSorting: false,
+    cell: ({ row: { original } }) => (
+      <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+        {original.customer_response}
+      </Text>
+    ),
+  }),
+  columnHelper.accessor('clarity_score', {
     size: 100,
-    header: 'Score Criteria',
+    header: 'Clarity Score',
     enableSorting: false,
     cell: ({ row: { original } }) => (
-      <>
-        <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
-          {original.scoreCriteria}
-        </Text>
-      </>
+      <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+        {original.clarity_score}
+      </Text>
     ),
   }),
-  columnHelper.accessor('score', {
+  columnHelper.accessor('relevance_score', {
     size: 100,
-    header: 'Score (1-5)',
+    header: 'Relevance Score',
     enableSorting: false,
     cell: ({ row: { original } }) => (
-      <>
-        <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
-          {original.score}
-        </Text>
-      </>
+      <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+        {original.relevance_score}
+      </Text>
     ),
   }),
-  columnHelper.accessor('comments', {
+  columnHelper.accessor('efficiency_score', {
     size: 100,
-    header: 'Comments',
+    header: 'Efficiency Score',
     enableSorting: false,
     cell: ({ row: { original } }) => (
-      <>
-        <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
-          {original.comments}
-        </Text>
-      </>
+      <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+        {original.efficiency_score}
+      </Text>
     ),
   }),
-
+  columnHelper.accessor('empathy_score', {
+    size: 100,
+    header: 'Empathy Score',
+    enableSorting: false,
+    cell: ({ row: { original } }) => (
+      <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+        {original.empathy_score}
+      </Text>
+    ),
+  }),
+  columnHelper.accessor('response_management_score', {
+    size: 100,
+    header: 'Response Management Score',
+    enableSorting: false,
+    cell: ({ row: { original } }) => (
+      <Text className="text-sm font-medium text-gray-900 dark:text-gray-700">
+        {original.response_management_score}
+      </Text>
+    ),
+  }),
 ];

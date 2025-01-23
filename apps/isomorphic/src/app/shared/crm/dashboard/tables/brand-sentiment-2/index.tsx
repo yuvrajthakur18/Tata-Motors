@@ -8,19 +8,18 @@ import { useTanStackTable } from '@core/components/table/custom/use-TanStack-Tab
 import cn from '@core/utils/class-names';
 import Filters from './filters';
 
+// Define types for Brand Sentiment data
+interface BrandSentimentInstance {
+  category: string;
+  sentiment_indicator: string;
+  frequency_of_frustration: string;
+  frequency_of_happiness: string;
+  brand_sentiment_analysis: string;
+}
+
 interface Call {
   call_id: string;
-  qa_scoring: {
-    markings: {
-      question: string;
-      customer_response: string;
-      clarity_score: number;
-      relevance_score: number;
-      efficiency_score: number;
-      empathy_score: number;
-      response_management_score: number;
-    }[];
-  };
+  brand_sentiment: BrandSentimentInstance[];
 }
 
 interface DummyDataType {
@@ -29,50 +28,46 @@ interface DummyDataType {
   };
 }
 
-// Import dummy data and type it
+// Import and type dummy data
 import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
 
-const dummyDataTyped = dummyData as DummyDataType[];
+// Type the dummyData explicitly
+const dummyDataTyped: DummyDataType[] = dummyData as DummyDataType[];
 
 export type AppointmentDataType = {
   id: string;
-  question: string;
-  customer_response: string;
-  clarity_score: string;
-  relevance_score: string;
-  efficiency_score: string;
-  empathy_score: string;
-  response_management_score: string;
+  category: string;
+  sentiment_indicator: string;
+  frequency_of_frustration: string;
+  frequency_of_happiness: string;
+  brand_sentiment_analysis: string;
 };
 
-interface QAScoringTableProps {
+interface BrandSentimentProps {
   callId: string; // Pass only the caseId as a prop
   className?: string;
 }
 
-export default function QAScoringTable({
+export default function BrandSentiment({
   callId,
   className,
-}: QAScoringTableProps) {
-  // Extract QA scoring data
-  const qaScoringData =
+}: BrandSentimentProps) {
+  const brandSentimentData =
     dummyDataTyped
       .flatMap((item) => item.calls_overview?.calls || [])
-      .find((call) => call.call_id === callId)?.qa_scoring || null;
+      .find((call) => call.call_id === callId)?.brand_sentiment;
 
-  // Map data
-  const mappedData = qaScoringData?.markings.map((item, index) => ({
-    id: `qa-${index}`,
-    question: item.question,
-    customer_response: item.customer_response,
-    clarity_score: item.clarity_score.toString(),
-    relevance_score: item.relevance_score.toString(),
-    efficiency_score: item.efficiency_score.toString(),
-    empathy_score: item.empathy_score.toString(),
-    response_management_score: item.response_management_score.toString(),
-  })) || [];
+  const mappedData = brandSentimentData
+    ? brandSentimentData.map((item, index) => ({
+        id: `qa-${index}`,
+        category: item.category,
+        sentiment_indicator: item.sentiment_indicator,
+        frequency_of_frustration: item.frequency_of_frustration,
+        frequency_of_happiness: item.frequency_of_happiness,
+        brand_sentiment_analysis: item.brand_sentiment_analysis,
+      }))
+    : [];
 
-  // Use TanStackTable unconditionally
   const { table } = useTanStackTable<AppointmentDataType>({
     tableData: mappedData,
     columnConfig: appointmentColumns,
@@ -87,7 +82,7 @@ export default function QAScoringTable({
     },
   });
 
-  if (!qaScoringData) {
+  if (!brandSentimentData) {
     return (
       <WidgetCard
         className={cn('p-0 lg:p-0', className)}
@@ -103,7 +98,7 @@ export default function QAScoringTable({
   return (
     <WidgetCard
       className={cn('p-0 lg:p-0', className)}
-      title={`QA Scoring`}
+      title={`Brand Sentiment`}
       titleClassName="whitespace-nowrap"
       headerClassName="mb-4 items-start flex-col @[62rem]:flex-row @[62rem]:items-center px-5 lg:px-7 pt-5 lg:pt-7"
       actionClassName="grow @[62rem]:ps-11 ps-0 items-center w-full @[42rem]:w-full @[62rem]:w-auto"
