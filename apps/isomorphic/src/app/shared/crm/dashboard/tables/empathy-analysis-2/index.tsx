@@ -8,18 +8,19 @@ import { useTanStackTable } from '@core/components/table/custom/use-TanStack-Tab
 import cn from '@core/utils/class-names';
 import Filters from './filters';
 
+// Define types for Empathy Analysis data
+interface EmpathyInstance {
+  customer_statement: string;
+  emotion_type: string;
+  agent_response: string;
+  empathy_analysis: string;
+  time_stamp: string;
+}
+
 interface Call {
   call_id: string;
-  qa_scoring: {
-    markings: {
-      question: string;
-      customer_response: string;
-      clarity_score: number;
-      relevance_score: number;
-      efficiency_score: number;
-      empathy_score: number;
-      response_management_score: number;
-    }[];
+  empathy_detection: {
+    empathy_instances: EmpathyInstance[];
   };
 }
 
@@ -29,51 +30,47 @@ interface DummyDataType {
   };
 }
 
-// Import dummy data and type it
+// Import and type dummy data
 import dummyData from '@/app/shared/crm/dashboard/tables/data/dummy-data.json';
 
-const dummyDataTyped = dummyData as DummyDataType[];
+// Type the dummyData explicitly
+const dummyDataTyped: DummyDataType[] = dummyData as DummyDataType[];
 
-export type AppointmentDataType = {
+export interface Appointment {
   id: string;
-  question: string;
-  customer_response: string;
-  clarity_score: string;
-  relevance_score: string;
-  efficiency_score: string;
-  empathy_score: string;
-  response_management_score: string;
-};
+  customer_statement: string;
+  emotion_type: string;
+  agent_response: string;
+  empathy_analysis: string;
+  time_stamp: string;
+}
 
-interface QAScoringTableProps {
-  callId: string; // Pass only the caseId as a prop
+interface EmpathyAnalysisProps {
+  callId: string;
   className?: string;
 }
 
-export default function QAScoringTable({
+export default function EmpathyAnalysis({
   callId,
   className,
-}: QAScoringTableProps) {
-  // Extract QA scoring data
-  const qaScoringData =
+}: EmpathyAnalysisProps) {
+  const empathyAnalysisData =
     dummyDataTyped
       .flatMap((item) => item.calls_overview?.calls || [])
-      .find((call) => call.call_id === callId)?.qa_scoring || null;
+      .find((call) => call.call_id === callId)?.empathy_detection.empathy_instances;
 
-  // Map data
-  const mappedData = qaScoringData?.markings.map((item, index) => ({
-    id: `qa-${index}`,
-    question: item.question,
-    customer_response: item.customer_response,
-    clarity_score: item.clarity_score.toString(),
-    relevance_score: item.relevance_score.toString(),
-    efficiency_score: item.efficiency_score.toString(),
-    empathy_score: item.empathy_score.toString(),
-    response_management_score: item.response_management_score.toString(),
-  })) || [];
+  const mappedData = empathyAnalysisData
+    ? empathyAnalysisData.map((item, index) => ({
+        id: `empathy-${index}`,
+        customer_statement: item.customer_statement,
+        emotion_type: item.emotion_type,
+        agent_response: item.agent_response,
+        empathy_analysis: item.empathy_analysis,
+        time_stamp: item.time_stamp,
+      }))
+    : [];
 
-  // Use TanStackTable unconditionally
-  const { table } = useTanStackTable<AppointmentDataType>({
+  const { table } = useTanStackTable<Appointment>({
     tableData: mappedData,
     columnConfig: appointmentColumns,
     options: {
@@ -87,15 +84,15 @@ export default function QAScoringTable({
     },
   });
 
-  if (!qaScoringData) {
+  if (!empathyAnalysisData || !Array.isArray(empathyAnalysisData)) {
     return (
       <WidgetCard
         className={cn('p-0 lg:p-0', className)}
-        title="QA Scoring"
+        title="Empathy Analysis"
         titleClassName="whitespace-nowrap"
         headerClassName="mb-4 px-5 lg:px-7 pt-5 lg:pt-7"
       >
-        <p className="text-red-500 text-center py-4">Call not found.</p>
+        <p className="text-red-500 text-center py-4">Call not found or invalid data.</p>
       </WidgetCard>
     );
   }
@@ -103,7 +100,7 @@ export default function QAScoringTable({
   return (
     <WidgetCard
       className={cn('p-0 lg:p-0', className)}
-      title={`QA Scoring`}
+      title="Empathy Analysis"
       titleClassName="whitespace-nowrap"
       headerClassName="mb-4 items-start flex-col @[62rem]:flex-row @[62rem]:items-center px-5 lg:px-7 pt-5 lg:pt-7"
       actionClassName="grow @[62rem]:ps-11 ps-0 items-center w-full @[42rem]:w-full @[62rem]:w-auto"
