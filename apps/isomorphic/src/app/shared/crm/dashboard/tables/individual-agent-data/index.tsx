@@ -1,22 +1,30 @@
 'use client';
 
+import { useState } from 'react';
 import Table from '@core/components/table';
 import { agentColumns } from './columns';
-import { agentData } from '@/data/agent-data';
 import WidgetCard from '@core/components/cards/widget-card';
 import TablePagination from '@core/components/table/pagination';
 import { useTanStackTable } from '@core/components/table/custom/use-TanStack-Table';
 import cn from '@core/utils/class-names';
 import Filters from './filters';
+import agentPerformanceData from './data/agent_performance.json';
 
-export type AgentDataType = (typeof agentData)[number];
+export type AgentPerformanceData = {
+  agent_name: string;
+  overall_performance_score: number;
+  agent_qa_score_percentage: number;
+  agent_qa_rating: string;
+};
 
 export default function IndividualAgentData({
   className,
 }: {
   className?: string;
 }) {
-  const { table, setData } = useTanStackTable<AgentDataType>({
+  const [agentData] = useState<AgentPerformanceData[]>(agentPerformanceData);
+
+  const { table } = useTanStackTable<AgentPerformanceData>({
     tableData: agentData,
     columnConfig: agentColumns,
     options: {
@@ -24,11 +32,6 @@ export default function IndividualAgentData({
         pagination: {
           pageIndex: 0,
           pageSize: 7,
-        },
-      },
-      meta: {
-        handleDeleteRow: (row) => {
-          setData((prev) => prev.filter((r) => r.id !== row.id));
         },
       },
       enableColumnResizing: false,
