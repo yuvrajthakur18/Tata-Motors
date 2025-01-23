@@ -6,8 +6,8 @@ import WidgetCard from '@core/components/cards/widget-card';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const data = [
-  { name: 'Satisfied', value: 83 },
-  { name: 'Not Satisfied', value: 17 },
+  { name: 'Satisfied', value: 108 },
+  { name: 'Not Satisfied', value: 2 },
 ];
 
 const valueSum = data.reduce((total, item) => total + item.value, 0);

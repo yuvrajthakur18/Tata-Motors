@@ -88,9 +88,9 @@ function DropdownMenu() {
         <Avatar src="/avatar.webp" name="Albert Flores" />
         <div className="ms-3">
           <Title as="h6" className="font-semibold">
-            Albert Flores
+            Arjun Pandey
           </Title>
-          <Text className="text-gray-600">flores@doe.io</Text>
+          <Text className="text-gray-600">arjun@tml.com</Text>
         </div>
       </div>
       <div className="grid px-3.5 py-3.5 font-medium text-gray-700">
