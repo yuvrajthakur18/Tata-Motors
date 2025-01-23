@@ -114,7 +114,7 @@ export const menuItems = [
     icon: <PiBriefcaseDuotone />,
   },
   {
-    name: 'Customers Overview',
+    name: 'Transcripts',
     href: routes.customersPage,
     // icon: <PiFolderUserDuotone />,
     icon: <PiSparkleDuotone />,

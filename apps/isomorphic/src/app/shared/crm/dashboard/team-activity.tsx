@@ -9,19 +9,19 @@ import { useElementSize } from '@core/hooks/use-element-size';
 const data = [
   {
     name: 'Inbound',
-    devices: 8530,
+    devices: 195,
     fill: '#29CCB1',
     id: '#ratingShadowOne',
   },
   {
     name: 'Outbound',
-    devices: 6304,
+    devices: 306,
     fill: '#34B3F1',
     id: '#ratingShadowOne',
   },
   {
     name: 'Internal',
-    devices: 2723,
+    devices: 12,
     fill: '#FE9738',
     id: '#ratingShadowOne',
   },

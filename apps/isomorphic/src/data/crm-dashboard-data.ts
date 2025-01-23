@@ -28,7 +28,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Agents',
-    customer: 3080,
+    customer: 616,
     increased: true,
     percentage: 25.2,
     lastMonth: 600,
@@ -60,10 +60,10 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Unsolved Cases',
-    customer: 278,
+    customer: 88,
     increased: true,
     percentage: 0.1,
-    lastMonth: 271,
+    lastMonth: 88,
     href: '#',
   },
   {
@@ -76,7 +76,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'NPS score / 100',
-    customer: 92,
+    customer: 81,
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,

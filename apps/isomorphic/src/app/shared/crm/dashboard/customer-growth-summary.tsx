@@ -82,14 +82,7 @@ export default function CustomerGrowthSummary({
       className={cn('@container', className)}
       title="Case type"
       description="Showing number of cases per Case type"
-      action={
-        <DropdownAction
-          className="rounded-lg border"
-          options={viewOptions}
-          onChange={handleChange}
-          dropdownClassName="!z-0"
-        />
-      }
+      
     >
       <div className="custom-scrollbar w-full overflow-x-auto scroll-smooth">
         <Box className="mt-[22px] h-[350px]">
