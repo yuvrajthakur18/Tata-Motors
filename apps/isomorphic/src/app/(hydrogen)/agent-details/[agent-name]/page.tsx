@@ -65,7 +65,35 @@ export default async function AgentDetailsPage({ params }: any) {
     return null;
   };
 
+  // Count total cases for the agent
+  const countTotalCases = () => {
+    return dummyData.reduce((count, caseItem) => {
+      if (
+        caseItem.case_overview?.participants?.agents?.some(
+          (agent) => agent.toLowerCase() === agentName.toLowerCase()
+        )
+      ) {
+        count += 1;
+      }
+      return count;
+    }, 0);
+  };
+
+  // Count total calls for the agent
+const countTotalCalls = () => {
+  return dummyData.reduce((count, caseItem) => {
+    const matchingCalls = caseItem.calls_overview?.calls?.filter(
+      (call) =>
+        call.agent_details?.agent_name.toLowerCase() ===
+        agentName.toLowerCase()
+    );
+    return count + (matchingCalls ? matchingCalls.length : 0);
+  }, 0);
+};
+
   const agentDetails = findAgentDetails();
+  const totalCases = countTotalCases();
+  const totalCalls = countTotalCalls();
 
   if (!agentDetails) {
     console.error('No agent details found for:', agentName);
@@ -82,6 +110,8 @@ export default async function AgentDetailsPage({ params }: any) {
         performanceScore={agentDetails.performance_score}
         qaRating={agentDetails.qa_rating}
         shiftTimings={agentDetails.shift_timings}
+        totalCases={totalCases}
+        totalCalls={totalCalls}
         className="my-5 p-3"
       />
 
@@ -90,13 +120,13 @@ export default async function AgentDetailsPage({ params }: any) {
         <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">
           <p className="text-center text-gray-500">Total Cases</p>
           <h4 className="text-center text-xl font-bold text-gray-800">
-            {'N/A'}
+            {totalCases || "N/A"}
           </h4>
         </div>
         <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">
           <p className="text-center text-gray-500">Total Calls</p>
           <h4 className="text-center text-xl font-bold text-gray-800">
-            {'N/A'}
+            {totalCalls || 'N/A'}
           </h4>
         </div>
         <div className="card w-56 transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl">

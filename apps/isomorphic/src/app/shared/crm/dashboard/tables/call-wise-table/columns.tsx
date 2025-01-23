@@ -8,8 +8,6 @@ import { CallDataType } from '.';
 const columnHelper = createColumnHelper<CallDataType>();
 
 export const callColumns = [
-  
-  
   // Call ID
   columnHelper.accessor((row) => row.call_id, {
     id: 'call_id',

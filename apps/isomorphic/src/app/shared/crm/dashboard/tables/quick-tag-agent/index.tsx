@@ -16,9 +16,13 @@ export type AgentPerformanceData = {
 export default function QuickTagAgent({
   className,
   agentName,
+  totalCases,
+  totalCalls,
 }: {
   className?: string;
   agentName?: string;
+  totalCases?: number;
+  totalCalls?: number;
 }) {
   const filteredAgentData = useMemo(() => {
     return agentName
@@ -26,8 +30,8 @@ export default function QuickTagAgent({
           .filter((agent) => agent.agent_name === agentName)
           .map((agent) => [
             { parameter: 'Agent Name', value: agent.agent_name },
-            { parameter: 'Cases Handled', value: agent.cases_handled },
-            { parameter: 'Customers Handled', value: agent.customers_handled },
+            { parameter: 'Cases Handled', value: totalCases },
+            { parameter: 'Customers Handled', value: totalCalls },
             {
               parameter: 'Coaching Required',
               value: agent.coaching_required ? 'Yes' : 'No',
