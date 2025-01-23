@@ -18,14 +18,14 @@ import {
 import { Title } from 'rizzui';
 
 const data = [
-  { subject: 'Communication', Score:3, fullMark: 5 }, // Communication effectiveness score
-  { subject: 'Problem Solving', Score:2.75, fullMark: 5 }, // Overall performance score
-  { subject: 'Technical Skills', Score:1, fullMark: 5 }, // Expertise and knowledge score
-  { subject: 'Customer Empathy', Score:1, fullMark: 5 }, // Empathy and emotional intelligence score
-  { subject: 'Ownership', Score:5, fullMark: 5 }, // Ownership and accountability score
-  { subject: 'Time Management', Score:2, fullMark: 5 }, // Time management and hand-holding score
-  { subject: 'Proactive', Score:3, fullMark: 5 }, // Proactive communication score
-  { subject: 'Follow-up & Resolution', Score:1, fullMark: 5 } // Follow-up and resolution closure score
+  { subject: 'Rapport building', Score:3, fullMark: 5 }, // Communication effectiveness score
+  { subject: 'Product knowledge', Score:2.75, fullMark: 5 }, // Overall performance score
+  { subject: 'Empathy', Score:1, fullMark: 5 }, // Expertise and knowledge score
+  { subject: 'Particulation and clarity', Score:1, fullMark: 5 }, // Empathy and emotional intelligence score
+  { subject: 'Objection handling', Score:5, fullMark: 5 }, // Ownership and accountability score
+  { subject: 'Appropriate probing', Score:2, fullMark: 5 }, // Time management and hand-holding score
+  { subject: 'Adaptability', Score:3, fullMark: 5 }, // Proactive communication score
+  { subject: 'Problem Identification', Score:1, fullMark: 5 } // Follow-up and resolution closure score
 ];
 
 const viewOptions = [
@@ -62,15 +62,7 @@ export default function AgentCoaching({ className }: { className?: string }) {
       }
       className={cn('min-h-[28rem]', className)}
     >
-      <div className="mb-4 mt-1 flex items-center gap-2">
-        <Title as="h5" className="font-inter font-semibold">
-          85%
-        </Title>
-        <span className="flex items-center gap-1 text-green-dark">
-          <TrendingUpIcon className="h-auto w-5" />
-          <span className="font-semibold leading-none"> +10.50%</span>
-        </span>
-      </div>
+      
       <CustomLegend className="mb-4 mt-0 inline-flex @[80rem]:hidden" />
       <div className="custom-scrollbar -mb-3 overflow-x-auto pb-3">
         <div className="h-[20rem] w-full pe-1 pt-6">
