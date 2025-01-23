@@ -11,6 +11,10 @@ import EmpathyAnalysisTable from '@/app/shared/crm/dashboard/tables/empathy-anal
 import AgentPerformanceAnalysisTable from '@/app/shared/crm/dashboard/tables/agent-performance-analysis-3';
 import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold-2';
 import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table-2';
+import AgentCoaching from '@/app/shared/crm/dashboard/agent-coaching';
+import AgentPerformance from '@/app/shared/crm/dashboard/agent-performance';
+import AgentPersonality from '@/app/shared/crm/dashboard/agent-personalities';
+import { Box } from 'rizzui/box';
 
 export default async function AgentDetailsPage({ params }: any) {
   // Decode and preserve spaces
@@ -114,6 +118,13 @@ export default async function AgentDetailsPage({ params }: any) {
           </h4>
         </div>
       </div>
+
+      <Box className="@container/crm">
+        <Box className="grid grid-cols-1 gap-6 @3xl/crm:grid-cols-12 @7xl/crm:gap-7 3xl:gap-8">
+          <AgentCoaching className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
+          <AgentPersonality className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
+        </Box>
+      </Box>
     </div>
   );
 }
