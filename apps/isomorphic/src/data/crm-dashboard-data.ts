@@ -68,7 +68,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Agents overall performance / 5',
-    customer: 4.05,
+    customer: 3.85,
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
