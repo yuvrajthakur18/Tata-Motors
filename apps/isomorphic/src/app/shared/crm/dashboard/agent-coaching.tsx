@@ -18,7 +18,7 @@ import {
 import { Title } from 'rizzui';
 
 const data = [
-  { subject: 'Rapport building', Score:3, fullMark: 5 }, // Communication effectiveness score
+  { subject: 'Rapport building', Score:5.5, fullMark: 8 }, // Communication effectiveness score
   { subject: 'Product knowledge', Score:2.75, fullMark: 5 }, // Overall performance score
   { subject: 'Empathy', Score:1, fullMark: 5 }, // Expertise and knowledge score
   { subject: 'Particulation and clarity', Score:1, fullMark: 5 }, // Empathy and emotional intelligence score

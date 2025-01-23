@@ -8,21 +8,8 @@ import { CallDataType } from '.';
 const columnHelper = createColumnHelper<CallDataType>();
 
 export const callColumns = [
-  // Call ID
-  columnHelper.accessor((row) => row.call_id, {
-    id: 'call_id',
-    header: 'Call ID',
-    size: 150,
-    cell: (info) => (
-      <Link
-        href={`/call-details/${info.getValue()}`}
-        className="text-blue-600 hover:underline"
-      >
-        {info.getValue() || 'N/A'}
-      </Link>
-    ),
-  }),
-
+  
+  
   // Call ID
   columnHelper.accessor((row) => row.call_id, {
     id: 'call_id',

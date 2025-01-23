@@ -7,7 +7,9 @@ import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const data = [
   { name: 'Satisfied', value: 108 },
-  { name: 'Not Satisfied', value: 2 },
+  { name: 'Not Satisfied', value: 3 },
+  { name: 'Positive', value: 3 },
+  { name: 'Neutral', value: 2 },
 ];
 
 const valueSum = data.reduce((total, item) => total + item.value, 0);

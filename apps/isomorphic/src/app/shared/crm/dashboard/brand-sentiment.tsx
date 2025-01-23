@@ -95,46 +95,33 @@ export default function BrandSentiment({ className }: { className?: string }) {
               />
               
               <Bar
-                dataKey="happy"
-                fill="url(#positive-gradient)"
-                name="Happy"
-                barSize={18}
-                radius={[10, 10, 0, 0]}
-                animationBegin={700}
-                animationDuration={1200}
-              />
-              <Bar
-                dataKey="neutral"
-                fill="url(#customers-gradient)"
-                name="Neutral"
-                barSize={18}
-                radius={[10, 10, 0, 0]}
-                animationBegin={500}
-                animationDuration={1200}
-              />
-              <Bar
-                dataKey="frustrated"
-                fill="url(#negative-gradient)"
-                name="Frustrated"
-                barSize={18}
-                radius={[10, 10, 0, 0]}
-                animationBegin={900}
-                animationDuration={1200}
-              />
-              <defs>
-                <linearGradient id="customers-gradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#29CCB1" stopOpacity={0.8} />
-                  <stop offset="100%" stopColor="#29CCB1" stopOpacity={0.3} />
-                </linearGradient>
-                <linearGradient id="positive-gradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#4CAF50" stopOpacity={0.8} />
-                  <stop offset="100%" stopColor="#4CAF50" stopOpacity={0.3} />
-                </linearGradient>
-                <linearGradient id="negative-gradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#F44336" stopOpacity={0.8} />
-                  <stop offset="100%" stopColor="#F44336" stopOpacity={0.3} />
-                </linearGradient>
-              </defs>
+  dataKey="happy"
+  fill="#FE9738" // Orange color for Happy
+  name="Happy"
+  barSize={18}
+  radius={[10, 10, 0, 0]}
+  animationBegin={700}
+  animationDuration={1200}
+/>
+<Bar
+  dataKey="neutral"
+  fill="#34B3F1" // Blue color for Neutral
+  name="Neutral"
+  barSize={18}
+  radius={[10, 10, 0, 0]}
+  animationBegin={500}
+  animationDuration={1200}
+/>
+<Bar
+  dataKey="frustrated"
+  fill="#29CCB1" // Green color for Frustrated
+  name="Frustrated"
+  barSize={18}
+  radius={[10, 10, 0, 0]}
+  animationBegin={900}
+  animationDuration={1200}
+/>
+              
             </BarChart>
           </ResponsiveContainer>
         </Box>
