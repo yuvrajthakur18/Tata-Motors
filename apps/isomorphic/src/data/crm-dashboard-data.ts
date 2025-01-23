@@ -84,7 +84,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Total Duration (in minutes)',
-    customer: 2777,
+    customer: 3428,
     increased: false,
     percentage: 25.2,
     lastMonth: 2846,
@@ -95,35 +95,35 @@ export const crmStatData: CrmStatType[] = [
 export const revenueSummaryData = [
   {
     name: 'Support',
-    value: 5 ,
-  },
-  {
-    name: 'Service',
-    value: 111 ,
-  },
-  {
-    name: 'Technician',
-    value: 5 ,
-  },
-  {
-    name: 'Feedback',
     value: 17 ,
   },
   {
+    name: 'Service',
+    value: 587 ,
+  },
+  {
+    name: 'Internal',
+    value: 12 ,
+  },
+  {
+    name: 'Feedback',
+    value: 0 ,
+  },
+  {
     name: 'Assistance',
-    value: 110,
+    value: 0,
   },
   {
     name: 'Coordination',
-    value: 89 ,
+    value: 0,
   },
   {
     name: 'Resolution',
-    value: 1 ,
+    value: 0 ,
   },
   {
     name: 'Followup',
-    value: 20 ,
+    value: 0 ,
   }
 ];
 
