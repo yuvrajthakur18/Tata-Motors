@@ -9,17 +9,17 @@ import DropdownAction from '@core/components/charts/dropdown-action';
 
 // Original data
 const originalData = [
-  { name: 'Breakdown Issue', value: 605 },
-  { name: 'Accelerator', value: 235 },
-  { name: 'Workshop related', value: 454 },
-  { name: 'Customer Complaints', value: 120 },
-  { name: 'General Queries', value: 256 },
+  { name: 'Breakdown Issue', value: 30 },
+  { name: 'Assistance', value: 3 },
+  { name: 'Workshop related', value: 1 },
+  { name: 'Customer Complaints', value: 2 },
+  { name: 'General Queries', value: 80 },
 ];
 
 const viewOptions = [
   { value: 'All', label: 'View All Issues' },
   { value: 'Breakdown Issue', label: 'Breakdown Issue' },
-  { value: 'Accelerator', label: 'Accelerator' },
+  { value: 'Assistance', label: 'Assistance' },
   { value: 'Workshop related', label: 'Workshop related' },
   { value: 'Customer Complaints', label: 'Customer Complaints' },
   { value: 'General Queries', label: 'General Queries' },

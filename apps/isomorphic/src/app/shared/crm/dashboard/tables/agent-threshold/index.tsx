@@ -37,7 +37,6 @@ export default function AgentThreshold({ className }: { className?: string }) {
       titleClassName="whitespace-nowrap"
       headerClassName="mb-4 items-start flex-col @[62rem]:flex-row @[62rem]:items-center px-5 lg:px-7 pt-5 lg:pt-7"
       actionClassName="grow @[62rem]:ps-11 ps-0 items-center w-full @[42rem]:w-full @[62rem]:w-auto"
-      action={<Filters table={table} />}
     >
       <Table
         table={table}

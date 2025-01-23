@@ -2,7 +2,7 @@ export type AgentPerformanceDataType = (typeof agentPerformanceData)[number];
 
 export const agentPerformanceData = [
   {
-    agentName: 'Agent Smith',
+    agentName: 'Veena Bhat',
     casesAllotted: 50,
     casesSolved: 45,
     agentPerformanceScore: 4.8,
@@ -14,10 +14,10 @@ export const agentPerformanceData = [
     expertiseAndKnowledge: 4.9,
     followUpAndResolutionClosure: 4.7,
     comments:
-      'Agent Smith consistently provides excellent support and displays high empathy.',
+      'Veena Bhat consistently provides excellent support and displays high empathy.',
   },
   {
-    agentName: 'Agent Taylor',
+    agentName: 'Reena Bhatt',
     casesAllotted: 40,
     casesSolved: 36,
     agentPerformanceScore: 4.5,
@@ -29,10 +29,10 @@ export const agentPerformanceData = [
     expertiseAndKnowledge: 4.6,
     followUpAndResolutionClosure: 4.5,
     comments:
-      'Agent Taylor handles cases efficiently and communicates effectively.',
+      'handles cases efficiently and communicates effectively.',
   },
   {
-    agentName: 'Agent Lee',
+    agentName: 'Sujit Kumar',
     casesAllotted: 55,
     casesSolved: 50,
     agentPerformanceScore: 4.7,
@@ -44,10 +44,10 @@ export const agentPerformanceData = [
     expertiseAndKnowledge: 4.8,
     followUpAndResolutionClosure: 4.6,
     comments:
-      'Agent Lee demonstrates a high level of expertise and attention to detail.',
+      'Sujit jayesh: a high level of expertise and attention to detail.',
   },
   {
-    agentName: 'Agent Clark',
+    agentName: 'Radha Motor',
     casesAllotted: 35,
     casesSolved: 32,
     agentPerformanceScore: 4.4,
@@ -59,21 +59,7 @@ export const agentPerformanceData = [
     expertiseAndKnowledge: 4.5,
     followUpAndResolutionClosure: 4.4,
     comments:
-      'Agent Clark handles cases well but could improve on proactive communication.',
+      'Radha Motor could improve on proactive communication.',
   },
-  {
-    agentName: 'Agent Miller',
-    casesAllotted: 60,
-    casesSolved: 55,
-    agentPerformanceScore: 4.6,
-    communicationEffectiveness: 4.7,
-    empathyAndEmotionalIntelligence: 4.5,
-    ownershipAndAccountability: 4.6,
-    timeManagementAndHoldHandling: 4.6,
-    proactiveCommunication: 4.5,
-    expertiseAndKnowledge: 4.7,
-    followUpAndResolutionClosure: 4.6,
-    comments:
-      'Agent Miller consistently exceeds expectations and resolves cases quickly.',
-  },
+  
 ];

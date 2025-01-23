@@ -114,7 +114,7 @@ export default function SalesAnalytics({ className }: { className?: string }) {
         </ResponsiveContainer>
 
         <Box className="absolute inset-24 flex flex-col items-center justify-center rounded-full bg-white shadow-[0px_4px_20px_0px_#00000029] @sm:inset-28 dark:bg-gray-200">
-          <Text className="text-center text-gray-500">Total Sales</Text>
+          <Text className="text-center text-gray-500">Total Cases</Text>
           <Text className="text-xl font-semibold dark:text-white">
             {valueSum}
           </Text>
