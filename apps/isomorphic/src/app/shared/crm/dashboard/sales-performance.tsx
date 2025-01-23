@@ -17,17 +17,82 @@ import { Box, Button } from 'rizzui';
 
 // Data for bar chart
 const data = [
-  { agent: 'A1', performance: 10 },
-  { agent: 'A2', performance: 40 },
-  { agent: 'A3', performance: 48 },
-  { agent: 'A4', performance: 33 },
-  { agent: 'A5', performance: 25 },
-  { agent: 'A6', performance: 25 },
-  { agent: 'A7', performance: 50 },
-  { agent: 'A8', performance: 37 },
-  { agent: 'A9', performance: 20 },
-  { agent: 'A10', performance: 44 },
+  { agent: 'Anshali Bhaskar', performance: 4.05, percent: 97.6, rating: 'Excellent' },
+  { agent: 'Anshali Bhaskar', performance: 4.05, percent: 92.8, rating: 'Excellent' },
+  { agent: 'Parveen', performance: 4.05, percent: 87.2, rating: 'Good' },
+  { agent: 'Kapil', performance: 4.05, percent: 72.0, rating: 'Needs Improvement' },
+  { agent: 'Priya Bhaskar', performance: 4.05, percent: 85.6, rating: 'Good' },
+  { agent: 'Bachchu Digels', performance: 4.05, percent: 94.4, rating: 'Excellent' },
+  { agent: 'name1', performance: 4.05, percent: 84.0, rating: 'Good' },
+  { agent: 'jayesh', performance: 4.0, percent: 91.2, rating: 'Excellent' },
+  { agent: 'Bharti', performance: 4.05, percent: 87.2, rating: 'Good' },
+  { agent: 'Bharti', performance: 4.05, percent: 96.0, rating: 'Excellent' },
+  { agent: 'jayesh', performance: 4.05, percent: 80.0, rating: 'Good' },
+  { agent: 'Mr. Neela', performance: 4.05, percent: 89.6, rating: 'Good' },
+  { agent: 'Rada', performance: 4.05, percent: 88.8, rating: 'Good' },
+  { agent: 'Tata Muthus', performance: 4.05, percent: 82.4, rating: 'Good' },
+  { agent: 'Rajesh Lokhande', performance: 3.9, percent: 67.2, rating: 'Needs Improvement' },
+  { agent: 'Rada', performance: 4.05, percent: 80.8, rating: 'Good' },
+  { agent: 'Neelim', performance: 3.75, percent: 83.2, rating: 'Good' },
+  { agent: 'Rajesh Lokhande', performance: 4.05, percent: 55.2, rating: 'Poor' },
+  { agent: 'jayesh', performance: 4.05, percent: 80.8, rating: 'Good' },
+  { agent: 'Santosh Singh', performance: 4.05, percent: 92.0, rating: 'Excellent' },
+  { agent: 'Maruti Parashyambur', performance: 4.05, percent: 76.8, rating: 'Good' },
+  { agent: 'Shweta Radha', performance: 4.25, percent: 84.0, rating: 'Good' },
+  { agent: 'Shweta', performance: 4.05, percent: 77.6, rating: 'Good' },
+  { agent: 'Shweta', performance: 4.05, percent: 52.8, rating: 'Poor' },
+  { agent: 'Shweta', performance: 3.9, percent: 90.4, rating: 'Excellent' },
+  { agent: 'Norman Nirmal', performance: 4.05, percent: 76.0, rating: 'Good' },
+  { agent: 'Harsha', performance: 4.05, percent: 84.0, rating: 'Good' },
+  { agent: 'Pintu', performance: 4.05, percent: 83.2, rating: 'Good' },
+  { agent: 'jayesh', performance: 4.0, percent: 91.2, rating: 'Excellent' },
+  { agent: 'Bharti', performance: 4.05, percent: 87.2, rating: 'Good' },
+  { agent: 'Bharti', performance: 4.05, percent: 96.0, rating: 'Excellent' },
+  { agent: 'jayesh', performance: 4.05, percent: 80.0, rating: 'Good' },
+  { agent: 'Mr. Neela', performance: 4.05, percent: 89.6, rating: 'Good' },
+  { agent: 'Rada', performance: 4.05, percent: 88.8, rating: 'Good' },
+  { agent: 'Tata Muthus', performance: 4.05, percent: 82.4, rating: 'Good' },
+  { agent: 'Rajesh Lokhande', performance: 3.9, percent: 67.2, rating: 'Needs Improvement' },
+  { agent: 'Rada', performance: 4.05, percent: 80.8, rating: 'Good' },
+  { agent: 'Neelim', performance: 3.75, percent: 83.2, rating: 'Good' },
+  { agent: 'Rajesh Lokhande', performance: 4.05, percent: 55.2, rating: 'Poor' },
+  { agent: 'jayesh', performance: 4.05, percent: 80.8, rating: 'Good' },
+  { agent: 'Santosh Singh', performance: 4.05, percent: 92.0, rating: 'Excellent' },
+  { agent: 'Maruti Parashyambur', performance: 4.05, percent: 76.8, rating: 'Good' },
+  { agent: 'Shweta Radha', performance: 4.25, percent: 84.0, rating: 'Good' },
+  { agent: 'Shweta', performance: 4.05, percent: 77.6, rating: 'Good' },
+  { agent: 'Shweta', performance: 4.05, percent: 52.8, rating: 'Poor' },
+  { agent: 'Shweta', performance: 3.9, percent: 90.4, rating: 'Excellent' },
+  { agent: 'Norman Nirmal', performance: 4.05, percent: 76.0, rating: 'Good' },
+  { agent: 'Harsha', performance: 4.05, percent: 84.0, rating: 'Good' },
+  { agent: 'Pintu', performance: 4.05, percent: 83.2, rating: 'Good' },
+  { agent: 'Priya', performance: 4.05, percent: 78.4, rating: 'Good' },
+  { agent: 'Shruthi Radha', performance: 4.05, percent: 82.4, rating: 'Good' },
+  { agent: 'Rajesh Lokhande', performance: 4.05, percent: 91.2, rating: 'Excellent' },
+  { agent: 'Rada', performance: 3.45, percent: 58.4, rating: 'Poor' },
+  { agent: 'Tata Mota', performance: 4.05, percent: 91.2, rating: 'Excellent' },
+  { agent: 'Rajesh Lokhande', performance: 4.55, percent: 60.0, rating: 'Needs Improvement' },
+  { agent: 'Rada', performance: 4.05, percent: 84.0, rating: 'Good' },
+  { agent: 'jayesh', performance: 4.05, percent: 66.4, rating: 'Needs Improvement' },
+  { agent: 'Rajesh Lokhande', performance: 3.75, percent: 66.4, rating: 'Needs Improvement' },
+  { agent: 'jayesh', performance: 3.55, percent: 80.0, rating: 'Good' }
 ];
+
+
+
+const CustomTooltipContent = ({ active, payload }: any) => {
+  if (active && payload && payload.length) {
+    const { agent, performance, percent } = payload[0].payload;
+    return (
+      <div className="bg-white p-2 shadow-md rounded-md">
+        <p className="text-gray-700"><strong>Agent:</strong> {agent}</p>
+        <p className="text-gray-700"><strong>Performance:</strong> {performance}</p>
+        <p className="text-gray-700"><strong>Percent:</strong> {percent}%</p>
+      </div>
+    );
+  }
+  return null;
+};
 
 export default function SalesPerformance({
   className,
@@ -42,7 +107,7 @@ export default function SalesPerformance({
     <WidgetCard
       rounded="lg"
       className={className}
-      title="Top Agents Performance"
+      title="Agents Performance"
     >
       <div className="custom-scrollbar w-full overflow-x-auto scroll-smooth">
         <Box className="mt-6 h-72 w-full @sm:mt-3 @lg:mt-8">
@@ -58,17 +123,32 @@ export default function SalesPerformance({
             >
               <CartesianGrid strokeDasharray="8 10" strokeOpacity={0.435} />
               <XAxis
-                dataKey="agent"
-                axisLine={false}
+                dataKey={(entry) => {
+                  const names = entry.agent.split(' ');
+                  return names.length > 1 
+                    ? `${names[0].charAt(0)}${names[names.length - 1].charAt(0)}` 
+                    : names[0].charAt(0); // Handles single-name cases
+                }}
+                axisLine={true}
                 tickLine={false}
                 tickMargin={20}
               />
-              <YAxis axisLine={false} tickLine={false} tickMargin={20} />
-              <Tooltip content={<CustomTooltip />} />
+              <YAxis
+                axisLine={true}
+                tickLine={false}
+                tickMargin={20}
+                tickFormatter={(value) => `${value}%`}
+              />
+              <Tooltip
+                formatter={(value, name, props) => {
+                  return [`${value}%`, props.payload.agent]; // Show full name in the tooltip
+                }}
+                labelFormatter={(label) => `Agent: ${label}`} // Optional, formats the label for better context
+              />
               <Bar
-                dataKey="performance"
+                dataKey="percent"
                 className="fill-[#29CCB1] dark:[fill-opacity:0.9]"
-                name="Performance"
+                name="Percent"
                 barSize={16}
                 radius={20}
                 background={{

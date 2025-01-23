@@ -3,11 +3,12 @@
 import { Box, Table } from 'rizzui';
 
 const AgentPerformance = ({ data }: { data: any[] }) => {
-  // Filter logic
+  // Filter logic based on `percent`
   const totalAgents = data.length;
-  const topAgents = data.slice(0, Math.ceil(totalAgents * 0.25));
-  const bottomAgents = data.slice(Math.floor(totalAgents * 0.75), totalAgents);
-  const mediocreAgents = data.slice(
+  const sortedData = [...data].sort((a, b) => b.percent - a.percent); // Sort by performance percent descending
+  const topAgents = sortedData.slice(0, Math.ceil(totalAgents * 0.25));
+  const bottomAgents = sortedData.slice(Math.floor(totalAgents * 0.75), totalAgents);
+  const mediocreAgents = sortedData.slice(
     Math.ceil(totalAgents * 0.25),
     Math.floor(totalAgents * 0.75)
   );
@@ -44,48 +45,22 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
             background-color:rgb(250, 250, 248);
           }
         `}</style>
-        <Table className="min-w-[900px]">
+        <Table className="min-w-[600px]">
           <thead>
             <tr>
               <th className="px-2 py-2 text-left font-medium">Agent Name</th>
-              <th className="px-2 py-2 text-left font-medium">
-                Total Cases Allotted
-              </th>
-              <th className="px-2 py-2 text-left font-medium">Calls Handled</th>
-              <th className="px-2 py-2 text-left font-medium">Cases Solved</th>
-              <th className="px-2 py-2 text-left font-medium">Duration</th>
-              <th className="px-2 py-2 text-left font-medium">Hold Time</th>
-              <th className="px-2 py-2 text-left font-medium">
-                Talk to Listen Ratio
-              </th>
-              <th className="px-2 py-2 text-left font-medium">
-                Interruptions Count
-              </th>
-              <th className="px-2 py-2 text-left font-medium">
-                Agent Efficiency
-              </th>
-              <th className="px-2 py-2 text-left font-medium">
-                Brand Mentions
-              </th>
-              <th className="px-2 py-2 text-left font-medium">
-                Agent Overall Performance
-              </th>
+              <th className="px-2 py-2 text-left font-medium">Performance Score</th>
+              <th className="px-2 py-2 text-left font-medium">Percent</th>
+              <th className="px-2 py-2 text-left font-medium">Rating</th>
             </tr>
           </thead>
           <tbody>
             {agents.map((agent, index) => (
               <tr key={index}>
-                <td className="px-2 py-1">{agent.name}</td>
-                <td className="px-2 py-1">{agent.totalCases}</td>
-                <td className="px-2 py-1">{agent.callsHandled}</td>
-                <td className="px-2 py-1">{agent.casesSolved}</td>
-                <td className="px-2 py-1">{agent.duration}</td>
-                <td className="px-2 py-1">{agent.holdTime}</td>
-                <td className="px-2 py-1">{agent.talkToListen}</td>
-                <td className="px-2 py-1">{agent.interruptions}</td>
-                <td className="px-2 py-1">{agent.efficiency}</td>
-                <td className="px-2 py-1">{agent.brandMentions}</td>
-                <td className="px-2 py-1">{agent.overallPerformance}</td>
+                <td className="px-2 py-1">{agent.agent}</td>
+                <td className="px-2 py-1">{agent.performance}</td>
+                <td className="px-2 py-1">{agent.percent}%</td>
+                <td className="px-2 py-1">{agent.rating}</td>
               </tr>
             ))}
           </tbody>

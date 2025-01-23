@@ -18,11 +18,14 @@ import {
 import { Title } from 'rizzui';
 
 const data = [
-  { subject: 'Communication', A: 4, fullMark: 5 },
-  { subject: 'Problem Solving', A: 3, fullMark: 5 },
-  { subject: 'Technical Skills', A: 5, fullMark: 5 },
-  { subject: 'Customer Empathy', A: 4, fullMark: 5 },
-  { subject: 'Product Knowledge', A: 4, fullMark: 5 },
+  { subject: 'Communication', Score:3, fullMark: 5 }, // Communication effectiveness score
+  { subject: 'Problem Solving', Score:2.75, fullMark: 5 }, // Overall performance score
+  { subject: 'Technical Skills', Score:1, fullMark: 5 }, // Expertise and knowledge score
+  { subject: 'Customer Empathy', Score:1, fullMark: 5 }, // Empathy and emotional intelligence score
+  { subject: 'Ownership', Score:5, fullMark: 5 }, // Ownership and accountability score
+  { subject: 'Time Management', Score:2, fullMark: 5 }, // Time management and hand-holding score
+  { subject: 'Proactive', Score:3, fullMark: 5 }, // Proactive communication score
+  { subject: 'Follow-up & Resolution', Score:1, fullMark: 5 } // Follow-up and resolution closure score
 ];
 
 const viewOptions = [
@@ -54,12 +57,7 @@ export default function AgentCoaching({ className }: { className?: string }) {
       action={
         <div className="flex items-center gap-5">
           <CustomLegend className="hidden @[80rem]:mt-0 @[80rem]:inline-flex" />
-          <DropdownAction
-            className="rounded-lg border"
-            options={viewOptions}
-            onChange={handleChange}
-            dropdownClassName="!z-0"
-          />
+          
         </div>
       }
       className={cn('min-h-[28rem]', className)}
@@ -76,7 +74,7 @@ export default function AgentCoaching({ className }: { className?: string }) {
       <CustomLegend className="mb-4 mt-0 inline-flex @[80rem]:hidden" />
       <div className="custom-scrollbar -mb-3 overflow-x-auto pb-3">
         <div className="h-[20rem] w-full pe-1 pt-6">
-          <ResponsiveContainer width="100%" height="100%" minWidth={700}>
+          <ResponsiveContainer width="100%" height="100%" minWidth={400}>
             <RadarChart
               outerRadius="80%"
               data={data}
@@ -93,7 +91,7 @@ export default function AgentCoaching({ className }: { className?: string }) {
               <Tooltip content={<CustomTooltip />} />
               <Radar
                 name="Agent Performance"
-                dataKey="A"
+                dataKey="Score"
                 stroke={theme ? COLORS[0][theme] : COLORS[0].light} // Fallback to 'light' color if theme is undefined
                 fill={theme ? COLORS[0][theme] : COLORS[0].light} // Fallback to 'light' color if theme is undefined
                 fillOpacity={0.6}

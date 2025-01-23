@@ -47,8 +47,8 @@ export default function CrmDashboard() {
         <SalesPerformance className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
         {/* <CallTypes className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
         <EmotionalTone className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" /> */}
-        <Duration className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
-        <BrandSentiment className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
+        {/* <Duration className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" /> */}
+        {/* <BrandSentiment className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" /> */}
         <AgentCoaching className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
         <AgentPersonality className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
         {/* <RevenueGrowth className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" /> */}

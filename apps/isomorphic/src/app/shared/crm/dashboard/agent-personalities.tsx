@@ -18,12 +18,14 @@ import {
 import { Title } from 'rizzui';
 
 const data = [
-  { subject: 'Extroversion', A: 4, fullMark: 5 },
-  { subject: 'Agreeableness', A: 3, fullMark: 5 },
-  { subject: 'Conscientiousness', A: 5, fullMark: 5 },
-  { subject: 'Emotional Stability', A: 4, fullMark: 5 },
-  { subject: 'Openness', A: 4, fullMark: 5 },
+  { subject: 'Extroversion', Persona: 3, fullMark: 5 }, // Reflects moderate communication effectiveness.
+  { subject: 'Agreeableness', Persona: 1, fullMark: 5 }, // Indicates limited empathy and interpersonal skills.
+  { subject: 'Conscientiousness', Persona: 5, fullMark: 5 }, // Demonstrates strong ownership and accountability.
+  { subject: 'Emotional Stability', Persona: 2, fullMark: 5 }, // Shows room for improvement in handling pressure and time management.
+  { subject: 'Openness', Persona: 3, fullMark: 5 } // Reflects moderate adaptability and proactive behavior.
 ];
+
+
 
 const viewOptions = [
   { value: 'Daily', label: 'Daily' },
@@ -80,7 +82,7 @@ export default function AgentPersonality({
       <CustomLegend className="mb-4 mt-0 inline-flex @[80rem]:hidden" />
       <div className="custom-scrollbar -mb-3 overflow-x-auto pb-3">
         <div className="h-[20rem] w-full pe-1 pt-6">
-          <ResponsiveContainer width="100%" height="100%" minWidth={700}>
+          <ResponsiveContainer width="100%" height="100%" minWidth={400}>
             <RadarChart
               outerRadius="80%"
               data={data}
@@ -97,7 +99,7 @@ export default function AgentPersonality({
               <Tooltip content={<CustomTooltip />} />
               <Radar
                 name="Agent Personality"
-                dataKey="A"
+                dataKey="Persona"
                 stroke={theme ? COLORS[0][theme] : COLORS[0].light} // Fallback to 'light' color if theme is undefined
                 fill={theme ? COLORS[0][theme] : COLORS[0].light} // Fallback to 'light' color if theme is undefined
                 fillOpacity={0.6}
