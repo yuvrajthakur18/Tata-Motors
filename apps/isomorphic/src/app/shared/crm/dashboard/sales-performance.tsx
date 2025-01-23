@@ -78,7 +78,8 @@ const data = [
   { agent: 'jayesh', performance: 3.55, percent: 80.0, rating: 'Good' }
 ];
 
-
+const sortedData = [...data].sort((a, b) => b.percent - a.percent);
+const topPerformers = sortedData.slice(0, 10);
 
 const CustomTooltipContent = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
@@ -107,13 +108,13 @@ export default function SalesPerformance({
     <WidgetCard
       rounded="lg"
       className={className}
-      title="Agents Performance"
+      title="Top Agents Performance"
     >
       <div className="custom-scrollbar w-full overflow-x-auto scroll-smooth">
         <Box className="mt-6 h-72 w-full @sm:mt-3 @lg:mt-8">
           <ResponsiveContainer width="100%" height="100%" minWidth={400}>
             <BarChart
-              data={data}
+              data={topPerformers}
               margin={{
                 left: -5,
                 right: 5,

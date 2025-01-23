@@ -13,32 +13,26 @@ import {
   YAxis,
   Legend,
 } from 'recharts';
-import { Box, Button } from 'rizzui';
+import { Box } from 'rizzui';
 
 const data = [
   {
-    item: 'Product',
-    customers: 10,
-    positive: 8,
-    negative: 2,
+    item: 'Start',
+    happy: 20,
+    neutral: 8,
+    frustrated: 22,
   },
   {
-    item: 'Workshop',
-    customers: 40,
-    positive: 25,
-    negative: 15,
+    item: 'Mid',
+    happy: 10,
+    neutral: 25,
+    frustrated: 9,
   },
   {
-    item: 'People',
-    customers: 48,
-    positive: 35,
-    negative: 13,
-  },
-  {
-    item: 'Process',
-    customers: 33,
-    positive: 20,
-    negative: 13,
+    item: 'End',
+    happy: 18,
+    neutral: 35,
+    frustrated: 30,
   },
 ];
 
@@ -50,14 +44,8 @@ export default function BrandSentiment({ className }: { className?: string }) {
     <WidgetCard
       rounded="lg"
       className={`${className} p-4`}
-      title="Frequency of Frustration on Brand"
-      action={
-        <Button variant="outline" size="sm">
-          View All
-        </Button>
-      }
+      title="Sentiment trends of customers"
     >
-      
       <div className="custom-scrollbar w-full overflow-x-auto scroll-smooth">
         <Box className="mt-4 h-80 w-full">
           <ResponsiveContainer width="100%" height="100%" minWidth={400}>
@@ -84,30 +72,14 @@ export default function BrandSentiment({ className }: { className?: string }) {
                 tick={{ fontSize: 12, fill: isDark ? '#aaa' : '#555' }}
               />
               <YAxis
-                yAxisId="left"
-                axisLine={false}
+                axisLine={true}
                 tickLine={false}
                 tickMargin={10}
                 tick={{ fontSize: 12, fill: isDark ? '#aaa' : '#555' }}
                 label={{
-                  value: 'Customers',
+                  value: 'Sentiment Count',
                   angle: -90,
                   position: 'insideLeft',
-                  fontSize: 12,
-                  fill: isDark ? '#aaa' : '#555',
-                }}
-              />
-              <YAxis
-                yAxisId="right"
-                orientation="right"
-                axisLine={false}
-                tickLine={false}
-                tickMargin={10}
-                tick={{ fontSize: 12, fill: isDark ? '#aaa' : '#555' }}
-                label={{
-                  value: 'Sentiments',
-                  angle: 90,
-                  position: 'insideRight',
                   fontSize: 12,
                   fill: isDark ? '#aaa' : '#555',
                 }}
@@ -121,31 +93,29 @@ export default function BrandSentiment({ className }: { className?: string }) {
                   color: isDark ? '#aaa' : '#555',
                 }}
               />
+              
               <Bar
-                yAxisId="left"
-                dataKey="customers"
-                fill="url(#customers-gradient)"
-                name="Customers"
-                barSize={18}
-                radius={[10, 10, 0, 0]}
-                animationBegin={500}
-                animationDuration={1200}
-              />
-              <Bar
-                yAxisId="right"
-                dataKey="positive"
+                dataKey="happy"
                 fill="url(#positive-gradient)"
-                name="Positive"
+                name="Happy"
                 barSize={18}
                 radius={[10, 10, 0, 0]}
                 animationBegin={700}
                 animationDuration={1200}
               />
               <Bar
-                yAxisId="right"
-                dataKey="negative"
+                dataKey="neutral"
+                fill="url(#customers-gradient)"
+                name="Neutral"
+                barSize={18}
+                radius={[10, 10, 0, 0]}
+                animationBegin={500}
+                animationDuration={1200}
+              />
+              <Bar
+                dataKey="frustrated"
                 fill="url(#negative-gradient)"
-                name="Negative"
+                name="Frustrated"
                 barSize={18}
                 radius={[10, 10, 0, 0]}
                 animationBegin={900}
