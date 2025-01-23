@@ -12,11 +12,10 @@ import AgentThreshold from '@/app/shared/crm/dashboard/tables/agent-threshold-2'
 import SuggestedCoachingTable from '@/app/shared/crm/dashboard/tables/suggested-coaching-table-2';
 import OverAllCaseTable from '@/app/shared/crm/dashboard/tables/overall-case-table';
 import { overAllCaseData } from '@/data/over-all-case-data';
-import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action'; 
-// import quick data table 
+import PlanOfAction from '@/app/shared/crm/dashboard/tables/plan-of-action';
+// import quick data table
 import QuickTag from '@/app/shared/crm/dashboard/tables/quick-tag';
 import BrandSentiments from '@/app/shared/crm/dashboard/brand-sentiment-2';
-
 
 export default async function CallDetailsPage({ params }: any) {
   const { callId: rawCallId } = params as { callId: string };
@@ -53,18 +52,16 @@ export default async function CallDetailsPage({ params }: any) {
     console.error(`Call details for ID ${callId} not found.`);
     notFound();
   }
-  
-  const callDirection = callDetails.call_direction
-  const callType = callDetails.call_type
-  const complaintNumber = callDetails.complaint_number
-  const workshopLocation = callDetails.workshop_location
-  const issueResolved = callDetails.issue_resolved
-  const workshopPhoneNumber = callDetails.workshop_phone_number
 
-
+  const callDirection = callDetails.call_direction;
+  const callType = callDetails.call_type;
+  const complaintNumber = callDetails.complaint_number;
+  const workshopLocation = callDetails.workshop_location;
+  const issueResolved = callDetails.issue_resolved;
+  const workshopPhoneNumber = callDetails.workshop_phone_number;
 
   return (
-    <div className="m-10 p-3">
+    <div className="mx-10 mb-10 p-3">
       <h1 className="mb-4 text-2xl font-bold">Call Details for {callId}</h1>
 
       {/* Quick Tags Table */}
@@ -127,12 +124,16 @@ export default async function CallDetailsPage({ params }: any) {
           </tr>
         </tbody>
       </table> */}
-      <QuickTag  callId={callDetails.call_id} callDirection = {callDetails.call_direction}
-      callType = {callDetails.call_type}
-      complaintNumber = {callDetails.complaint_number}
-      workshopLocation = {callDetails.workshop_location}
-      issueResolved = {callDetails.issue_resolved}
-      workshopPhoneNumber = {callDetails.workshop_phone_number} className='p-3 my-5'/>
+      <QuickTag
+        callId={callDetails.call_id}
+        callDirection={callDetails.call_direction}
+        callType={callDetails.call_type}
+        complaintNumber={callDetails.complaint_number}
+        workshopLocation={callDetails.workshop_location}
+        issueResolved={callDetails.issue_resolved}
+        workshopPhoneNumber={callDetails.workshop_phone_number}
+        className="my-5 p-3"
+      />
 
       {/* Enhanced Cards */}
       <div className="mb-8 mt-8 flex justify-evenly gap-6">
@@ -168,33 +169,29 @@ export default async function CallDetailsPage({ params }: any) {
         </div>
       </div>
 
+      <BrandSentiments callId={callDetails.call_id} className="my-5 p-3" />
 
-      <BrandSentiments callId={callDetails.call_id}  className='p-3 my-5'/>
-     
-      <QAScoringTable callId={callDetails.call_id} className='p-3 my-5'/>
+      <QAScoringTable callId={callDetails.call_id} className="my-5 p-3" />
 
-     
-     
-     <ProbingQuestions callId={callDetails.call_id} className='p-3 my-5'/>
+      <ProbingQuestions callId={callDetails.call_id} className="my-5 p-3" />
 
-      
-      <BrandSentiment callId={callDetails.call_id} className='p-3 my-5'/>
+      <BrandSentiment callId={callDetails.call_id} className="my-5 p-3" />
 
-      
-      <EmpathyAnalysisTable callId={callDetails.call_id} className='p-3 my-5'/>
+      <EmpathyAnalysisTable callId={callDetails.call_id} className="my-5 p-3" />
 
-      
-      <AgentPerformanceAnalysisTable callId={callDetails.call_id} className='p-3 my-5'/>
+      <AgentPerformanceAnalysisTable
+        callId={callDetails.call_id}
+        className="my-5 p-3"
+      />
 
-      
-      <AgentThreshold callId={callDetails.call_id} className='p-3 my-5'/>
+      <AgentThreshold callId={callDetails.call_id} className="my-5 p-3" />
 
-      
-      <SuggestedCoachingTable callId={callDetails.call_id} className='p-3 my-5'/>
+      <SuggestedCoachingTable
+        callId={callDetails.call_id}
+        className="my-5 p-3"
+      />
 
-      
-      <PlanOfAction className='p-3 my-5'/> 
-
+      <PlanOfAction className="my-5 p-3" />
     </div>
   );
 }

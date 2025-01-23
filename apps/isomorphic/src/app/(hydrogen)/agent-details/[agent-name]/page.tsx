@@ -69,7 +69,7 @@ export default async function AgentDetailsPage({ params }: any) {
   }
 
   return (
-    <div className="m-10 p-3">
+    <div className="mx-10 mb-10 p-3">
       <h1 className="mb-4 text-2xl font-bold">Agent Details for {agentName}</h1>
       <QuickTagsAgents
         agentName={agentDetails.agent_name}
