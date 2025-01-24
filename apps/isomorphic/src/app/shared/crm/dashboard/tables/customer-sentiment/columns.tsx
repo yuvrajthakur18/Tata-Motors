@@ -3,7 +3,7 @@
 import { createColumnHelper } from '@tanstack/react-table';
 import { Checkbox, Text } from 'rizzui';
 import TableRowActionGroup from '@core/components/table-utils/table-row-action-group';
-import { SentimentDataType } from '@/data/sentiment-data';
+import { SentimentDataType } from './index';
 
 const columnHelper = createColumnHelper<SentimentDataType>();
 

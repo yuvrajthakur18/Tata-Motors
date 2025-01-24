@@ -8,15 +8,15 @@ import { CustomerTrendsDataType } from '@/data/cust-trends-data';
 const columnHelper = createColumnHelper<CustomerTrendsDataType>();
 
 export const custTrendsColumns = [
-  columnHelper.accessor('id', {
-    size: 50,
-    header: 'Case ID',
-    cell: (info) => (
-      <Text className="whitespace-nowrap font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
-  }),
+  // columnHelper.accessor('id', {
+  //   size: 50,
+  //   header: 'Case ID',
+  //   cell: (info) => (
+  //     <Text className="whitespace-nowrap font-medium text-gray-900">
+  //       {info.getValue()}
+  //     </Text>
+  //   ),
+  // }),
   columnHelper.accessor('customerName', {
     size: 200,
     header: 'Customer Name',
@@ -26,9 +26,18 @@ export const custTrendsColumns = [
       </Text>
     ),
   }),
-  columnHelper.accessor('emotionalToneOfCustomer', {
-    size: 200,
-    header: 'Emotional Tone of Customer',
+  columnHelper.accessor('vehicleNumber', {
+    size: 150,
+    header: 'Vehicle Number',
+    cell: (info) => (
+      <Text className="text-sm font-medium text-gray-900">
+        {info.getValue()}
+      </Text>
+    ),
+  }),
+  columnHelper.accessor('vehicleModel', {
+    size: 150,
+    header: 'Vehicle Model',
     cell: (info) => (
       <Text className="text-sm font-medium text-gray-900">
         {info.getValue()}
@@ -47,23 +56,29 @@ export const custTrendsColumns = [
   columnHelper.accessor('emotionalToneInstances', {
     size: 300,
     header: 'Emotional Tone Instances',
-    cell: ({ row: { original } }) => (
-      <div className="text-sm text-gray-900">
-        {original.emotionalToneInstances.map((tone, index) => (
-          <Text key={index} className="block">
-            {tone.tone}: {tone.count}
-          </Text>
-        ))}
-      </div>
-    ),
+    cell: (info) => {
+      const instances = info.getValue();
+      return (
+        <div className="max-h-10 overflow-y-auto text-sm text-gray-900">
+          {instances.map((instance, index) => (
+            <Text key={index} className="block">
+              {instance.emotionalTone} at {instance.timeStamp}: {instance.emotionalToneAnalysis}
+            </Text>
+          ))}
+        </div>
+      );
+    },
   }),
-  columnHelper.accessor('emotionalToneAnalysis', {
-    size: 300,
-    header: 'Emotional Tone Analysis',
-    cell: (info) => (
-      <Text className="text-sm font-medium text-gray-900">
-        {info.getValue()}
-      </Text>
-    ),
+  columnHelper.accessor('sentimentTrend', {
+    size: 150,
+    header: 'Sentiment Trend',
+    cell: (info) => {
+      const trend = info.getValue();
+      return (
+        <Text className="text-sm font-medium text-gray-900">
+          Start: {trend.start}, Mid: {trend.mid}, End: {trend.end}
+        </Text>
+      );
+    },
   }),
 ];

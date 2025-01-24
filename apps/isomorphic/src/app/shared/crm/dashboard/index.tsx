@@ -6,7 +6,6 @@ import RevenueGrowth from './revenue-growth';
 import SalesAnalytics from './sales-analytics';
 import RatingAnalytics from './rating-analytics';
 import ReportAnalytics from './report-analytics';
-import SalesPerformance from './sales-performance';
 import CustomerByCountries from './customer-by-countries';
 import CustomerGrowthSummary from './customer-growth-summary';
 import CustomerAreaByPlatform from './customer-area-by-platform';
@@ -26,12 +25,13 @@ import CustomerSentiment from './tables/customer-sentiment';
 import AgentToneAnalysis from './tables/agent-tone-analysis';
 import CustomerTrends from './tables/customer-trends';
 import EmpathyDetection from './tables/empathy-detection';
-import ProbingQuestions from './tables/probing-questions';
+import ProbingQuestions from './tables/probing-questions-2';
 import BrandSentimentAnalysis from './tables/brand-sentiment-analysis';
 import AgentThreshold from './tables/agent-threshold';
 import AgentPerformanceAnalysis from './tables/agent-performance-analysis';
 import FeedbackSuggestion from './tables/feedback-suggestions';
 import PlanOfAction from './tables/plan-of-action';
+
 
 export default function CrmDashboard() {
   return (
@@ -39,7 +39,6 @@ export default function CrmDashboard() {
       <Box className="grid grid-cols-1 gap-6 @3xl/crm:grid-cols-12 @7xl/crm:gap-7 3xl:gap-8">
         <CRMStats className="@3xl/crm:col-span-full" />
         <CustomerGrowthSummary className="@3xl/crm:col-span-6 @7xl/crm:col-span-8 dark:bg-[#181818]" />
-        <SalesPerformance className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
         <SalesAnalytics className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
         <CustomerAreaByPlatform className="@3xl/crm:col-span-6 @7xl/crm:col-span-4 dark:bg-[#181818]" />
         {/* <CustomerList className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" /> */}
@@ -65,7 +64,7 @@ export default function CrmDashboard() {
         {/* <AgentToneAnalysis className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" /> */}
         <CustomerTrends className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
         <EmpathyDetection className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
-        <ProbingQuestions callId="Call_1_Inbound_9822043084_updated" className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
+        <ProbingQuestions  className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
         {/* <BrandSentimentAnalysis className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" /> */}
         <AgentPerformanceAnalysis className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
         <AgentThreshold className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
