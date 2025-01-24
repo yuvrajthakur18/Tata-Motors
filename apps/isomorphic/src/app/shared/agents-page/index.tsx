@@ -6,10 +6,9 @@ import IndividualAgentData from '../crm/dashboard/tables/individual-agent-data';
 import AgentPerformance from '../crm/dashboard/agent-performance';
 import SalesPerformance from '../crm/dashboard/sales-performance';
 import dummydata from '@/app/shared/crm/dashboard/tables/data/agent_performance.json';
+import NPS from '../crm/dashboard/nps';
 
 export default function AgentsDashboard() {
-  
-
   // const agentData = [
   //   {
   //     agent: 'Anshali Bhaskar',
@@ -177,26 +176,25 @@ export default function AgentsDashboard() {
   //   { agent: 'jayesh', performance: 3.55, percent: 80.0, rating: 'Good' },
   // ];
 
-  // agentData 
+  // agentData
   // map agent data from import dummyData from '@/app/shared/crm/dashboard/tables/data/agent_performance.json';
-  // agentData = 
+  // agentData =
   const transformData = (data: typeof dummydata) => {
     return data.map((item) => {
       const agent = item.agent_name; // Assuming you want the first call details
       const percent = item.agent_qa_score_percentage; // Assuming you want the first call details
       const rating = item.agent_qa_rating; // Assuming you want the first call details
       const performance = item.overall_performance_score;
-      
+
       return {
         agent: agent || 'N/A',
         percent: percent || 'N/A',
-        performance: performance || "N/A",
-        rating: rating  || "N/A",
+        performance: performance || 'N/A',
+        rating: rating || 'N/A',
       };
     });
-  }
-  const agentData = transformData(dummydata)
-
+  };
+  const agentData = transformData(dummydata);
 
   return (
     <Box className="@container/crm">
@@ -210,6 +208,7 @@ export default function AgentsDashboard() {
         <IndividualAgentData className="col-span-full dark:bg-[#181818]" />
 
         <SalesPerformance className="@3xl/crm:col-span-full @7xl/crm:col-span-4 dark:bg-[#181818]" />
+        <NPS className="@3xl/crm:col-span-6 @7xl/crm:col-span-8 dark:bg-[#181818]" />
       </Box>
     </Box>
   );

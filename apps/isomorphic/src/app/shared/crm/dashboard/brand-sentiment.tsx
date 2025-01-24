@@ -18,24 +18,24 @@ import { Box } from 'rizzui';
 const data = [
   {
     item: 'Start',
-    positive: 51,
-    neutral: 6,
-    negative: 48,
-    mixed:0,
+    positive: 361,
+    neutral: 94,
+    negative: 131,
+    unknown: 125,
   },
   {
     item: 'Mid',
-    positive: 10,
-    neutral: 25,
-    negative: 9,
-    mixed:17,
+    positive: 150,
+    neutral: 124,
+    negative: 195,
+    unknown: 242,
   },
   {
     item: 'End',
-    positive: 18,
-    neutral: 35,
-    negative: 30,
-    mixed:1,
+    positive: 476,
+    neutral: 15,
+    negative: 19,
+    unknown: 201,
   },
 ];
 
@@ -96,44 +96,43 @@ export default function BrandSentiment({ className }: { className?: string }) {
                   color: isDark ? '#aaa' : '#555',
                 }}
               />
-              
+
               <Bar
-  dataKey="positive"
-  fill="#29CCB1" // Orange color for positive
-  name="positive"
-  barSize={18}
-  radius={[10, 10, 0, 0]}
-  animationBegin={700}
-  animationDuration={1200}
-/>
-<Bar
-  dataKey="neutral"
-  fill="#34B3F1" // Blue color for Neutral
-  name="Neutral"
-  barSize={18}
-  radius={[10, 10, 0, 0]}
-  animationBegin={500}
-  animationDuration={1200}
-/>
-<Bar
-  dataKey="negative"
-  fill="#FE9738" // Green color for negative
-  name="negative"
-  barSize={18}
-  radius={[10, 10, 0, 0]}
-  animationBegin={900}
-  animationDuration={1200}
-/>
-<Bar
-  dataKey="mixed"
-  fill="#ffd701" // Green color for negative
-  name="mixed"
-  barSize={18}
-  radius={[10, 10, 0, 0]}
-  animationBegin={900}
-  animationDuration={1200}
-/>
-              
+                dataKey="positive"
+                fill="#29CCB1" // Orange color for positive
+                name="Positive"
+                barSize={18}
+                radius={[10, 10, 0, 0]}
+                animationBegin={700}
+                animationDuration={1200}
+              />
+              <Bar
+                dataKey="neutral"
+                fill="#34B3F1" // Blue color for Neutral
+                name="Neutral"
+                barSize={18}
+                radius={[10, 10, 0, 0]}
+                animationBegin={500}
+                animationDuration={1200}
+              />
+              <Bar
+                dataKey="negative"
+                fill="#FE9738" // Green color for negative
+                name="Negative"
+                barSize={18}
+                radius={[10, 10, 0, 0]}
+                animationBegin={900}
+                animationDuration={1200}
+              />
+              <Bar
+                dataKey="unknown"
+                fill="#ffd701" // Green color for negative
+                name="Unknown"
+                barSize={18}
+                radius={[10, 10, 0, 0]}
+                animationBegin={900}
+                animationDuration={1200}
+              />
             </BarChart>
           </ResponsiveContainer>
         </Box>

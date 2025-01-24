@@ -6,9 +6,9 @@ import WidgetCard from '@core/components/cards/widget-card';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const data = [
-  { name: 'Satisfied', value: 131 },
-  { name: 'Not Satisfied', value: 5 },
-  { name: 'Neutral', value: 3 },
+  { name: 'Internal', value: 12 },
+  { name: 'Service', value: 678 },
+  { name: 'Support', value: 21 },
 ];
 
 const valueSum = data.reduce((total, item) => total + item.value, 0);
@@ -17,16 +17,9 @@ const calculatePercentage = (part: number, total: number) =>
 
 const COLORS = ['#6956E5', '#FB896B', '#F8C07F', '#A5D2F2'];
 
-export default function CustomerAreaByPlatform({
-  className,
-}: {
-  className?: string;
-}) {
+export default function CallType({ className }: { className?: string }) {
   return (
-    <WidgetCard
-      title="Customer satisfaction indicators"
-      className={cn('@container', className)}
-    >
+    <WidgetCard title="Call Type" className={cn('@container', className)}>
       <Box className="relative mx-auto my-2.5 size-[300px] @sm:size-[340px]">
         <ResponsiveContainer
           width="100%"

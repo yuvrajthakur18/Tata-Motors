@@ -12,7 +12,7 @@ export type CrmStatType = {
 export const crmStatData: CrmStatType[] = [
   {
     title: 'Total Cases',
-    customer: 138,
+    customer: 139,
     increased: true,
     percentage: 25.2,
     lastMonth: 110,
@@ -20,7 +20,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Calls',
-    customer: 616,
+    customer: 711,
     increased: false,
     percentage: 18.2,
     lastMonth: 600,
@@ -28,7 +28,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Agents',
-    customer:314,
+    customer: 398,
     increased: true,
     percentage: 25.2,
     lastMonth: 600,
@@ -60,7 +60,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Unsolved Cases',
-    customer: 88,
+    customer: 102,
     increased: true,
     percentage: 0.1,
     lastMonth: 88,
@@ -68,7 +68,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Agents overall performance / 5',
-    customer: 3.85,
+    customer: 4.0,
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
@@ -76,7 +76,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'NPS score / 100',
-    customer: 81,
+    customer: 78.34,
     increased: true,
     percentage: 25.2,
     lastMonth: 3987,
@@ -84,7 +84,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Total Duration (in minutes)',
-    customer: 3428,
+    customer: 1007.2,
     increased: false,
     percentage: 25.2,
     lastMonth: 2846,
@@ -95,23 +95,23 @@ export const crmStatData: CrmStatType[] = [
 export const revenueSummaryData = [
   {
     name: 'Support',
-    value: 17 ,
+    value: 24,
   },
   {
     name: 'Service',
-    value: 587 ,
+    value: 587,
   },
   {
     name: 'Internal',
-    value: 12 ,
+    value: 12,
   },
   {
     name: 'Feedback',
-    value: 0 ,
+    value: 0,
   },
   {
     name: 'Assistance',
-    value: 0,
+    value: 112,
   },
   {
     name: 'Coordination',
@@ -119,12 +119,35 @@ export const revenueSummaryData = [
   },
   {
     name: 'Resolution',
-    value: 0 ,
+    value: 3,
   },
   {
     name: 'Followup',
-    value: 0 ,
-  }
+    value: 0,
+  },
+];
+
+export const callNatureData = [
+  {
+    name: 'Support',
+    value: 68,
+  },
+  {
+    name: 'Service',
+    value: 14,
+  },
+  {
+    name: 'Assistance',
+    value: 559,
+  },
+  {
+    name: 'Resolution',
+    value: 70,
+  },
+  {
+    name: 'Followup',
+    value: 0,
+  },
 ];
 
 export const customerListData = [

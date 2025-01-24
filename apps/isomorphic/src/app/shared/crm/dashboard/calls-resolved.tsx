@@ -8,21 +8,21 @@ import { useElementSize } from '@core/hooks/use-element-size';
 
 const data = [
   {
-    name: 'Internal',
-    devices: 134,
-    fill: '#FE9738',
-    id: '#ratingShadowOne',
-  },
-  {
-    name: 'Inbound',
-    devices: 225,
+    name: 'Solved',
+    devices: 467,
     fill: '#29CCB1',
     id: '#ratingShadowOne',
   },
   {
-    name: 'Outbound',
-    devices: 352,
+    name: 'Unsolved',
+    devices: 236,
     fill: '#34B3F1',
+    id: '#ratingShadowOne',
+  },
+  {
+    name: 'Unknown',
+    devices: 8,
+    fill: '#FE9738',
     id: '#ratingShadowOne',
   },
 ];
@@ -31,14 +31,14 @@ const valueSum = data.reduce((total, item) => total + item.devices, 0);
 const calculatePercentage = (part: number, total: number) =>
   ((part / total) * 100).toFixed(2);
 
-export default function TeamActivity({ className }: { className?: string }) {
+export default function CallsResolved({ className }: { className?: string }) {
   const [ref, { width }] = useElementSize();
   const isLG = width > 430;
 
   return (
     <WidgetCard
       ref={ref as React.Ref<HTMLDivElement>}
-      title="Call Direction"
+      title="Call Resolved"
       className={cn('@container', className)}
     >
       <Box className="flex size-full flex-col items-center justify-center pb-4">

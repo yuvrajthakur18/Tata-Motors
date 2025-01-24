@@ -18,14 +18,14 @@ import {
 import { Title } from 'rizzui';
 
 const data = [
-  { subject: 'Rapport building', Score:5.5, fullMark: 8 }, // Communication effectiveness score
-  { subject: 'Product knowledge', Score:2.75, fullMark: 5 }, // Overall performance score
-  { subject: 'Empathy', Score:1, fullMark: 5 }, // Expertise and knowledge score
-  { subject: 'Particulation and clarity', Score:1, fullMark: 5 }, // Empathy and emotional intelligence score
-  { subject: 'Objection handling', Score:5, fullMark: 5 }, // Ownership and accountability score
-  { subject: 'Appropriate probing', Score:2, fullMark: 5 }, // Time management and hand-holding score
-  { subject: 'Adaptability', Score:3, fullMark: 5 }, // Proactive communication score
-  { subject: 'Problem Identification', Score:1, fullMark: 5 } // Follow-up and resolution closure score
+  { subject: 'Rapport building', Score: 6.49, fullMark: 8 }, // Communication effectiveness score
+  { subject: 'Product knowledge', Score: 6.07, fullMark: 5 }, // Overall performance score
+  { subject: 'Empathy Score', Score: 5.6, fullMark: 5 }, // Expertise and knowledge score
+  { subject: 'Particulation and clarity', Score: 7.4, fullMark: 5 }, // Empathy and emotional intelligence score
+  { subject: 'Objection handling', Score: 5.5, fullMark: 5 }, // Ownership and accountability score
+  { subject: 'Appropriate Probing', Score: 5.38, fullMark: 5 }, // Time management and hand-holding score
+  { subject: 'Adaptability Score', Score: 6.65, fullMark: 5 }, // Proactive communication score
+  { subject: 'Problem Identification', Score: 5.7, fullMark: 5 }, // Follow-up and resolution closure score
 ];
 
 const viewOptions = [
@@ -57,12 +57,10 @@ export default function AgentCoaching({ className }: { className?: string }) {
       action={
         <div className="flex items-center gap-5">
           <CustomLegend className="hidden @[80rem]:mt-0 @[80rem]:inline-flex" />
-          
         </div>
       }
       className={cn('min-h-[28rem]', className)}
     >
-      
       <CustomLegend className="mb-4 mt-0 inline-flex @[80rem]:hidden" />
       <div className="custom-scrollbar -mb-3 overflow-x-auto pb-3">
         <div className="h-[20rem] w-full pe-1 pt-6">
@@ -89,11 +87,14 @@ export default function AgentCoaching({ className }: { className?: string }) {
                 fillOpacity={0.6}
               />
             </RadarChart>
-          </ResponsiveContainer>  
+          </ResponsiveContainer>
         </div>
-      <div className="bg-yellow-100 text-yellow-800 p-3 mt-3 rounded-lg">
-        <p className="text-xs"><p className="text-xs font-semibold">Please note:</p>For now, we have threshold value as 8</p>
-      </div>
+        <div className="mt-3 rounded-lg bg-yellow-100 p-3 text-yellow-800">
+          <p className="text-xs">
+            <p className="text-xs font-semibold">Please note:</p>For now, we
+            have threshold value as 8
+          </p>
+        </div>
       </div>
     </WidgetCard>
   );
