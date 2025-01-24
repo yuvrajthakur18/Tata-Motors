@@ -88,7 +88,7 @@ export default function Filters<TData extends Record<string, any>>({
       />
       {/* Add View All Link */}
       <Link
-        href="/customers-page"
+        href="/transcripts"
         className="order-4 mt-4 text-sm font-medium text-blue-600 hover:underline @3xl:ms-6 @3xl:mt-0"
       >
         View All
