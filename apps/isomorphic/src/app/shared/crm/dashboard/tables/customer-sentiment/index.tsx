@@ -26,9 +26,9 @@ const transformData = (data: typeof rawData) => {
       customerName: firstCall.customer_details?.customer_name || 'N/A',
       agentAllotted: firstCall.agent_details?.agent_name || 'N/A',
       callType: firstCall.call_type || 'N/A',
-      brandPerception: 'Positive', // Example, adjust based on your logic
-      brandLoyalty: 'High', // Example, adjust based on your logic
-      brandTrust: 'Moderate', // Example, adjust based on your logic
+      brandPerception: firstCall.brand_perception, // Example, adjust based on your logic
+      brandLoyalty: firstCall.brand_loyalty_impact, // Example, adjust based on your logic
+      brandTrust: firstCall.brand_trust, // Example, adjust based on your logic
       breakdownLocation:
         firstCall.customer_details?.breakdown_location || 'N/A',
       phoneNumber: firstCall.customer_details?.phone_number || 'N/A',

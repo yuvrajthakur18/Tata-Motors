@@ -30,12 +30,12 @@ export const caseColumns = [
     ),
   }),
   // Accessing nested data: case_overview.case_number
-  columnHelper.accessor((row) => row.case_overview.case_number, {
-    id: 'case_number',
-    size: 150,
-    header: 'Case Number',
-    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
-  }),
+  // columnHelper.accessor((row) => row.case_overview.case_number, {
+  //   id: 'case_number',
+  //   size: 150,
+  //   header: 'Case Number',
+  //   cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+  // }),
 
   // Accessing nested data: case_overview.status_of_case
   columnHelper.accessor((row) => row.case_overview.status_of_case, {
@@ -50,6 +50,8 @@ export const caseColumns = [
         Pending: 'orange',
         Escalated: 'red',
         InProgress: 'purple',
+        Open:'blue',
+
       };
 
       return (
@@ -91,12 +93,12 @@ export const caseColumns = [
   }),
 
   // Accessing nested data: case_overview.resolution_time
-  columnHelper.accessor((row) => row.case_overview.resolution_time, {
-    id: 'resolution_time',
-    size: 120,
-    header: 'Resolution Time',
-    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
-  }),
+  // columnHelper.accessor((row) => row.case_overview.resolution_time, {
+  //   id: 'resolution_time',
+  //   size: 120,
+  //   header: 'Resolution Time',
+  //   cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+  // }),
 
   // // Accessing nested data: case_overview.resolved_by
   // columnHelper.accessor((row) => row.case_overview.resolved_by, {

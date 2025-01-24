@@ -49,8 +49,8 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
           <thead>
             <tr>
               <th className="px-2 py-2 text-left font-medium">Agent Name</th>
-              <th className="px-2 py-2 text-left font-medium">Performance Score</th>
               <th className="px-2 py-2 text-left font-medium">Percent</th>
+              <th className="px-2 py-2 text-left font-medium">Performance Score</th>
               <th className="px-2 py-2 text-left font-medium">Rating</th>
             </tr>
           </thead>
@@ -58,8 +58,8 @@ const AgentPerformance = ({ data }: { data: any[] }) => {
             {agents.map((agent, index) => (
               <tr key={index}>
                 <td className="px-2 py-1">{agent.agent}</td>
-                <td className="px-2 py-1">{agent.performance}</td>
                 <td className="px-2 py-1">{agent.percent}%</td>
+                <td className="px-2 py-1">{agent.performance}</td>
                 <td className="px-2 py-1">{agent.rating}</td>
               </tr>
             ))}
