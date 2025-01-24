@@ -58,7 +58,7 @@ export const routes = {
   casesPage: '/cases-page',
   callsPage: '/calls-page',
   agentsPage: '/agents-page',
-  customersPage: '/customers-page',
+  customersPage: '/transcripts',
   affiliate: {
     dashboard: 'https://isomorphic-dnd.vercel.app',
   },
