@@ -23,21 +23,46 @@ export const callColumns = [
     ),
   }),
 
-  // Call Direction
-  columnHelper.accessor((row) => row.call_direction, {
-    id: 'call_direction',
-    header: 'Direction',
-    size: 120,
-    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
-  }),
-
-  // Call Type
+  
   columnHelper.accessor((row) => row.call_type, {
     id: 'call_type',
-    header: 'Type of Call',
     size: 180,
-    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+    header: 'Call Type',
+    cell: (info) => {
+      const status = info.getValue() || 'N/A';
+      const statusColor = {
+        service: 'blue',
+        support: 'green',
+        internal:'orange',
+        feedback:'yellow',
+        assistance:'pink',
+        resolution:'brown'
+      };
+
+      return (
+        <Text style={{ color: statusColor[status] || 'black' }}>{status}</Text>
+      );
+    },
   }),
+  // Call Type
+  
+   columnHelper.accessor((row) => row.call_direction, {
+      id: 'call_direction',
+      size: 180,
+      header: 'Direction',
+      cell: (info) => {
+        const status = info.getValue() || 'N/A';
+        const statusColor = {
+          Outbound: 'blue',
+          Inbound: 'green',
+          Internal:'orange'
+        };
+  
+        return (
+          <Text style={{ color: statusColor[status] || 'black' }}>{status}</Text>
+        );
+      },
+    }),
 
   // Complaint Number
   columnHelper.accessor((row) => row.complaint_number, {
