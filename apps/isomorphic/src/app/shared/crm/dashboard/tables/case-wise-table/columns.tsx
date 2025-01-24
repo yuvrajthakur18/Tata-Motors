@@ -216,6 +216,10 @@ export const caseColumns = [
     id: 'first_call_resolution',
     size: 180,
     header: 'First Call Resolution',
-    cell: (info) => <Text>{info.getValue() || 'N/A'}</Text>,
+    cell: (info) => {
+      const value = info.getValue(); // Get the value (true/false)
+      console.log('First Call Resolution Value:', value); // Print the value in the console
+      return <Text>{value?<>False</>:<>True</>}</Text>;
+    },
   }),
 ];
