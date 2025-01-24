@@ -12,7 +12,7 @@ export type CrmStatType = {
 export const crmStatData: CrmStatType[] = [
   {
     title: 'Total Cases',
-    customer: 116,
+    customer: 138,
     increased: true,
     percentage: 25.2,
     lastMonth: 110,
@@ -28,7 +28,7 @@ export const crmStatData: CrmStatType[] = [
   },
   {
     title: 'Agents',
-    customer: 616,
+    customer:314,
     increased: true,
     percentage: 25.2,
     lastMonth: 600,

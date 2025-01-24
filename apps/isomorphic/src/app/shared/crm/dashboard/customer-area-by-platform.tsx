@@ -6,9 +6,8 @@ import WidgetCard from '@core/components/cards/widget-card';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const data = [
-  { name: 'Satisfied', value: 108 },
+  { name: 'Satisfied', value: 111 },
   { name: 'Not Satisfied', value: 3 },
-  { name: 'Positive', value: 3 },
   { name: 'Neutral', value: 2 },
 ];
 

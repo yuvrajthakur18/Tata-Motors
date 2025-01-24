@@ -18,21 +18,24 @@ import { Box } from 'rizzui';
 const data = [
   {
     item: 'Start',
-    happy: 20,
-    neutral: 8,
-    frustrated: 22,
+    positive: 51,
+    neutral: 6,
+    negative: 48,
+    mixed:0,
   },
   {
     item: 'Mid',
-    happy: 10,
+    positive: 10,
     neutral: 25,
-    frustrated: 9,
+    negative: 9,
+    mixed:17,
   },
   {
     item: 'End',
-    happy: 18,
+    positive: 18,
     neutral: 35,
-    frustrated: 30,
+    negative: 30,
+    mixed:1,
   },
 ];
 
@@ -95,9 +98,9 @@ export default function BrandSentiment({ className }: { className?: string }) {
               />
               
               <Bar
-  dataKey="happy"
-  fill="#FE9738" // Orange color for Happy
-  name="Happy"
+  dataKey="positive"
+  fill="#29CCB1" // Orange color for positive
+  name="positive"
   barSize={18}
   radius={[10, 10, 0, 0]}
   animationBegin={700}
@@ -113,9 +116,18 @@ export default function BrandSentiment({ className }: { className?: string }) {
   animationDuration={1200}
 />
 <Bar
-  dataKey="frustrated"
-  fill="#29CCB1" // Green color for Frustrated
-  name="Frustrated"
+  dataKey="negative"
+  fill="#FE9738" // Green color for negative
+  name="negative"
+  barSize={18}
+  radius={[10, 10, 0, 0]}
+  animationBegin={900}
+  animationDuration={1200}
+/>
+<Bar
+  dataKey="mixed"
+  fill="#ffd701" // Green color for negative
+  name="mixed"
   barSize={18}
   radius={[10, 10, 0, 0]}
   animationBegin={900}
