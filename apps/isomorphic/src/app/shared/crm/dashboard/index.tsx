@@ -68,7 +68,7 @@ export default function CrmDashboard() {
         <ProbingQuestions className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
         {/* <BrandSentimentAnalysis className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" /> */}
         <AgentPerformanceAnalysis className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
-        <AgentThreshold className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
+        {/* <AgentThreshold className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" /> */}
         <FeedbackSuggestion className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
         <PlanOfAction className="@3xl/crm:col-span-full @7xl/crm:col-span-8 dark:bg-[#181818]" />
       </Box>

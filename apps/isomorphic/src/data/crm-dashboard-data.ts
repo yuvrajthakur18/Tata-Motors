@@ -90,6 +90,14 @@ export const crmStatData: CrmStatType[] = [
     lastMonth: 2846,
     href: '#',
   },
+  {
+    title: 'Average Compliance Score',
+    customer: 7.46,
+    increased: true,
+    percentage: 14.2,
+    lastMonth: 2846,
+    href: '#',
+  },
 ];
 
 export const revenueSummaryData = [
